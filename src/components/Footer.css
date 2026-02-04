@@ -1,0 +1,146 @@
+.footer-refined {
+    background-color: #2b274c;
+    /* Matching Mission section */
+    color: #ffffff;
+    padding: 100px 0 0;
+}
+
+.footer-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 100px;
+    padding-bottom: 80px;
+}
+
+.footer-brand-col {
+    max-width: 400px;
+}
+
+.footer-logo-refined {
+    height: 40px;
+    margin-bottom: 28px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-desc-refined {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 32px;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.icon-circle {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.08);
+    /* Frosted circle */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.icon-circle:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-3px);
+    border-color: var(--color-primary);
+}
+
+.footer-nav-col h4 {
+    color: #a49945;
+    /* Gold headings */
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-links-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover {
+    color: var(--color-primary);
+}
+
+.footer-bottom-refined {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 32px 0;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.bottom-legal-links {
+    display: flex;
+    gap: 32px;
+}
+
+.bottom-legal-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.bottom-legal-links a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 1024px) {
+    .footer-content-grid {
+        gap: 60px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-brand-col {
+        grid-column: span 2;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-content-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .footer-brand-col {
+        grid-column: span 1;
+    }
+
+    .bottom-flex {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
