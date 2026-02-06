@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 import './Solutions.css';
 
 // Image Assets for Verification
-import bizIcon from '../assets/laptopstastsicon.png';
-import indIcon from '../assets/image1573536412633-mflj-200h.png';
-import partIcon from '../assets/image1399075722482-kxcc-200h.png';
+import bizIcon from '../assets/newimages/Business.png';
+import indIcon from '../assets/newimages/Individuals.png';
+import partIcon from '../assets/newimages/Partners.png';
 
 // Image Assets for Trust
-import trustBizIcon from '../assets/statsicon.png';
-import trustIndIcon from '../assets/image1170794722633-dqnq-200h.png';
-import trustEntIcon from '../assets/image1011271012633-dph-200h.png';
+import trustBizIcon from '../assets/newimages/Verify.png';
+import trustIndIcon from '../assets/newimages/Verifyy.png';
+import trustEntIcon from '../assets/newimages/SMEs.png';
 
 export const VerificationSolutions: React.FC = () => {
     const solutions = [

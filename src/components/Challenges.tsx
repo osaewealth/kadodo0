@@ -4,38 +4,38 @@ import { motion } from 'framer-motion';
 import './Challenges.css';
 
 // Image Assets
-import moneyIcon from '../assets/moneyicon.png';
-import boxIcon from '../assets/image1644774312481-y6z-200h.png';
-import identityIcon from '../assets/humanverificationicon.png';
-import complianceIcon from '../assets/image843568912481-8s13-200h.png';
+import cashIcon from '../assets/newimages/cash.png';
+import globeIcon from '../assets/newimages/Globe.png';
+import idIcon from '../assets/newimages/ID.png';
+import costIcon from '../assets/newimages/high cost.png';
 
 const challenges = [
     {
         title: "Financial Exclusion",
         challenge: "Banks classify 90% of SMEs as \"High Risk\" due to a lack of verifiable data, denying them capital.",
         solution: "We provide the authenticated profiles banks need to de-risk lending and unlock credit.",
-        icon: moneyIcon,
+        icon: cashIcon,
         color: "yellow"
     },
     {
         title: "The \"Black Box\" Risk",
         challenge: "European and global partners cannot verify local African suppliers, stalling cross-border trade.",
         solution: "We offer definitive proof of existence and compliance, acting as the \"Trust Bridge\" for imports/exports.",
-        icon: boxIcon,
+        icon: globeIcon,
         color: "navy"
     },
     {
         title: "The Identity Gap",
         challenge: "Millions of skilled professionals in the informal sector have no \"paper trail\" to prove their worth.",
         solution: "We turn informal reputation into a formal digital identity, creating a portable Trust Passport.",
-        icon: identityIcon,
+        icon: idIcon,
         color: "navy"
     },
     {
         title: "High Cost of Compliance",
         challenge: "Manual due diligence is slow, expensive, and prone to error.",
         solution: "Our API and dual-check system reduce verification time from weeks to minutes.",
-        icon: complianceIcon,
+        icon: costIcon,
         color: "yellow"
     }
 ];
