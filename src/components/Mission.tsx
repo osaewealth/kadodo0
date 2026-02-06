@@ -2,7 +2,6 @@ import React from 'react';
 import Section from './Section';
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import './Mission.css';
 import womanImage from '../assets/woman.png';
 
