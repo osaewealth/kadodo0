@@ -50,9 +50,9 @@ const Mission: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <h2 className="trust-title">Building Africa's Foundation of Trust</h2>
+                        <h2 className="trust-title">The Future of African Commerce is Built on Trust</h2>
                         <p className="trust-subtitle">
-                            Providing the essential digital infrastructure to de-risk and power the African Continental Free Trade Area (AfCFTA) and Caribbean trade ecosystems.
+                            We bridge the trust gap for the $2.5 Trillion AfCFTA market. Kadodo profiles, authenticates, and connects credible businesses and individuals across Africa and the Caribbean.
                         </p>
 
                         <div className="trust-checklist">

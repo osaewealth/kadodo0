@@ -94,6 +94,67 @@
     z-index: 2;
     min-width: 220px;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    /* For shine effect */
+}
+
+.verified-badge-overlay::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 20%,
+            rgba(255, 255, 255, 0.4) 50%,
+            transparent 80%);
+    transform: rotate(25deg);
+    animation: badge-shine 4s ease-in-out infinite;
+}
+
+@keyframes badge-shine {
+    0% {
+        transform: translateX(-150%) rotate(25deg);
+    }
+
+    100% {
+        transform: translateX(150%) rotate(25deg);
+    }
+}
+
+.badge-icon {
+    position: relative;
+}
+
+.badge-icon::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #00bfa5;
+    opacity: 0.2;
+    animation: badge-pulse 2s infinite;
+}
+
+@keyframes badge-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    70% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
 }
 
 .badge-content {
