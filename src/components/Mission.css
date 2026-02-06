@@ -1,6 +1,5 @@
 .mission-section-new {
-    background-color: #ffffff;
-    /* User requested white background */
+    background-color: #f5f4f3;
     padding: 120px 0;
     overflow: hidden;
     color: var(--color-secondary);
@@ -55,7 +54,7 @@
 
 .foundation-trust-section {
     padding: 120px 0;
-    background-color: white;
+    background-color: #f5f4f3;
 }
 
 .trust-grid {
