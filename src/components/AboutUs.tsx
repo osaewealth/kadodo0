@@ -1,9 +1,9 @@
 import React from 'react';
 import './AboutUs.css';
 import aboutHero from '../assets/aboutushero.jpg';
-import busIcon from '../assets/image1011271012633-dph-200h.png';
-import indIcon from '../assets/image1573536412633-mflj-200h.png';
-import partIcon from '../assets/image1399075712686-bz2e-200h.png';
+import busIcon from '../assets/newimages/Business.png';
+import indIcon from '../assets/newimages/Individuals.png';
+import partIcon from '../assets/newimages/Partners.png';
 import founderImg from '../assets/founder.jpg';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -137,6 +137,45 @@ const AboutUs: React.FC = () => {
                             <div className="leader-badge">
                                 <CheckCircle2 size={18} className="badge-check" /> <span>UN SDSN Fellow</span>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Operational Leadership Section */}
+            <section className="operational-leadership">
+                <div className="container">
+                    <div className="section-header-centered">
+                        <h2 className="section-title-large">Operational Leadership</h2>
+                    </div>
+                    <div className="operational-grid">
+                        <div className="op-card">
+                            <div className="op-image-circle">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&h=400&auto=format&fit=crop" alt="Chief Technology Officer" />
+                            </div>
+                            <h3>Chief Technology Officer</h3>
+                            <span className="op-subtitle">Product & Engineering</span>
+                        </div>
+                        <div className="op-card">
+                            <div className="op-image-circle">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&h=400&auto=format&fit=crop" alt="Head of Sales & Marketing" />
+                            </div>
+                            <h3>Head of Sales & Marketing</h3>
+                            <span className="op-subtitle">Growth & Expansion</span>
+                        </div>
+                        <div className="op-card">
+                            <div className="op-image-circle">
+                                <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=400&h=400&auto=format&fit=crop" alt="Head of Operations & Compliance" />
+                            </div>
+                            <h3>Head of Operations & Compliance</h3>
+                            <span className="op-subtitle">Regulatory Affairs</span>
+                        </div>
+                        <div className="op-card">
+                            <div className="op-image-circle">
+                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=400&auto=format&fit=crop" alt="Head of Strategic Partnerships" />
+                            </div>
+                            <h3>Head of Strategic Partnerships</h3>
+                            <span className="op-subtitle">Global Ecosystems</span>
                         </div>
                     </div>
                 </div>
