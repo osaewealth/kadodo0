@@ -1,0 +1,401 @@
+.contact-page {
+    width: 100%;
+}
+
+/* Hero Section */
+.contact-page .contact-hero {
+    background-color: var(--color-secondary);
+    color: white;
+    text-align: center;
+    padding: 120px 20px 120px;
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Diagonal Background Split - Adjusted to be more subtle or removed if polygons handle it */
+.contact-page .contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primary) 30%, var(--color-secondary) 30.1%);
+    z-index: 1;
+}
+
+.contact-page .hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-page .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-page .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    color: white;
+}
+
+.contact-page .hero-contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-page .hero-contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-page .hero-contact-info img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.contact-page .hero-navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-page .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.contact-page .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Hero Decorations */
+.bg-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Polygon Decorations - Hitting walls and corners */
+.contact-page .bg-decorations .poly {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.contact-page .poly-top-left {
+    top: -20px;
+    left: -20px;
+    width: 300px;
+    transform: rotate(-15deg);
+}
+
+.contact-page .poly-top-right {
+    top: -40px;
+    right: -40px;
+    width: 350px;
+    transform: rotate(10deg);
+}
+
+.contact-page .poly-bottom-left {
+    bottom: 40px;
+    left: -50px;
+    width: 250px;
+    transform: rotate(30deg);
+}
+
+.contact-page .poly-bottom-right {
+    bottom: -20px;
+    right: -20px;
+    width: 400px;
+    transform: rotate(-5deg);
+}
+
+/* Inquiry Cards */
+.contact-page .inquiry-section {
+    padding: 100px 0 80px;
+    /* Increased padding for icons */
+    background-color: #ffffff;
+    margin-top: -40px;
+    /* Small overlap as requested */
+    position: relative;
+    z-index: 20;
+}
+
+.contact-page .inquiry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 120px 30px;
+    /* Large vertical gap to accommodate popping icons */
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.contact-page .inquiry-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #f0f0f0;
+}
+
+.contact-page .inquiry-card:hover {
+    transform: translateY(-8px);
+}
+
+.contact-page .card-image {
+    width: 140px;
+    height: 140px;
+    margin-top: -110px;
+    /* Stronger pop out */
+    margin-bottom: 25px;
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-page .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact-page .inquiry-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+}
+
+.contact-page .inquiry-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.contact-page .card-email {
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.contact-page .card-email:hover {
+    border-bottom-color: var(--color-secondary);
+}
+
+/* Offices Section */
+.contact-page .offices-section {
+    padding: 100px 0;
+    overflow: hidden;
+    /* Prevent horizontal scroll from bleeding map */
+}
+
+.contact-page .offices-layout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-page .offices-info {
+    flex: 1;
+    z-index: 10;
+}
+
+.contact-page .offices-info h2 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.contact-page .offices-info .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.contact-page .office-location {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-page .location-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.contact-page .location-header h3 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+.contact-page .badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.contact-page .badge.active {
+    background-color: #a4ad4b;
+    color: white;
+}
+
+.contact-page .badge.coming-soon {
+    background-color: #2a2d45;
+    color: white;
+}
+
+.contact-page .location-details {
+    display: flex;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+.contact-page .location-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.contact-page .location-details img {
+    width: 18px;
+    height: 18px;
+}
+
+/* Support Hours */
+.contact-page .support-hours {
+    background-color: #f1f1f5;
+    padding: 25px;
+    border-radius: 12px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.contact-page .hours-icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-page .hours-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--color-secondary);
+}
+
+.contact-page .hours-content p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.contact-page .hours-content .highlight {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    margin: 8px 0;
+}
+
+.contact-page .hours-content .subtext {
+    font-style: italic;
+}
+
+/* Map - Hitting the corner */
+.contact-page .offices-map {
+    margin-right: -20px;
+    position: relative;
+    right: -10px;
+    flex: 0.6;
+    /* Reduced from 0.8 to make it smaller */
+}
+
+.contact-page .offices-map img {
+    width: 80%;
+    /* Further reduced for better balance */
+    height: auto;
+    margin-left: auto;
+    /* Keep it on the right */
+    filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.1));
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact-page .offices-layout {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page .contact-hero {
+        padding: 60px 20px;
+    }
+
+    .contact-page .hero-contact-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .contact-page .location-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-page .inquiry-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-page .inquiry-section {
+        margin-top: 0;
+    }
+
+    .contact-page .offices-map {
+        margin-right: 0;
+        right: 0;
+        margin-top: 40px;
+    }
+
+    .contact-page .offices-map img {
+        width: 100%;
+    }
+}
