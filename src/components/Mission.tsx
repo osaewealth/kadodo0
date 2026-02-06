@@ -1,84 +1,66 @@
 import React from 'react';
 import Section from './Section';
-import { CheckCircle2 } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './Mission.css';
-
-// Using a high-quality professional portrait placeholder
-const trustPortrait = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop";
+import missionImage from '../assets/man-holding-phone.png';
 
 const Mission: React.FC = () => {
     return (
-        <Section id="about-us" className="foundation-trust-section">
+        <Section id="about-us" className="mission-section-new">
             <div className="mission-container">
                 <motion.div
-                    className="trust-grid"
+                    className="mission-grid-new"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
                     <motion.div
-                        className="trust-visual"
+                        className="mission-visual-new"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <div className="trust-image-wrapper">
-                            <img src={trustPortrait} alt="Professional Verification Expert" className="trust-main-img" />
-                            <div className="verified-badge-overlay">
-                                <div className="badge-content">
-                                    <div className="badge-icon">
-                                        <CheckCircle2 size={20} color="#00bfa5" />
-                                    </div>
-                                    <div className="badge-text">
-                                        <p className="badge-status">VERIFIED</p>
-                                        <div className="badge-skeleton-lines">
-                                            <div className="sk-line"></div>
-                                            <div className="sk-line"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <img src={missionImage} alt="Mission Vision" className="mission-main-img" />
                     </motion.div>
 
                     <motion.div
-                        className="trust-content"
+                        className="mission-content-new"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <h2 className="trust-title">Building Africa's Foundation of Trust</h2>
-                        <p className="trust-subtitle">
+                        <h2 className="mission-title-new">Building Africa's Foundation of Trust</h2>
+                        <p className="mission-subtitle-new">
                             Providing the essential digital infrastructure to de-risk and power the African Continental Free Trade Area (AfCFTA) and Caribbean trade ecosystems.
                         </p>
 
-                        <div className="trust-checklist">
-                            <div className="trust-check-item">
-                                <div className="trust-check-icon">
-                                    <CheckCircle2 size={22} color="#a49945" />
+                        <div className="mission-checklist-new">
+                            <div className="mission-check-item-new">
+                                <div className="mission-check-icon">
+                                    <Check size={18} />
                                 </div>
-                                <span className="trust-check-text">Verified business and identity profiles</span>
+                                <span className="mission-check-text">Mission-driven verification infrastructure</span>
                             </div>
-                            <div className="trust-check-item">
-                                <div className="trust-check-icon">
-                                    <CheckCircle2 size={22} color="#a49945" />
+                            <div className="mission-check-item-new">
+                                <div className="mission-check-icon">
+                                    <Check size={18} />
                                 </div>
-                                <span className="trust-check-text">Cross-border trust infrastructure for AfCFTA trade</span>
+                                <span className="mission-check-text">Mission-driven verification infrastructure</span>
                             </div>
-                            <div className="trust-check-item">
-                                <div className="trust-check-icon">
-                                    <CheckCircle2 size={22} color="#a49945" />
+                            <div className="mission-check-item-new">
+                                <div className="mission-check-icon">
+                                    <Check size={18} />
                                 </div>
-                                <span className="trust-check-text">Risk reduction for partners, investors, and buyers</span>
+                                <span className="mission-check-text">Mission-driven verification infrastructure</span>
                             </div>
                         </div>
 
-                        <Link to="/about-us" className="btn-trust-cta">
+                        <Link to="/about-us" className="btn-mission-cta">
                             Learn About Our Mission <span>→</span>
                         </Link>
                     </motion.div>
