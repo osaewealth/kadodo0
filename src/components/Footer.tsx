@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, Share2 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import './Footer.css';
-import logo from '../assets/kadodo-logo.svg';
+import logo from '../assets/kadodologofooter.png';
 
 const Footer: React.FC = () => {
     const location = useLocation();

@@ -1,0 +1,680 @@
+.coverage-page {
+    overflow-x: hidden;
+}
+
+/* Hero Section */
+.coverage-hero {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-secondary);
+    color: white;
+    padding-top: 100px;
+}
+
+.coverage-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.map-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    transform: scale(1.1);
+    animation: slowZoom 40s linear infinite alternate;
+}
+
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 50%, transparent 20%, var(--color-secondary) 80%);
+}
+
+.coverage-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.coverage-hero-content {
+    max-width: 600px;
+}
+
+.now-live-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(164, 153, 69, 0.15);
+    border: 1px solid rgba(164, 153, 69, 0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    backdrop-filter: blur(4px);
+    gap: 10px;
+}
+
+.flag-gh.mini {
+    width: 24px;
+    height: 16px;
+    border-radius: 2px;
+}
+
+.flag-gh.mini .black-star {
+    width: 6px;
+    height: 6px;
+}
+
+.now-live-badge .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    /* Green dot as in screenshot */
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+    animation: pulse Green 2s infinite;
+}
+
+@keyframes pulseGreen {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+
+.coverage-title {
+    font-size: clamp(3.5rem, 10vw, 5.5rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+}
+
+.coverage-desc {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    opacity: 1;
+    color: #f1f5f9;
+    margin-bottom: 48px;
+    max-width: 550px;
+}
+
+.coverage-btns {
+    display: flex;
+    gap: 24px;
+}
+
+.btn-get-started {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: white !important;
+    padding: 16px 32px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+}
+
+.btn-view-ids {
+    background-color: white !important;
+    color: var(--color-secondary) !important;
+    border-color: white !important;
+    padding: 16px 32px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+}
+
+/* Ghana Marker & Badge */
+.ghana-marker-container {
+    position: absolute;
+    right: 35%;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+
+.marker-badge-box {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 140px;
+    position: relative;
+}
+
+.marker-badge-box::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+}
+
+.badge-header {
+    color: var(--color-secondary);
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.badge-flag {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.flag-gh {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.flag-gh-red {
+    background-color: #CE1126;
+    flex: 1;
+}
+
+.flag-gh-gold {
+    background-color: #FCD116;
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-gh-green {
+    background-color: #006B3F;
+    flex: 1;
+}
+
+.black-star {
+    width: 14px;
+    height: 14px;
+    background-color: black;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    z-index: 2;
+}
+
+.marker-pindrop {
+    margin-top: 5px;
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+}
+
+.marker-pindrop-secondary {
+    position: absolute;
+    bottom: -100px;
+    left: -120px;
+    opacity: 0.8;
+}
+
+/* Ghana Verification Section */
+.ghana-verification {
+    padding: 120px 0;
+    background-color: #f8fafc;
+}
+
+.section-header-wrap {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 100px;
+    position: relative;
+}
+
+.status-label-top {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.flag-gh-large {
+    width: 90px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.badge-active-olive {
+    background: #a49945;
+    /* Olive gold as in screenshot */
+    color: white;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: -20px;
+    margin-top: 10px;
+    padding-left: 30px;
+    z-index: 1;
+}
+
+.section-title-large {
+    font-size: 3.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+.section-subtitle-large {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.verification-cards-refined {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.v-card-premium {
+    background: white;
+    border-radius: 24px;
+    padding: 60px 40px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(46, 43, 79, 0.05);
+    /* Very subtle navy shadow */
+    border: 1px solid rgba(241, 245, 249, 1);
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+}
+
+.v-card-premium:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 50px rgba(46, 43, 79, 0.1);
+}
+
+.v-card-icon-overlapping {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edu-icon-design {
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle at center, #ffcc33 100%, #ffcc33 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(255, 204, 51, 0.3);
+    position: relative;
+}
+
+.emp-icon-design,
+.pro-icon-design {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.suit-img,
+.id-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.v-card-premium-content h3 {
+    font-size: 1.8rem;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.v-card-premium-content p {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.v-card-spacer {
+    flex-grow: 1;
+}
+
+.v-card-eg {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+/* Caribbean Expansion Section */
+.caribbean-expansion {
+    padding: 120px 0;
+    background-color: white;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    background: #2e2b4f;
+    color: white;
+    padding: 8px 24px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(46, 43, 79, 0.2);
+}
+
+.expansion-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.expansion-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expansion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.flag-container {
+    width: 100%;
+    height: 180px;
+    background: #f8fafc;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.expansion-card-content {
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.card-info-left {
+    width: 100%;
+}
+
+.waitlist-footer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-join-waitlist {
+    background-color: #2e2b4f !important;
+    color: white !important;
+    padding: 18px 40px !important;
+    border-radius: 16px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(46, 43, 79, 0.3);
+}
+
+/* Caribbean Flags */
+
+/* Trinidad & Tobago */
+.flag-tt {
+    width: 240px;
+    height: 144px;
+    background-color: #E2231A;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tt-stripe-black {
+    position: absolute;
+    width: 150%;
+    height: 48px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-31deg);
+    z-index: 2;
+}
+
+.tt-stripe-white-1,
+.tt-stripe-white-2 {
+    position: absolute;
+    width: 150%;
+    height: 60px;
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-31deg);
+    z-index: 1;
+}
+
+/* Jamaica */
+.flag-jm {
+    width: 240px;
+    height: 144px;
+    background-color: #FFD100;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.jm-tri-green-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #009B3A;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.jm-tri-green-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #009B3A;
+    clip-path: polygon(0 100%, 100% 100%, 50% 0);
+}
+
+.jm-tri-black-left {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.jm-tri-black-right {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* Barbados */
+.flag-bb {
+    width: 240px;
+    height: 144px;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bb-stripe-blue-left,
+.bb-stripe-blue-right {
+    background-color: #00267F;
+    flex: 1;
+}
+
+.bb-stripe-yellow {
+    background-color: #FFC726;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bb-trident {
+    width: 40px;
+    height: 60px;
+    background-color: black;
+    clip-path: polygon(50% 0%, 55% 15%, 85% 15%, 75% 45%, 55% 45%, 55% 100%, 45% 100%, 45% 45%, 25% 45%, 15% 15%, 45% 15%, 50% 0%);
+}
+
+/* Guyana */
+.flag-gy {
+    width: 240px;
+    height: 144px;
+    background-color: #009E49;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gy-white-triangle {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.gy-yellow-triangle {
+    position: absolute;
+    left: 0;
+    width: 95%;
+    height: 100%;
+    background-color: #FCD116;
+    clip-path: polygon(0 5%, 0 95%, 90% 50%);
+}
+
+.gy-black-triangle {
+    position: absolute;
+    left: 0;
+    width: 55%;
+    height: 100%;
+    background-color: black;
+    clip-path: polygon(0 0, 0 100%, 100% 50%);
+}
+
+.gy-red-triangle {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #CE1126;
+    clip-path: polygon(0 8%, 0 92%, 85% 50%);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .ghana-marker-container {
+        right: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header-wrap {
+        margin-bottom: 120px;
+    }
+
+    .status-label-top {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -80px;
+    }
+
+    .section-title-large {
+        font-size: 2.5rem;
+    }
+
+    .verification-cards-refined {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .v-card-premium {
+        margin-top: 60px;
+    }
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import './Navbar.css';
-import logo from '../assets/kadodo-logo.svg';
+import logo from '../assets/mainkadodologo.png';
 import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
