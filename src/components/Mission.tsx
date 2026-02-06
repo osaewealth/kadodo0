@@ -25,20 +25,6 @@ const Mission: React.FC = () => {
                     >
                         <div className="trust-image-wrapper">
                             <img src={womanImage} alt="Professional Verification Expert" className="trust-main-img" />
-                            <motion.div
-                                className="verified-badge-premium"
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.5, duration: 0.6 }}
-                            >
-                                <div className="badge-inner">
-                                    <div className="badge-icon-pulsing">
-                                        <CheckCircle2 size={24} color="#00bfa5" fill="#00bfa520" />
-                                    </div>
-                                    <span className="badge-text-bold">Verified</span>
-                                </div>
-                                <div className="badge-shine-effect"></div>
-                            </motion.div>
                         </div>
                     </motion.div>
 

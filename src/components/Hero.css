@@ -97,7 +97,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
 }
 
 .graphic-outer::after {
@@ -150,5 +149,95 @@
     .graphic-outer {
         border-radius: 30px 100px 30px 100px;
         padding: 40px;
+    }
+}
+
+/* Verified Badge Premium */
+.verified-badge-premium {
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    background: white;
+    padding: 16px 30px;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.badge-inner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.badge-text-bold {
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--color-secondary);
+}
+
+.badge-icon-pulsing {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-icon-pulsing::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #00bfa5;
+    animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+
+    80%,
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+.badge-shine-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            (255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    animation: shine 4s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -150%;
+    }
+
+    20%,
+    100% {
+        left: 150%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .verified-badge-premium {
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
