@@ -405,6 +405,142 @@
     font-weight: 700;
 }
 
+/* Partners Marquee Section */
+.partners-marquee-section {
+    padding: 100px 0;
+    background-color: white;
+    overflow: hidden;
+}
+
+.section-tag {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    margin-bottom: 60px;
+    display: block;
+    text-align: center;
+}
+
+.marquee-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 40px 0;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 120px;
+    animation: marquee 20s linear infinite;
+    width: max-content;
+    align-items: center;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 60px));
+    }
+}
+
+.partner-logo-item {
+    height: 120px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.partner-logo-item img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0.2) opacity(0.8);
+    transition: all 0.3s ease;
+}
+
+.partner-logo-item:hover img {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.05);
+}
+
+/* Join Us (CTA) Section */
+.about-cta {
+    padding: 100px 0 160px;
+}
+
+.about-cta-card {
+    background: white;
+    padding: 100px 60px;
+    border-radius: 40px;
+    border: 3px solid #2e2b4f;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 40px 100px rgba(46, 43, 79, 0.08);
+}
+
+.about-cta-card h2 {
+    font-size: 3.5rem;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+    font-weight: 800;
+}
+
+.about-cta-card p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+}
+
+.about-cta-btns {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.btn-primary-gold {
+    background-color: #a49945;
+    color: white;
+    padding: 22px 45px;
+    border-radius: 16px;
+    border: none;
+    font-weight: 800;
+    font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(164, 153, 69, 0.25);
+}
+
+.btn-primary-gold:hover {
+    transform: translateY(-5px);
+    background-color: #93883b;
+    box-shadow: 0 20px 45px rgba(164, 153, 69, 0.35);
+}
+
+.btn-secondary-outline {
+    background: #e5e5f0;
+    color: var(--color-secondary);
+    padding: 22px 45px;
+    border-radius: 16px;
+    border: 1px solid #d1d5db;
+    font-weight: 800;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-outline:hover {
+    background-color: #f1f5f9;
+    transform: translateY(-5px);
+}
+
 /* Responsive Updates */
 @media (max-width: 1024px) {
 
@@ -444,6 +580,10 @@
     .operational-grid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .about-cta-card h2 {
+        font-size: 2.8rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -479,5 +619,17 @@
     .operational-grid {
         grid-template-columns: 1fr;
         gap: 60px;
+    }
+
+    .about-cta-card {
+        padding: 60px 30px;
+    }
+
+    .about-cta-card h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-cta-btns {
+        flex-direction: column;
     }
 }

@@ -5,7 +5,10 @@ import busIcon from '../assets/newimages/Business.png';
 import indIcon from '../assets/newimages/Individuals.png';
 import partIcon from '../assets/newimages/Partners.png';
 import founderImg from '../assets/founder.jpg';
-import { CheckCircle2 } from 'lucide-react';
+import sponsor1 from '../assets/sponsor1.png';
+import sponsor2 from '../assets/sponsor2.png';
+import sponsor3 from '../assets/sponsor3.png';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 const AboutUs: React.FC = () => {
     return (
@@ -176,6 +179,42 @@ const AboutUs: React.FC = () => {
                             </div>
                             <h3>Head of Strategic Partnerships</h3>
                             <span className="op-subtitle">Global Ecosystems</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Strategic Partners Section */}
+            <section className="partners-marquee-section">
+                <div className="container">
+                    <div className="section-header-centered">
+                        <span className="section-tag">Strategic Alignment & Global Partners</span>
+                    </div>
+                    <div className="marquee-wrapper">
+                        <div className="marquee-content">
+                            {[sponsor1, sponsor2, sponsor3, sponsor1, sponsor2, sponsor3].map((logo, idx) => (
+                                <div key={idx} className="partner-logo-item">
+                                    <img src={logo} alt={`Partner ${idx + 1}`} />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Join Us (CTA) Section */}
+            <section className="about-cta">
+                <div className="container">
+                    <div className="about-cta-card">
+                        <h2>Join Us in Building the Future</h2>
+                        <p>Whether you are a business seeking growth or a partner seeking impact, Kadodo Africa is your gateway to trust.</p>
+                        <div className="about-cta-btns">
+                            <button className="btn-primary-gold">
+                                Get Verified Today <ArrowRight size={20} />
+                            </button>
+                            <button className="btn-secondary-outline">
+                                Contact Our Team
+                            </button>
                         </div>
                     </div>
                 </div>
