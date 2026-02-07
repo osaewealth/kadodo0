@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Fingerprint, GraduationCap, Contact2, Briefcase } from 'lucide-react';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
 import './Solutions.css';
 import handshakeImage from '../assets/solutionpageheropicture.png';
 import individualsImage from '../assets/your professional trust image.jpg';
@@ -14,6 +14,12 @@ import activateStoreIcon from '../assets/newimages/Sale.png';
 import mandateIcon from '../assets/newimages/Processing_1.png';
 import verifyIcon from '../assets/newimages/Verify.png';
 import engageIcon from '../assets/newimages/Partners.png';
+
+// Individual Icons
+import idIcon from '../assets/newimages/ID.png';
+import educationIcon from '../assets/newimages/Education.png';
+import licenseIcon from '../assets/newimages/License.png';
+import employmentIcon from '../assets/newimages/Employment.png';
 
 const SolutionsHero: React.FC = () => {
     const features = [
@@ -86,10 +92,10 @@ const SolutionsHero: React.FC = () => {
 
 const IndividualsSection: React.FC = () => {
     const features = [
-        { icon: <Fingerprint size={24} />, title: "Identity Authentication" },
-        { icon: <GraduationCap size={24} />, title: "Academic Degree Verification" },
-        { icon: <Contact2 size={24} />, title: "Professional License Check" },
-        { icon: <Briefcase size={24} />, title: "Employment History Validation" }
+        { icon: idIcon, title: "Identity Authentication" },
+        { icon: educationIcon, title: "Academic Degree Verification" },
+        { icon: licenseIcon, title: "Professional License Check" },
+        { icon: employmentIcon, title: "Employment History Validation" }
     ];
 
     return (
@@ -112,8 +118,8 @@ const IndividualsSection: React.FC = () => {
                     <div className="individuals-features">
                         {features.map((feature, index) => (
                             <div key={index} className="individual-feature-card">
-                                <div className="feature-icon-box">
-                                    {feature.icon}
+                                <div className="feature-icon-box-3d">
+                                    <img src={feature.icon} alt={feature.title} />
                                 </div>
                                 <span className="feature-title">{feature.title}</span>
                             </div>
