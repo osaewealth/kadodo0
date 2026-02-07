@@ -309,6 +309,34 @@ const EnterpriseProcess: React.FC = () => {
     );
 };
 
+const SolutionsCTA: React.FC = () => {
+    return (
+        <section className="solutions-cta-section">
+            <div className="container">
+                <motion.div
+                    className="solutions-cta-box"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <h2 className="cta-title">Ready to Build Trust</h2>
+                    <p className="cta-subtitle">Select the verification path that fits our goals today.</p>
+
+                    <div className="cta-buttons">
+                        <button className="btn-cta-primary">
+                            Start Business Verification <ArrowRight size={20} />
+                        </button>
+                        <button className="btn-cta-secondary">
+                            Start Individual Verification
+                        </button>
+                    </div>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
+
 const SolutionsPage: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -320,6 +348,7 @@ const SolutionsPage: React.FC = () => {
             <IndividualsSection />
             <MarketplaceOnboarding />
             <EnterpriseProcess />
+            <SolutionsCTA />
         </div>
     );
 };
