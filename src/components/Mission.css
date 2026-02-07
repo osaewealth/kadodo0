@@ -98,11 +98,11 @@
 }
 
 .trust-title {
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     font-weight: 800;
     color: var(--color-secondary);
     line-height: 1.1;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     text-align: left;
 }
 
@@ -111,16 +111,66 @@
 }
 
 .trust-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--color-text-muted);
-    line-height: 1.6;
-    margin-bottom: 56px;
+    line-height: 1.5;
+    margin-bottom: 32px;
     max-width: 580px;
 }
 
-.trust-btns {
+.mission-blocks {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.mission-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background-color: #e5e7eb;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.mission-block-icon {
+    color: var(--color-secondary);
+    opacity: 0.6;
+}
+
+.mission-block-text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    opacity: 0.8;
+}
+
+.btn-mission-learn {
+    background-color: #a49945;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(164, 153, 69, 0.2);
+    width: fit-content;
+}
+
+.btn-mission-learn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(164, 153, 69, 0.3);
+}
+
+.btn-mission-learn .arrow {
+    font-size: 1.2rem;
 }
 
 .btn-trust-gold {

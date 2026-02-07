@@ -35,22 +35,31 @@ const Mission: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        <div className="trust-tag">Authenticating The Future</div>
                         <h2 className="trust-title">
-                            The Future of <span className="text-gold">African Commerce</span> is Built on Trust
+                            Building Africa's <br /> Foundation of Trust
                         </h2>
                         <p className="trust-subtitle">
-                            We bridge the trust gap for the $2.5 Trillion AfCFTA market. Kadodo profiles, authenticates, and connects credible businesses and individuals across Africa and the Caribbean.
+                            Providing the essential digital infrastructure to de-risk and power the African Continental Free Trade Area (AfCFTA) and Caribbean trade ecosystems.
                         </p>
 
-                        <div className="trust-btns">
-                            <button className="btn-trust-gold">
-                                <CheckCircle2 size={18} /> Verify My Business
-                            </button>
-                            <button className="btn-trust-outline">
-                                <CheckCircle2 size={18} /> Verify My Profession
-                            </button>
+                        <div className="mission-blocks">
+                            <div className="mission-block">
+                                <CheckCircle2 className="mission-block-icon" size={24} />
+                                <span className="mission-block-text">Mission-driven verification infrastructure</span>
+                            </div>
+                            <div className="mission-block">
+                                <CheckCircle2 className="mission-block-icon" size={24} />
+                                <span className="mission-block-text">Mission-driven verification infrastructure</span>
+                            </div>
+                            <div className="mission-block">
+                                <CheckCircle2 className="mission-block-icon" size={24} />
+                                <span className="mission-block-text">Mission-driven verification infrastructure</span>
+                            </div>
                         </div>
+
+                        <button className="btn-mission-learn">
+                            Learn About Our Mission <span className="arrow">→</span>
+                        </button>
                     </motion.div>
                 </motion.div>
             </div>
