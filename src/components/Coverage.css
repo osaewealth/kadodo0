@@ -5,63 +5,135 @@
 /* Hero Section */
 .coverage-hero {
     position: relative;
-    min-height: 85vh;
+    min-height: 700px;
+    height: 85vh;
+    max-height: 900px;
     display: flex;
     align-items: center;
-    background-color: var(--color-secondary);
+    background-color: #2e2b4f;
     color: white;
-    padding-top: 100px;
-}
-
-.coverage-hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    padding-top: 60px;
     overflow: hidden;
 }
 
-.map-bg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.4;
-    transform: scale(1.1);
-    animation: slowZoom 40s linear infinite alternate;
-}
-
-@keyframes slowZoom {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.15);
-    }
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 50%, transparent 20%, var(--color-secondary) 80%);
-}
+/* Removed old map bg styles */
 
 .coverage-container {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
     align-items: center;
     width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
 }
 
 .coverage-hero-content {
-    max-width: 600px;
+    max-width: 650px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 5;
+    margin-top: -50px;
+    /* Slight visual centering adjustment */
+}
+
+.hero-globe-wrapper {
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    transform: translateY(-50%);
+    width: 70%;
+    height: 120%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    /* Removed pointer-events: none to enable interaction if needed, but pins need it */
+}
+
+.globe-3d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.globe-graphic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1.3);
+    /* Make it huge as requested */
+    filter: drop-shadow(0 0 50px rgba(46, 43, 80, 0.5));
+    pointer-events: none;
+    /* Let clicks pass to pins */
+}
+
+/* Globe Pins */
+.globe-pin {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateZ(50px);
+    /* Lift off globe surface */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.globe-pin:hover {
+    transform: translateZ(80px) scale(1.2);
+}
+
+.pin-icon {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    color: white;
+    /* Stroke color */
+}
+
+.pin-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pinPulse 2s infinite;
+}
+
+@keyframes pinPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+    }
+}
+
+/* Positioning - Estimated based on typical globe view centered on Atlantic/Africa */
+.pin-ghana {
+    top: 55%;
+    right: 38%;
+    /* Adjust based on globe rotation */
+}
+
+.pin-caribbean {
+    top: 45%;
+    right: 65%;
+    /* Further left (so higher right value) */
 }
 
 .now-live-badge {
@@ -119,10 +191,10 @@
 }
 
 .coverage-title {
-    font-size: clamp(3.5rem, 10vw, 5.5rem);
+    font-size: clamp(3rem, 5vw, 4.5rem);
     font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.0;
+    margin-bottom: 24px;
+    line-height: 1.1;
     letter-spacing: -0.02em;
 }
 
@@ -158,15 +230,10 @@
     font-weight: 600 !important;
 }
 
-/* Ghana Marker & Badge */
+/* Marker is now part of the globe image usually, or we position it relative to globe wrapper */
 .ghana-marker-container {
-    position: absolute;
-    right: 35%;
-    top: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 5;
+    display: none;
+    /* Hiding manual marker as it's likely part of the new specific globe image or not needed in layout */
 }
 
 .marker-badge-box {
@@ -345,41 +412,39 @@
 
 .v-card-icon-overlapping {
     position: absolute;
-    top: -60px;
+    top: -70px;
     left: 50%;
     transform: translateX(-50%);
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
 .edu-icon-design {
-    width: 120px;
-    height: 120px;
-    background: radial-gradient(circle at center, #ffcc33 100%, #ffcc33 100%);
-    border-radius: 50%;
+    width: 140px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 20px rgba(255, 204, 51, 0.3);
-    position: relative;
 }
 
 .emp-icon-design,
 .pro-icon-design {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .suit-img,
-.id-img {
-    width: 100px;
-    height: 100px;
+.id-img,
+.edu-img {
+    width: 120px;
+    height: 120px;
     object-fit: contain;
 }
 

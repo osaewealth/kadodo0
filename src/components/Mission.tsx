@@ -49,11 +49,11 @@ const Mission: React.FC = () => {
                             </div>
                             <div className="mission-block">
                                 <CheckCircle2 className="mission-block-icon" size={24} />
-                                <span className="mission-block-text">Mission-driven verification infrastructure</span>
+                                <span className="mission-block-text">Scalable trust architecture for AfCFTA</span>
                             </div>
                             <div className="mission-block">
                                 <CheckCircle2 className="mission-block-icon" size={24} />
-                                <span className="mission-block-text">Mission-driven verification infrastructure</span>
+                                <span className="mission-block-text">Empowering SMEs with digital identity</span>
                             </div>
                         </div>
 

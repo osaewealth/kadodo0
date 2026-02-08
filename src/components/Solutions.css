@@ -150,23 +150,25 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    margin-top: 40px;
 }
 
 .sol-icon-overlapping {
     position: absolute;
-    top: -60px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
 }
 
 .sol-icon-overlapping img {
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
 }
 
@@ -663,8 +665,8 @@
 }
 
 .step-3d-icon {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     top: 0;
     left: 0;
@@ -787,10 +789,10 @@
 
 .process-card-icon-box {
     position: absolute;
-    top: -30px;
-    right: -15px;
-    width: 90px;
-    height: 90px;
+    top: -25px;
+    right: -10px;
+    width: 70px;
+    height: 70px;
     z-index: 5;
 }
 
@@ -938,6 +940,7 @@
     color: #232243;
     margin: 0;
 }
+
 /* Solutions CTA Section */
 .solutions-cta-section {
     padding: 100px 0 140px;
@@ -1018,17 +1021,18 @@
         padding: 60px 24px;
         margin: 0 20px;
     }
-    
+
     .cta-title {
         font-size: 2.5rem;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         align-items: stretch;
     }
-    
-    .btn-cta-primary, .btn-cta-secondary {
+
+    .btn-cta-primary,
+    .btn-cta-secondary {
         justify-content: center;
     }
 }

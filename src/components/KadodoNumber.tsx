@@ -1,10 +1,12 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import './KadodoNumber.css';
 import cardBusiness from '../assets/kadodocardbusiness.png';
 import cardPersonal from '../assets/kadodocardpersonal.png';
 
 const KadodoNumber: React.FC = () => {
+    const location = useLocation();
+    const isKadodoPage = location.pathname === '/kadodo-number';
     return (
         <section id="coverage" className="kadodo-number-section">
             <div className="kn-container">
@@ -65,9 +67,13 @@ const KadodoNumber: React.FC = () => {
                             </div>
                         </div>
 
-                        <button className="btn-primary-muted-gold-lg">
-                            Learn More About Verification
-                        </button>
+                        {!isKadodoPage && (
+                            <Link to="/kadodo-number">
+                                <button className="btn-primary-muted-gold-lg">
+                                    Learn More About Verification
+                                </button>
+                            </Link>
+                        )}
                     </div>
                 </motion.div>
             </div>

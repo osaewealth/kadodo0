@@ -3,8 +3,9 @@ import Hero from './Hero';
 import Stats from './Stats';
 import Challenges from './Challenges';
 import KadodoNumber from './KadodoNumber';
-import { VerificationSolutions, TrustSolutions } from './Solutions';
+import { VerificationSolutions } from './Solutions';
 import Mission from './Mission';
+import RegionGateway from './RegionGateway';
 
 const LandingPage: React.FC = () => {
     return (
@@ -14,8 +15,8 @@ const LandingPage: React.FC = () => {
             <Challenges />
             <KadodoNumber />
             <VerificationSolutions />
-            <TrustSolutions />
             <Mission />
+            <RegionGateway />
         </>
     );
 };

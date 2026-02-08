@@ -40,12 +40,13 @@
 
 .nav-links {
     display: flex;
-    gap: 40px;
-    /* Increased gap for better breathing space */
+    gap: 32px;
+    /* Reduced gap - was 40px */
     position: absolute;
-    left: 50%;
+    left: 45%;
+    /* Shifted left slightly - was 50% */
     transform: translateX(-50%);
-    /* Center nav links perfectly */
+    /* Moved left to avoid overlap with Get Started button */
 }
 
 .nav-links a {
@@ -96,7 +97,8 @@
     color: white !important;
     padding: 12px 28px !important;
     font-weight: 800 !important;
-    border-radius: 12px !important;
+    border-radius: 50px !important;
+    /* Pill shape consistency */
     font-size: 0.95rem !important;
     border: none !important;
     box-shadow: 0 4px 12px rgba(164, 153, 69, 0.2) !important;
@@ -147,7 +149,44 @@
 
 @media (max-width: 1024px) {
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 90px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 60px;
+        gap: 32px;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
+
+    .nav-links.open {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
+        padding: 16px 32px;
+        width: 80%;
+        text-align: center;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background: rgba(164, 153, 69, 0.1);
     }
 
     .nav-actions {
@@ -156,5 +195,192 @@
 
     .mobile-menu-toggle {
         display: flex;
+        z-index: 1001;
     }
+
+    .mobile-menu-toggle span {
+        transition: all 0.3s ease;
+    }
+
+    /* Hamburger to X animation */
+    .mobile-menu-toggle.open span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-menu-toggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .navbar-container {
+        padding: 0 20px;
+    }
+}
+
+/* Region Selector Styles */
+.region-selector {
+    position: relative;
+    z-index: 1001;
+}
+
+.region-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #2b274c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    /* 50px Pill shape consistency */
+    cursor: pointer;
+    font-weight: 800;
+    /* Match Get Started */
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    /* Slightly wider */
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(46, 43, 80, 0.2);
+}
+
+.region-btn:hover {
+    background: #3a365e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(46, 43, 80, 0.3);
+}
+
+.region-btn.selected {
+    background: #2b274c;
+}
+
+.region-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.chevron {
+    transition: transform 0.3s ease;
+}
+
+.chevron.rotate {
+    transform: rotate(180deg);
+}
+
+.region-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: white;
+    border-radius: 12px;
+    padding: 8px;
+    width: 180px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f1f5f9;
+}
+
+.region-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.region-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.region-option:hover {
+    background: #f8fafc;
+    color: var(--color-primary);
+}
+
+/* Navbar Flags */
+.flag-gh-nav {
+    width: 24px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.flag-gh-red {
+    background: #CE1126;
+    flex: 1;
+}
+
+.flag-gh-gold {
+    background: #FCD116;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag-gh-green {
+    background: #006B3F;
+    flex: 1;
+}
+
+.flag-gh-nav .black-star {
+    width: 6px;
+    height: 6px;
+    background: black;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* Caricom Flag CSS */
+.flag-caricom-nav {
+    width: 24px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.flag-cc-top {
+    background: #009CA6;
+    flex: 1;
+}
+
+/* Light Blue */
+.flag-cc-bottom {
+    background: #00267F;
+    flex: 1;
+}
+
+/* Dark Blue */
+
+.flag-cc-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #FFD100;
+    /* Yellow Sun */
+    border-radius: 50%;
+    border: 1px solid black;
 }

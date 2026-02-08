@@ -134,6 +134,12 @@
     display: block;
 }
 
+.bridge-icon-png {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 /* Mission & Vision Cards */
 .mission-vision-refined {
     padding: 40px 0 120px;
@@ -169,6 +175,12 @@
 
 .mv-icon {
     margin-bottom: 40px;
+}
+
+.mv-icon-png {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .mv-card h2 {
@@ -211,12 +223,16 @@
 
 .wwd-card {
     background: white;
-    padding: 60px 40px;
-    border-radius: 20px;
+    padding: 80px 32px 32px;
+    border-radius: 32px;
     border: 1px solid #e2e8f0;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 .wwd-card:hover {
@@ -228,10 +244,20 @@
 .wwd-icon {
     width: 100px;
     height: 100px;
-    margin: 0 auto 35px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+}
+
+.wwd-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 .wwd-icon img {

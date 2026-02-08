@@ -1,0 +1,224 @@
+.region-gateway-section {
+    padding: 60px 0;
+    /* Reduced padding */
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.gateway-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    /* Reduced margin */
+}
+
+.gateway-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    color: var(--color-secondary);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.gateway-subtitle {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+.gateway-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    /* Wider minimum width */
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.gateway-card {
+    position: relative;
+    height: 300px;
+    /* Short height */
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    /* Horizontal layout */
+    align-items: center;
+    /* Center vertically */
+    padding: 0 50px;
+    color: white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.gateway-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.gateway-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+    z-index: 1;
+}
+
+.gateway-card:hover .gateway-bg {
+    transform: scale(1.05);
+    /* Subtle zoom */
+}
+
+.gateway-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(46, 43, 79, 0.95) 0%, rgba(46, 43, 79, 0.8) 50%, rgba(46, 43, 79, 0.4) 100%);
+    /* Horizontal gradient */
+    z-index: 2;
+}
+
+/* Specific Adjustment for Ghana Map */
+.ghana-card .gateway-bg {
+    background-position: center bottom;
+}
+
+/* Specific Adjustment for Caribbean Map */
+.caricom-card .gateway-bg {
+    background-position: center;
+}
+
+.gateway-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.gateway-text-wrap {
+    flex: 1;
+    text-align: left;
+}
+
+.gateway-region-badge {
+    display: inline-block;
+    background: #a49945;
+    /* Olive gold */
+    color: white;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gateway-region-badge.coming-soon {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.gateway-content h3 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.gateway-content p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.gateway-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: var(--color-secondary);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    /* Consistent pill shape */
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.gateway-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gateway-btn.outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.gateway-btn.outline:hover {
+    background: white;
+    color: var(--color-secondary);
+}
+
+@media (max-width: 992px) {
+    .gateway-grid {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gateway-card {
+        height: auto;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .gateway-overlay {
+        background: linear-gradient(to top, rgba(46, 43, 79, 0.95) 0%, rgba(46, 43, 79, 0.4) 100%);
+    }
+
+    .gateway-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .gateway-title {
+        font-size: 2rem;
+    }
+
+    .gateway-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gateway-content p {
+        max-width: 100%;
+    }
+}

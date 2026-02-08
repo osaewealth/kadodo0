@@ -43,7 +43,7 @@ const challenges = [
 const Challenges: React.FC = () => {
     return (
         <Section
-            id="opportunities"
+            id="challenges"
             title="The Challenges We Solve"
             className="challenges-section"
         >

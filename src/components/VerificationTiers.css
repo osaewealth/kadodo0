@@ -1,0 +1,197 @@
+.verification-tiers-section {
+    padding: 60px 40px;
+    background-color: white;
+}
+
+.vt-container-full {
+    width: 100%;
+    max-width: 1200px;
+    /* Aligns with page content borders */
+    margin: 0 auto;
+}
+
+.vt-grid {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 60px;
+    /* Increased gap for better separation */
+}
+
+.vt-separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #555;
+    font-weight: 300;
+    padding: 0 10px;
+    opacity: 0.5;
+}
+
+/* Common Card Styles */
+.vt-card {
+    background: white;
+    border-radius: 24px;
+    padding: 24px 30px;
+    /* Reduced vertical padding */
+    flex: 1;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+    /* Allow content to dictate height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vt-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Tier 1 Specifics */
+.vt-card.tier-1 {
+    border-top: 6px solid #2e2b4f;
+    /* Dark Purple Top Border */
+}
+
+/* Tier 2 Specifics */
+.vt-card.tier-2 {
+    border-top: 6px solid #a49945;
+    /* Gold Top Border */
+}
+
+.vt-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+    /* Reduced margin */
+}
+
+.vt-icon-wrapper {
+    width: 60px;
+    /* Slightly larger icon area */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vt-icon {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.vt-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.vt-tier-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+.vt-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    margin: 0;
+}
+
+.vt-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 16px;
+    /* Reduced margin */
+    flex-grow: 1;
+}
+
+/* Tags Grid */
+.vt-tags-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    /* Wider gap */
+    margin-top: auto;
+    width: 100%;
+}
+
+.vt-tag {
+    background: #ffffff;
+    /* White background per design */
+    border-radius: 8px;
+    /* Slightly less rounded */
+    padding: 14px 10px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-secondary);
+    font-size: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* Pronounced shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+}
+
+/* Tier 2 Specific Grid Layout */
+.tier-2-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.tier-2-grid .vt-tag {
+    flex: 1 1 calc(50% - 16px);
+    /* 2 per row */
+}
+
+.tier-2-grid .proof-tag {
+    flex: 1 1 100%;
+    /* Full width for 3rd item */
+    max-width: 55%;
+    /* Screenshot shows it somewhat isolated but full width looking relative to content */
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.vt-note-box {
+    width: 100%;
+    margin-top: 15px;
+    border: 1px solid #a49945;
+    background-color: #fdfdf5;
+    /* Very light gold bg */
+    color: #8e843b;
+    /* Darker gold text */
+    padding: 16px;
+    font-size: 0.8rem;
+    border-radius: 12px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .vt-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .vt-separator {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+
+    .verification-tiers-section {
+        padding: 40px 20px;
+    }
+}

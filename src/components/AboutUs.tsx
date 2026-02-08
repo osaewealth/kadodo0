@@ -4,6 +4,9 @@ import aboutHero from '../assets/aboutushero.jpg';
 import busIcon from '../assets/newimages/Business.png';
 import indIcon from '../assets/newimages/Individuals.png';
 import partIcon from '../assets/newimages/Partners.png';
+import bridgeIcon from '../assets/newimages/Digital Bridge.png';
+import missionIcon from '../assets/newimages/Mission.png';
+import visionIcon from '../assets/newimages/Vision.png';
 import founderImg from '../assets/founder.jpg';
 import sponsor1 from '../assets/sponsor1.png';
 import sponsor2 from '../assets/sponsor2.png';
@@ -36,11 +39,7 @@ const AboutUs: React.FC = () => {
                         <div className="gap-image-bg" style={{ backgroundImage: `url(${aboutHero})` }}></div>
                         <div className="digital-bridge-card">
                             <div className="bridge-icon-wrap">
-                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 13V17M3 17V21M3 17H21M21 17V13M21 17V21M7 17V13C7 10.2386 9.23858 8 12 8C14.7614 8 17 10.2386 17 13V17" stroke="#2e2b4f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                    <circle cx="12" cy="5" r="2" stroke="#2e2b4f" strokeWidth="2" />
-                                    <path d="M8 8L7 6M16 8L17 6" stroke="#2e2b4f" strokeWidth="2" strokeLinecap="round" />
-                                </svg>
+                                <img src={bridgeIcon} alt="The Digital Bridge" className="bridge-icon-png" />
                             </div>
                             <h3>The Digital Bridge</h3>
                             <span>Connecting Regulators & Market Participants</span>
@@ -55,10 +54,7 @@ const AboutUs: React.FC = () => {
                     {/* Our Mission */}
                     <div className="mv-card mission-dark">
                         <div className="mv-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 15L9 20L12 11M12 8L10 4L4 4L4 15M12 11L15 8M15 8L13 4L20 4L20 12L15 15L12 11M15 15L17 20L21 20" stroke="#a49945" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M12 21V11" stroke="#a49945" strokeWidth="2" strokeLinecap="round" />
-                            </svg>
+                            <img src={missionIcon} alt="Our Mission" className="mv-icon-png" />
                         </div>
                         <h2>Our Mission</h2>
                         <p>To build a decentralized trust infrastructure that authenticates every business and individual in the AfCFTA and Caribbean markets, making cross-border trade seamless, secure, and inclusive.</p>
@@ -67,9 +63,7 @@ const AboutUs: React.FC = () => {
                     {/* Our Vision */}
                     <div className="mv-card vision-light">
                         <div className="mv-icon">
-                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9 18H15M10 21H14M12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12C15 13.6569 13.6569 15 12 15ZM12 15V18M12 21H12.01M17 12H19M5 12H7M12 5V7M15.5355 8.46447L16.9497 7.05025M7.05025 16.9497L8.46447 15.5355M15.5355 15.5355L16.9497 16.9497M7.05025 7.05025L8.46447 8.46447" stroke="#2e2b4f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                            <img src={visionIcon} alt="Our Vision" className="mv-icon-png" />
                         </div>
                         <h2>Our Vision</h2>
                         <p>To become the global standard for identity and trust verification in emerging markets, empowering over 100 million businesses and professionals with a portable digital legacy.</p>

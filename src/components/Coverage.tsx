@@ -1,20 +1,67 @@
-import { MapPin, GraduationCap, ChevronRight } from 'lucide-react';
+import { MapPin, ChevronRight } from 'lucide-react';
 import Button from './Button';
 import './Coverage.css';
 
 // Assets
-import coverageMap from '../assets/coveragehero.png';
-import suitIcon from '../assets/image1573536412633-mflj-200h.png';
-import idIcon from '../assets/humanverificationicon.png';
+import globeCoverage from '../assets/globecoverage.png';
+import eduIcon from '../assets/newimages/Education.png';
+import empIcon from '../assets/newimages/Employment.png';
+import idIcon from '../assets/newimages/ID.png';
+
+import React, { useState, useRef } from 'react';
 
 const Coverage: React.FC = () => {
+    const [rotation, setRotation] = useState({ x: 0, y: 0 });
+    const globeRef = useRef<HTMLDivElement>(null);
+
+    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!globeRef.current) return;
+
+        const rect = globeRef.current.getBoundingClientRect();
+        const x = e.clientX - rect.left; // x position within the element.
+        const y = e.clientY - rect.top;  // y position within the element.
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * -10; // Max rotation 10deg
+        const rotateY = ((x - centerX) / centerX) * 10;
+
+        setRotation({ x: rotateX, y: rotateY });
+    };
+
+    const handleMouseLeave = () => {
+        setRotation({ x: 0, y: 0 });
+    };
+
     return (
         <div className="coverage-page">
             {/* Hero Section */}
-            <section className="coverage-hero">
-                <div className="coverage-hero-bg">
-                    <img src={coverageMap} alt="World Map" className="map-bg" />
-                    <div className="hero-overlay"></div>
+            <section className="coverage-hero" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+                {/* Globe Graphic on Right - positioned absolutely in CSS or as flex item */}
+                <div className="hero-globe-wrapper" ref={globeRef} style={{ perspective: '1000px' }}>
+                    <div
+                        className="globe-3d-container"
+                        style={{
+                            transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+                            transition: 'transform 0.1s ease-out'
+                        }}
+                    >
+                        <img src={globeCoverage} alt="Global Coverage" className="globe-graphic" />
+
+                        {/* Location Pins */}
+                        {/* Ghana Pin - Approx location adjustment needed in CSS */}
+                        <div className="globe-pin pin-ghana" title="Ghana">
+                            <div className="pin-pulse"></div>
+                            <MapPin size={24} className="pin-icon" fill="#a49945" />
+                        </div>
+
+                        {/* Caribbean Pin - Approx location adjustment needed in CSS */}
+                        <div className="globe-pin pin-caribbean" title="Caribbean">
+                            <div className="pin-pulse"></div>
+                            <MapPin size={24} className="pin-icon" fill="#2e2b4f" />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="container coverage-container">
@@ -95,8 +142,7 @@ const Coverage: React.FC = () => {
                         <div className="v-card-premium">
                             <div className="v-card-icon-overlapping edu">
                                 <div className="edu-icon-design">
-                                    <GraduationCap size={40} color="#fff" />
-                                    <div className="mortarboard-tassel"></div>
+                                    <img src={eduIcon} alt="Education" className="edu-img" />
                                 </div>
                             </div>
                             <div className="v-card-premium-content">
@@ -110,7 +156,7 @@ const Coverage: React.FC = () => {
                         <div className="v-card-premium">
                             <div className="v-card-icon-overlapping emp">
                                 <div className="emp-icon-design">
-                                    <img src={suitIcon} alt="Employment" className="suit-img" />
+                                    <img src={empIcon} alt="Employment" className="suit-img" />
                                 </div>
                             </div>
                             <div className="v-card-premium-content">

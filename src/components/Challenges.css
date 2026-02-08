@@ -25,7 +25,7 @@
 
 .card-icon-overlapping {
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
     width: 100px;
@@ -43,7 +43,7 @@
     font-weight: 800;
     margin-bottom: 12px;
     color: var(--color-secondary);
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .block-label {

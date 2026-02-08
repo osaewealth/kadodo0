@@ -36,8 +36,8 @@ const Footer: React.FC = () => {
                     <ul className="footer-links-list">
                         <li><a href={getLink("#home")}>Home</a></li>
                         <li><Link to="/solutions">Solutions</Link></li>
+                        <li><Link to="/kadodo-number">Kadodo Number</Link></li>
                         <li><Link to="/about-us">About Us</Link></li>
-                        <li><Link to="/opportunities">Resources</Link></li>
                     </ul>
                 </div>
 

@@ -7,10 +7,10 @@ import './Contact.css';
 
 
 // Import Assets - adjusted paths to use main assets folder
-import salesIcon from '../assets/image1151528612686-2phq-300h.png';
-import techIcon from '../assets/image864442612686-aouw-200h.png';
-import partnersIcon from '../assets/image1399075712686-bz2e-200h.png';
-import mediaIcon from '../assets/image1402523812686-gwcl-200h.png';
+import salesIcon from '../assets/newimages/Sale.png';
+import techIcon from '../assets/newimages/Technical.png';
+import partnersIcon from '../assets/newimages/Partners.png';
+import mediaIcon from '../assets/newimages/Media.png';
 import worldMap from '../assets/worldmap.png';
 import emailIcon from '../assets/icoutlineemail2686-hy5h.svg';
 import phoneIcon from '../assets/solarphonelinear2686-21c5.svg';
