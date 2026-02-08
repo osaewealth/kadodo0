@@ -7,11 +7,13 @@ import AboutUs from './components/AboutUs';
 import SolutionsPage from './components/SolutionsPage';
 import PagePlaceholder from './components/PagePlaceholder';
 import KadodoNumberPage from './components/KadodoNumberPage';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<LandingPage />} />
