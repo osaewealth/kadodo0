@@ -3,8 +3,10 @@ import './RegionGateway.css';
 import ghanaMap from '../assets/ghanamap.png';
 import caricomMap from '../assets/caribeanmap.png';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const RegionGateway: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <section className="region-gateway-section">
             <div className="container">
@@ -26,7 +28,7 @@ const RegionGateway: React.FC = () => {
                                 <h3>Ghana</h3>
                                 <p>Comprehensive ID verification services for businesses and individuals in Ghana.</p>
                             </div>
-                            <button className="gateway-btn">
+                            <button className="gateway-btn" onClick={() => navigate('/ghana')}>
                                 Visit Ghana <ArrowRight size={18} />
                             </button>
                         </div>

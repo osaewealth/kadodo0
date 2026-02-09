@@ -67,7 +67,9 @@
 
 @media (max-width: 640px) {
     .stats-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        /* Enforce 2x2 on mobile */
+        gap: 24px;
     }
 
     .stat-item::after {

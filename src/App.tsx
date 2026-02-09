@@ -7,6 +7,9 @@ import AboutUs from './components/AboutUs';
 import SolutionsPage from './components/SolutionsPage';
 import PagePlaceholder from './components/PagePlaceholder';
 import KadodoNumberPage from './components/KadodoNumberPage';
+import IndividualVerification from './components/IndividualVerification';
+import Business from './components/Business';
+import Ghana from './components/Ghana';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -18,9 +21,12 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<LandingPage />} />
                     <Route path="solutions" element={<SolutionsPage />} />
+                    <Route path="business" element={<Business />} />
+                    <Route path="individual-verification" element={<IndividualVerification />} />
                     <Route path="coverage" element={<Coverage />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route path="kadodo-number" element={<KadodoNumberPage />} />
+                    <Route path="ghana" element={<Ghana />} />
                     <Route path="contact-us" element={<Contact />} />
                     <Route path="legal" element={<PagePlaceholder title="Legal & Privacy" />} />
                     <Route path="terms" element={<PagePlaceholder title="Terms of Service" />} />
