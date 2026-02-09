@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import Button from './Button';
 import './Navbar.css';
@@ -7,12 +7,13 @@ import logo from '../assets/mainkadodologo.png';
 import { motion } from 'framer-motion';
 
 const Navbar: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [regionOpen, setRegionOpen] = useState(false);
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const regionRef = useRef<HTMLDivElement>(null);
     const location = useLocation();
+    const navigate = useNavigate();
 
     // Close dropdown on outside click
     useEffect(() => {
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
 
     return (
         <motion.nav
-            className={`navbar ${scrolled ? 'scrolled' : ''}`}
+            className={`navbar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'mobile-nav-open' : ''}`}
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -48,22 +49,34 @@ const Navbar: React.FC = () => {
                     <img src={logo} alt="Kadodo Logo" />
                 </Link>
 
-                <button className={`mobile-menu-toggle ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+                <button className={`mobile-menu-toggle ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(!isMenuOpen)}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
 
-                <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-                    <Link to="/" className={isActive('/') ? 'active' : ''} onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link to="/solutions" className={isActive('/solutions') ? 'active' : ''} onClick={() => setIsOpen(false)}>Solutions</Link>
-                    <Link to="/coverage" className={isActive('/coverage') ? 'active' : ''} onClick={() => setIsOpen(false)}>Coverage</Link>
-                    <Link to="/about-us" className={isActive('/about-us') ? 'active' : ''} onClick={() => setIsOpen(false)}>About Us</Link>
-                    <Link to="/contact-us" className={isActive('/contact-us') ? 'active' : ''} onClick={() => setIsOpen(false)}>Contact Us</Link>
+                <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+                    <Link to="/" className={isActive('/') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Home</Link>
+                    <Link to="/solutions" className={isActive('/solutions') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Solutions</Link>
+                    <Link to="/coverage" className={isActive('/coverage') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Coverage</Link>
+                    <Link to="/about-us" className={isActive('/about-us') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>About Us</Link>
+                    <Link to="/contact-us" className={isActive('/contact-us') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
+
+                    {/* Only visible on mobile in the side menu */}
+                    <div className="mobile-only-actions">
+                        <button className="btn-get-started" onClick={() => { navigate('/solutions'); setIsMenuOpen(false); }}>Get Started</button>
+                    </div>
                 </div>
 
                 <div className="nav-actions">
-                    <Button variant="secondary" size="sm" className="btn-get-started">Get Started</Button>
+                    <Button
+                        variant="secondary"
+                        size="sm"
+                        className="btn-get-started"
+                        onClick={() => navigate('/solutions')}
+                    >
+                        Get Started
+                    </Button>
 
                     {/* Region Selector */}
                     <div className="region-selector" ref={regionRef}>
@@ -94,7 +107,7 @@ const Navbar: React.FC = () => {
                         <div className={`region-dropdown ${regionOpen ? 'show' : ''}`}>
                             <div
                                 className="region-option"
-                                onClick={() => { setSelectedRegion('Ghana'); setRegionOpen(false); }}
+                                onClick={() => { setSelectedRegion('Ghana'); setRegionOpen(false); navigate('/ghana'); }}
                             >
                                 <div className="flag-gh-nav">
                                     <div className="flag-gh-red"></div>

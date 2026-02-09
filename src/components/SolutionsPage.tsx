@@ -1,27 +1,22 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Fingerprint, GraduationCap, IdCard, Briefcase } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Solutions.css';
 import handshakeImage from '../assets/solutionpageheropicture.png';
-import individualsImage from '../assets/your professional trust image.jpg';
+import manImage from '../assets/mannnn.png';
 
-// Onboarding Icons
-import verifyBusinessIcon from '../assets/newimages/Verifyy.png';
-import receiveNumberIcon from '../assets/newimages/Recieved.png';
-import activateStoreIcon from '../assets/newimages/Sale.png';
+// Onboarding Icons removed as per latest design update
 
 // Enterprise Process Icons
 import mandateIcon from '../assets/newimages/Processing_1.png';
 import verifyIcon from '../assets/newimages/Verify.png';
 import engageIcon from '../assets/newimages/Partners.png';
 
-// Individual Icons
-import idIcon from '../assets/newimages/ID.png';
-import educationIcon from '../assets/newimages/Education.png';
-import licenseIcon from '../assets/newimages/License.png';
-import employmentIcon from '../assets/newimages/Employment.png';
+// Individual Icons are now Lucide components
 
 const SolutionsHero: React.FC = () => {
+    const navigate = useNavigate();
     const features = [
         "Business & Leadership Profile Check",
         "Business Registration Verification",
@@ -81,7 +76,7 @@ const SolutionsHero: React.FC = () => {
                         </div>
                     </div>
 
-                    <button className="btn-solutions-cta">
+                    <button className="btn-solutions-cta" onClick={() => navigate('/business')}>
                         Start Business Verification <ArrowRight size={20} />
                     </button>
                 </motion.div>
@@ -91,11 +86,12 @@ const SolutionsHero: React.FC = () => {
 };
 
 const IndividualsSection: React.FC = () => {
+    const navigate = useNavigate();
     const features = [
-        { icon: idIcon, title: "Identity Authentication" },
-        { icon: educationIcon, title: "Academic Degree Verification" },
-        { icon: licenseIcon, title: "Professional License Check" },
-        { icon: employmentIcon, title: "Employment History Validation" }
+        { icon: <Fingerprint size={28} />, title: "Identity Authentication" },
+        { icon: <GraduationCap size={28} />, title: "Academic Degree Verification" },
+        { icon: <IdCard size={28} />, title: "Professional License Check" },
+        { icon: <Briefcase size={28} />, title: "Employment History Validation" }
     ];
 
     return (
@@ -118,15 +114,15 @@ const IndividualsSection: React.FC = () => {
                     <div className="individuals-features">
                         {features.map((feature, index) => (
                             <div key={index} className="individual-feature-card">
-                                <div className="feature-icon-box-3d">
-                                    <img src={feature.icon} alt={feature.title} />
+                                <div className="feature-icon-box">
+                                    {feature.icon}
                                 </div>
                                 <span className="feature-title">{feature.title}</span>
                             </div>
                         ))}
                     </div>
 
-                    <button className="btn-individuals-cta">
+                    <button className="btn-individuals-cta" onClick={() => navigate('/individual-verification')}>
                         Get Individually Verified <ArrowRight size={20} />
                     </button>
                 </motion.div>
@@ -139,16 +135,8 @@ const IndividualsSection: React.FC = () => {
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
                     <div className="individuals-image-wrapper">
-                        <div className="image-stack-refined">
-                            <div className="stack-item-v2 item-1">
-                                <img src={individualsImage} alt="Professional Trust" />
-                            </div>
-                            <div className="stack-item-v2 item-2">
-                                <img src={individualsImage} alt="Professional Trust" />
-                            </div>
-                            <div className="stack-item-v2 item-3">
-                                <img src={individualsImage} alt="Professional Trust" />
-                            </div>
+                        <div className="individuals-single-image">
+                            <img src={manImage} alt="Professional Trust" />
                         </div>
                     </div>
                 </motion.div>
@@ -162,23 +150,20 @@ const MarketplaceOnboarding: React.FC = () => {
         {
             number: "1",
             title: "Verify Business",
-            description: "Submit documentation for your chosen verification tier.",
-            color: "#232243",
-            icon: verifyBusinessIcon
+            description: "Submit your legal documents for a comprehensive background and compliance check.",
+            color: "#2b2a4a"
         },
         {
             number: "2",
             title: "Receive Kadodo Number",
             description: "Your unique digital trust ID is issued and verified on-chain.",
-            color: "#a49945",
-            icon: receiveNumberIcon
+            color: "#a49945"
         },
         {
             number: "3",
             title: "Activate Store",
             description: "Instantly sync your status with partner marketplaces and start trading.",
-            color: "#1e293b",
-            icon: activateStoreIcon
+            color: "#1e293b"
         }
     ];
 
@@ -212,9 +197,6 @@ const MarketplaceOnboarding: React.FC = () => {
                                 <div className="step-number" style={{ backgroundColor: step.color }}>
                                     {step.number}
                                 </div>
-                                <div className="step-3d-icon">
-                                    <img src={step.icon} alt={step.title} />
-                                </div>
                             </div>
                             <h3 className="step-title">{step.title}</h3>
                             <p className="step-description">{step.description}</p>
@@ -227,6 +209,7 @@ const MarketplaceOnboarding: React.FC = () => {
 };
 
 const EnterpriseProcess: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <section className="enterprise-section">
             <div className="container enterprise-container">
@@ -300,7 +283,7 @@ const EnterpriseProcess: React.FC = () => {
                 </div>
 
                 <div className="enterprise-cta-wrapper">
-                    <button className="btn-enterprise-cta">
+                    <button className="btn-enterprise-cta" onClick={() => navigate('/contact-us')}>
                         Partner With Us <ArrowRight size={24} />
                     </button>
                 </div>
@@ -310,6 +293,7 @@ const EnterpriseProcess: React.FC = () => {
 };
 
 const SolutionsCTA: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <section className="solutions-cta-section">
             <div className="container">
@@ -324,12 +308,12 @@ const SolutionsCTA: React.FC = () => {
                     <p className="cta-subtitle">Select the verification path that fits our goals today.</p>
 
                     <div className="cta-buttons">
-                        <button className="btn-cta-primary">
+                        <button className="btn-cta-primary" onClick={() => navigate('/business')}>
                             Start Business Verification <ArrowRight size={20} />
                         </button>
-                        <button className="btn-cta-secondary">
+                        <Link to="/individual-verification" className="btn-cta-secondary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                             Start Individual Verification
-                        </button>
+                        </Link>
                     </div>
                 </motion.div>
             </div>

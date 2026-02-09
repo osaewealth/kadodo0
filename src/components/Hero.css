@@ -5,19 +5,19 @@
     position: relative;
 }
 
-.hero-container {
+.hero .hero-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 80px;
 }
 
-.hero-content {
+.hero .hero-content {
     flex: 1.2;
     max-width: 650px;
 }
 
-.hero-badge {
+.hero .hero-badge {
     display: inline-block;
     padding: 8px 20px;
     background-color: #f5f3e7;
@@ -30,7 +30,7 @@
     margin-bottom: 32px;
 }
 
-.hero-content h1 {
+.hero .hero-content h1 {
     font-size: clamp(2.8rem, 6vw, 4.5rem);
     font-weight: 800;
     line-height: 1.1;
@@ -38,11 +38,11 @@
     color: var(--color-secondary);
 }
 
-.text-primary {
+.hero .text-primary {
     color: var(--color-primary);
 }
 
-.hero-content p {
+.hero .hero-content p {
     font-size: 1.2rem;
     color: var(--color-text-muted);
     margin-bottom: 40px;
@@ -50,13 +50,13 @@
     max-width: 580px;
 }
 
-.hero-btns {
+.hero .hero-btns {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
 
-.btn-icon {
+.hero .btn-icon {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -66,25 +66,25 @@
     transition: all 0.3s ease;
 }
 
-.btn-light {
+.hero .btn-light {
     background-color: #f8f9fc;
     border-color: #e2e8f0;
     color: var(--color-secondary);
 }
 
-.btn-icon:hover {
+.hero .btn-icon:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-.hero-graphic {
+.hero .hero-graphic {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-.graphic-outer {
+.hero .graphic-outer {
     background-color: #f8f9fc;
     padding: 60px;
     border-radius: 40px 160px 40px 160px;
@@ -99,7 +99,7 @@
     position: relative;
 }
 
-.graphic-outer::after {
+.hero .graphic-outer::after {
     content: '';
     position: absolute;
     top: -20px;
@@ -110,28 +110,28 @@
     border-radius: 50%;
 }
 
-.graphic-inner {
+.hero .graphic-inner {
     width: 70%;
     z-index: 10;
 }
 
-.graphic-inner img {
+.hero .graphic-inner img {
     width: 100%;
     height: auto;
 }
 
 @media (max-width: 1100px) {
-    .hero-container {
+    .hero .hero-container {
         flex-direction: column;
         text-align: left;
         gap: 60px;
     }
 
-    .hero-content {
+    .hero .hero-content {
         max-width: 100%;
     }
 
-    .hero-graphic {
+    .hero .hero-graphic {
         justify-content: center;
         width: 100%;
     }
@@ -142,18 +142,18 @@
         padding: 40px 0 80px;
     }
 
-    .hero-btns {
+    .hero .hero-btns {
         flex-direction: column;
     }
 
-    .graphic-outer {
+    .hero .graphic-outer {
         border-radius: 30px 100px 30px 100px;
         padding: 40px;
     }
 }
 
 /* Verified Badge Premium */
-.verified-badge-premium {
+.hero .verified-badge-premium {
     position: absolute;
     top: -20px;
     left: -40px;
@@ -167,26 +167,26 @@
     pointer-events: none;
 }
 
-.badge-inner {
+.hero .badge-inner {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.badge-text-bold {
+.hero .badge-text-bold {
     font-weight: 800;
     font-size: 1.15rem;
     color: var(--color-secondary);
 }
 
-.badge-icon-pulsing {
+.hero .badge-icon-pulsing {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.badge-icon-pulsing::after {
+.hero .badge-icon-pulsing::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -209,7 +209,7 @@
     }
 }
 
-.badge-shine-effect {
+.hero .badge-shine-effect {
     position: absolute;
     top: 0;
     left: 0;
@@ -218,7 +218,7 @@
     background: linear-gradient(to right,
             rgba(255, 255, 255, 0) 0%,
             rgba(255, 255, 255, 0.6) 50%,
-            (255, 255, 255, 0) 100%);
+            rgba(255, 255, 255, 0) 100%);
     transform: skewX(-25deg);
     animation: shine 4s ease-in-out infinite;
 }
@@ -235,7 +235,7 @@
 }
 
 @media (max-width: 1024px) {
-    .verified-badge-premium {
+    .hero .verified-badge-premium {
         top: -30px;
         left: 50%;
         transform: translateX(-50%);

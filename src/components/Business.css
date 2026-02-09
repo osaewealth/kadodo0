@@ -1,0 +1,542 @@
+.business-page {
+    color: #1a1a2e;
+    overflow-x: hidden;
+}
+
+/* Section Centering Helper */
+.business-page .section-title-centered {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #1a1a2e;
+}
+
+.business-page .section-subtitle-centered {
+    text-align: center;
+    color: #64748b;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+/* Hero Section */
+.business-page .business-hero {
+    background-color: #2a2754;
+    /* More purple-navy as per screenshot */
+    color: #ffffff;
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.business-page .hero-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.business-page .hero-text {
+    flex: 1.2;
+    max-width: 650px;
+}
+
+.business-page .hero-text h1 {
+    font-size: 4.5rem;
+    font-weight: 850;
+    line-height: 1.1;
+    margin-bottom: 24px;
+}
+
+.business-page .hero-text p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.business-page .btn-hero-select {
+    background-color: #a6994f !important;
+    color: #1a1a2e !important;
+    font-weight: 700 !important;
+    padding: 20px 45px !important;
+    font-size: 1.2rem !important;
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+@media (max-width: 640px) {
+    .business-page .btn-hero-select {
+        width: 100%;
+        padding: 16px 24px !important;
+        font-size: 1rem !important;
+    }
+}
+
+.business-page .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.business-page .orbiting-globe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Value Prop */
+.business-page .value-prop {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.business-page .value-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.business-page .value-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    flex: 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.business-page .value-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.business-page .value-icon-wrapper img {
+    height: 55px;
+    width: auto;
+}
+
+.business-page .value-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.business-page .value-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Section Left Alignment Helper */
+.business-page .section-title-left {
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 850;
+    margin-bottom: 15px;
+    color: #1a1a2e;
+}
+
+.business-page .section-subtitle-left {
+    text-align: left;
+    color: #334155;
+    margin-bottom: 60px;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* Trust Levels Refined */
+.business-page .trust-levels {
+    padding: 100px 0;
+}
+
+.business-page .trust-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.business-page .tiers-list {
+    flex: 1.5;
+    /* Increased flex to elongate width */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Tighter gap */
+}
+
+.business-page .tier-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 35px;
+    /* Reduced vertical padding */
+    background: #ffffff;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* Ensure it fills the space */
+}
+
+.business-page .tier-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: transparent;
+}
+
+.business-page .gold-border::before {
+    background: #d1b15a;
+}
+
+.business-page .dark-tier::before {
+    background: #d1b15a;
+}
+
+.business-page .gold-border h4 {
+    color: #a6994f !important;
+}
+
+.business-page .dark-tier {
+    background: #2a2754;
+    border: none;
+    box-shadow: 0 10px 30px rgba(42, 39, 84, 0.3);
+}
+
+.business-page .tier-icon-img {
+    width: 75px;
+    /* Slightly smaller to keep it compact */
+    height: auto;
+    flex-shrink: 0;
+}
+
+.business-page .tier-info {
+    flex: 1;
+}
+
+.business-page .tier-info h4 {
+    font-size: 1.4rem;
+    /* Slightly smaller font to fit "too big" concern */
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.business-page .text-white {
+    color: #ffffff !important;
+}
+
+.business-page .text-light {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.business-page .tier-info p {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.95rem;
+    /* Slightly smaller for density */
+    line-height: 1.5;
+}
+
+.business-page .trust-visual-container {
+    flex: 1;
+    /* Less flex for image side to give more to cards */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.business-page .visual-bg-container {
+    background-color: #2a2754;
+    padding: 40px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.business-page .trust-main-visual {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0;
+    /* Let the container handle the shape */
+    box-shadow: none;
+    /* Shadow on container instead */
+}
+
+/* Challenges Solve */
+.business-page .challenges-solve {
+    padding: 100px 0;
+    background: #ffffff;
+}
+
+.business-page .challenges-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 60px auto 0;
+}
+
+.business-page .challenge-card {
+    background: #ffffff;
+    padding: 80px 40px 40px;
+    border-radius: 24px;
+    flex: 1;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    position: relative;
+    border: 1px solid #f1f5f9;
+    text-align: left;
+    margin-top: 60px;
+    /* Space for the top-popping icon */
+    display: flex;
+    flex-direction: column;
+}
+
+.business-page .challenge-icon {
+    position: absolute;
+    top: -70px;
+    /* Pop out from the top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.business-page .challenge-card h3 {
+    font-size: 1.85rem;
+    font-weight: 850;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+}
+
+.business-page .challenge-sub {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.business-page .solution-box {
+    margin-top: auto;
+    /* Push to bottom */
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    position: relative;
+    border-left: none;
+    /* Remove previous border */
+}
+
+.business-page .solution-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 4px;
+    background: #d1b15a;
+    /* Default gold */
+    border-radius: 2px;
+}
+
+/* Second card specific solution bar */
+.business-page .challenges-grid .challenge-card:nth-child(2) .solution-box::before {
+    background: #1e1b4b;
+    /* Dark blue for second card */
+}
+
+.business-page .solution-tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* Dual Check */
+.business-page .dual-check {
+    padding: 120px 0;
+    background: #f1f5f9;
+}
+
+.business-page .dual-grid {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.business-page .shield-side {
+    flex: 1;
+    text-align: right;
+}
+
+.business-page .large-shield {
+    max-width: 450px;
+    height: auto;
+}
+
+.business-page .dual-info {
+    flex: 1.2;
+}
+
+.business-page .dual-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.business-page .dual-info p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 24px;
+}
+
+.business-page .check-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.business-page .check-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.business-page .check-icon {
+    color: #10b981;
+}
+
+/* Region Section */
+.business-page .select-region {
+    padding: 100px 0;
+    background: #e2e8f0;
+}
+
+.business-page .region-cards-grid {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.business-page .region-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.business-page .region-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.business-page .region-card p {
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    .business-page .business-hero {
+        padding: 100px 0 60px;
+    }
+
+    .business-page .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .business-page .hero-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .business-page .value-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .business-page .trust-flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .business-page .challenges-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .business-page .dual-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .business-page .value-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 on mobile */
+        gap: 20px;
+    }
+
+    .business-page .challenges-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 on mobile */
+        gap: 60px 20px;
+    }
+
+    .business-page .region-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .business-page .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .business-page .shield-side {
+        text-align: center;
+    }
+
+    .business-page .hero-flex,
+    .business-page .trust-flex,
+    .business-page .dual-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .business-page .large-shield {
+        max-width: 100%;
+    }
+}

@@ -24,9 +24,9 @@ const KadodoNumber: React.FC = () => {
                             </div>
                             <div className="kn-card-container kn-card-business-wrapper">
                                 <img src={cardBusiness} alt="Verified Business Card" className="kn-card" />
-                                <button className="kn-card-btn-overlay">
+                                <Link to="/kadodo-number" className="kn-card-btn-overlay">
                                     Start Now <span>→</span>
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>

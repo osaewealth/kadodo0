@@ -3,7 +3,7 @@
     padding: 100px 0;
 }
 
-.challenges-grid {
+.challenges-section .challenges-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px 24px;
@@ -12,7 +12,7 @@
     padding: 60px 20px 0;
 }
 
-.challenge-card {
+.challenges-section .challenge-card {
     background-color: white;
     padding: 40px 24px 24px;
     border-radius: 20px;
@@ -23,7 +23,7 @@
     min-height: 420px;
 }
 
-.card-icon-overlapping {
+.challenges-section .card-icon-overlapping {
     position: absolute;
     top: -50px;
     left: 50%;
@@ -32,13 +32,13 @@
     height: 100px;
 }
 
-.card-icon-overlapping img {
+.challenges-section .card-icon-overlapping img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-.card-content h3 {
+.challenges-section .card-content h3 {
     font-size: 1.25rem;
     font-weight: 800;
     margin-bottom: 12px;
@@ -46,7 +46,7 @@
     margin-top: 50px;
 }
 
-.block-label {
+.challenges-section .block-label {
     display: block;
     font-size: 0.65rem;
     font-weight: 800;
@@ -56,17 +56,17 @@
     color: #94a3b8;
 }
 
-.challenge-block {
+.challenges-section .challenge-block {
     margin-bottom: 24px;
 }
 
-.challenge-block p {
+.challenges-section .challenge-block p {
     font-size: 0.875rem;
     color: #475569;
     line-height: 1.5;
 }
 
-.solution-block-refined {
+.challenges-section .solution-block-refined {
     background-color: #f8fafc;
     padding: 16px;
     border-left: 4px solid;
@@ -74,7 +74,7 @@
     margin-top: auto;
 }
 
-.solution-block-refined p {
+.challenges-section .solution-block-refined p {
     font-size: 0.875rem;
     color: var(--color-secondary);
     line-height: 1.5;
@@ -82,20 +82,38 @@
 
 /* Responsiveness */
 @media (max-width: 1100px) {
-    .challenges-grid {
+    .challenges-section .challenges-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 80px 32px;
     }
 }
 
 @media (max-width: 640px) {
-    .challenges-grid {
-        grid-template-columns: 1fr;
-        gap: 80px;
+    .challenges-section .challenges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2x2 on mobile */
+        gap: 60px 16px;
+        padding: 60px 16px 0;
     }
 
-    .challenge-card {
-        max-width: 400px;
-        margin: 0 auto;
+    .challenges-section .challenge-card {
+        min-height: auto;
+        padding: 32px 16px 20px;
+    }
+
+    .challenges-section .card-icon-overlapping {
+        width: 70px;
+        height: 70px;
+        top: -35px;
+    }
+
+    .challenges-section .card-content h3 {
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+
+    .challenges-section .challenge-block p,
+    .challenges-section .solution-block-refined p {
+        font-size: 0.75rem;
     }
 }

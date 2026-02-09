@@ -21,19 +21,22 @@ export const VerificationSolutions: React.FC = () => {
             title: "Businesses (SMEs & Informal)",
             desc: "Unlock capital and contracts. Prove your legitimacy to banks and partners with a verified business profile.",
             icon: bizIcon,
-            linkText: "Explore Corporate"
+            linkText: "Explore Corporate",
+            route: "/business"
         },
         {
             title: "Individuals (Professionals)",
             desc: "Your digital trust passport. Authenticate your skills and work history to stand out to employers globally.",
             icon: indIcon,
-            linkText: "Explore Professional"
+            linkText: "Explore Professional",
+            route: "/individual-verification"
         },
         {
             title: "Partners (Investors, Importers, Development Agencies)",
             desc: "De-risk your African strategy. Access a curated pipeline of verified, investment-ready entities. Ideal for European importers and Development Agencies seeking impact transparency.",
             icon: partIcon,
-            linkText: "Explore Institutional"
+            linkText: "Explore Institutional",
+            route: "/solutions"
         }
     ];
 
@@ -55,7 +58,7 @@ export const VerificationSolutions: React.FC = () => {
                         <div className="sol-card-content">
                             <h3>{item.title}</h3>
                             <p>{item.desc}</p>
-                            <Link to="/solutions" className="sol-link">
+                            <Link to={item.route || "/solutions"} className="sol-link">
                                 {item.linkText} <ArrowRight size={18} />
                             </Link>
                         </div>
@@ -72,19 +75,22 @@ export const TrustSolutions: React.FC = () => {
             title: "Business Verification",
             desc: "Progressive verification tiers designed to scale with your business growth and international trade ambitions.",
             icon: trustBizIcon,
-            linkText: "Explore Solutions"
+            linkText: "Explore Solutions",
+            route: "/business"
         },
         {
             title: "Individual Verification",
             desc: "Your digital trust passport. Authenticate your skills and work history to stand out to employers globally.",
             icon: trustIndIcon,
-            linkText: "Explore Professional"
+            linkText: "Explore Professional",
+            route: "/individual-verification"
         },
         {
             title: "Enterprise Solutions",
             desc: "Customized infrastructure for financial institutions, development agencies, and large-scale importers.",
             icon: trustEntIcon,
-            linkText: "Explore Enterprise"
+            linkText: "Explore Enterprise",
+            route: "/solutions"
         }
     ];
 

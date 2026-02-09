@@ -12,8 +12,10 @@ import sponsor1 from '../assets/sponsor1.png';
 import sponsor2 from '../assets/sponsor2.png';
 import sponsor3 from '../assets/sponsor3.png';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AboutUs: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <div className="about-us-page">
             {/* Hero Section */}
@@ -203,10 +205,10 @@ const AboutUs: React.FC = () => {
                         <h2>Join Us in Building the Future</h2>
                         <p>Whether you are a business seeking growth or a partner seeking impact, Kadodo Africa is your gateway to trust.</p>
                         <div className="about-cta-btns">
-                            <button className="btn-primary-gold">
+                            <button className="btn-primary-gold" onClick={() => navigate('/solutions')}>
                                 Get Verified Today <ArrowRight size={20} />
                             </button>
-                            <button className="btn-secondary-outline">
+                            <button className="btn-secondary-outline" onClick={() => navigate('/contact-us')}>
                                 Contact Our Team
                             </button>
                         </div>

@@ -14,35 +14,37 @@
 
 .btn-primary {
     background-color: var(--color-secondary);
-    /* Dark navy */
     color: white;
+    box-shadow: 0 4px 12px rgba(46, 43, 79, 0.15);
 }
 
 .btn-primary:hover {
-    background-color: #3d3a6a;
-    transform: translateY(-1px);
+    background-color: #1e1b4b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(46, 43, 79, 0.25);
 }
 
 .btn-secondary {
     background-color: var(--color-primary);
-    /* Olive/Gold */
     color: white;
+    box-shadow: 0 4px 12px rgba(164, 153, 69, 0.15);
 }
 
 .btn-secondary:hover {
-    background-color: #6d732d;
-    transform: translateY(-1px);
+    background-color: #93893c;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(164, 153, 69, 0.25);
 }
 
 .btn-outline {
     background-color: transparent;
-    border-color: var(--color-border);
-    color: var(--color-text-dark);
+    border-color: #e2e8f0;
+    color: var(--color-secondary);
 }
 
 .btn-outline:hover {
-    border-color: var(--color-text-dark);
-    background-color: rgba(0, 0, 0, 0.02);
+    background-color: #f8fafc;
+    border-color: var(--color-secondary);
 }
 
 /* Sizes */
@@ -59,4 +61,27 @@
 .btn-lg {
     padding: 16px 32px;
     font-size: 1.125rem;
+}
+
+/* Utils */
+.btn-block {
+    width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 640px) {
+    .btn-lg {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+
+    .btn-md {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .mobile-full-width {
+        width: 100% !important;
+        max-width: none !important;
+    }
 }

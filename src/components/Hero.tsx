@@ -1,10 +1,12 @@
 import { ShieldCheck, UserCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import './Hero.css';
 import heroGraphic from '../assets/kadodo-logo.svg';
 
 const Hero: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <section id="home" className="hero">
             <div className="container hero-container">
@@ -13,11 +15,19 @@ const Hero: React.FC = () => {
                     <h1> The Future of <span className="text-primary">African Commerce</span> is Built on Trust</h1>
                     <p>We bridge the trust gap for the $2.5 Trillion AfCFTA market. Kadodo profiles, authenticates, and connects credible businesses and individuals across Africa and the Caribbean.</p>
                     <div className="hero-btns">
-                        <Button variant="secondary" className="btn-icon">
+                        <Button
+                            variant="secondary"
+                            className="btn-icon"
+                            onClick={() => navigate('/business')}
+                        >
                             <ShieldCheck size={20} />
                             Verify My Business
                         </Button>
-                        <Button variant="outline" className="btn-icon btn-light">
+                        <Button
+                            variant="outline"
+                            className="btn-icon btn-light"
+                            onClick={() => navigate('/individual-verification')}
+                        >
                             <UserCheck size={20} />
                             Verify My Profession
                         </Button>

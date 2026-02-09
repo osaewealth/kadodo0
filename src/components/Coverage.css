@@ -743,3 +743,10 @@
         margin-top: 60px;
     }
 }
+
+@media (max-width: 768px) {
+    .expansion-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
