@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +12,8 @@ import protectSellersIcon from '../assets/bankgradeimage.png';
 
 const IndividualVerification: React.FC = () => {
     const navigate = useNavigate();
+    const [showBusiness, setShowBusiness] = useState(false);
+    
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -45,8 +47,18 @@ const IndividualVerification: React.FC = () => {
 
                         <div className="toggle-container">
                             <div className="toggle-outer">
-                                <Link to="/solutions" className="toggle-link">For Businesses</Link>
-                                <button className="toggle-button active">For Individuals</button>
+                                <button 
+                                    className={`toggle-button ${!showBusiness ? 'active' : ''}`}
+                                    onClick={() => setShowBusiness(false)}
+                                >
+                                    For Individuals
+                                </button>
+                                <button 
+                                    className={`toggle-button ${showBusiness ? 'active' : ''}`}
+                                    onClick={() => setShowBusiness(true)}
+                                >
+                                    For Businesses
+                                </button>
                             </div>
                         </div>
                     </motion.div>
@@ -57,89 +69,178 @@ const IndividualVerification: React.FC = () => {
             <section className="pricing-tiers">
                 <div className="container">
                     <div className="tiers-grid">
-                        {/* Basic Plan */}
-                        <motion.div
-                            className="tier-card"
-                            {...fadeInUp}
-                            transition={{ duration: 0.6, delay: 0.1 }}
-                        >
-                            <div className="tier-header">
-                                <span className="tier-label">BASIC</span>
-                                <h2 className="tier-price">GH₵100 <span className="period">/ year</span></h2>
-                            </div>
-                            <ul className="tier-features-list">
-                                <li><CheckCircle2 className="icon-check" /> <span>Personal Biography</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>ID Verification (Ghana Card, Birth Cert, Passport or Naturalisation Cert)</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Education History</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
-                            </ul>
-                            <div className="tier-footer">
-                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=4" target="_blank" rel="noopener noreferrer">
-                                    <button
-                                        className="btn-tier-select"
-                                    >
-                                        Select Basic
-                                    </button>
-                                </a>
-                            </div>
-                        </motion.div>
+                        {showBusiness ? (
+                            <>
+                                {/* Business Basic Plan */}
+                                <motion.div
+                                    className="tier-card"
+                                    {...fadeInUp}
+                                    transition={{ duration: 0.6, delay: 0.1 }}
+                                >
+                                    <div className="tier-header">
+                                        <span className="tier-label">BUSINESS BASIC</span>
+                                        <h2 className="tier-price">GH₵100 <span className="period">/ year</span></h2>
+                                    </div>
+                                    <ul className="tier-features-list">
+                                        <li><CheckCircle2 className="icon-check" /> <span>Business Profile Validation</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Legal Registration Check</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Contact Person Verification</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
+                                    </ul>
+                                    <div className="tier-footer">
+                                        <a href="https://kadodo.com.gh/sign-up/create?price_plan=5" target="_blank" rel="noopener noreferrer">
+                                            <button
+                                                className="btn-tier-select"
+                                            >
+                                                Select Basic
+                                            </button>
+                                        </a>
+                                    </div>
+                                </motion.div>
 
-                        {/* Standard Plan */}
-                        <motion.div
-                            className="tier-card"
-                            {...fadeInUp}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            <div className="tier-header">
-                                <span className="tier-label">STANDARD</span>
-                                <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
-                            </div>
-                            <ul className="tier-features-list">
-                                <li className="highlight-feature"><PlusCircle className="icon-plus" /> <span>Everything in Basic+</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Work History or Work Experience</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Training Certification</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
-                            </ul>
-                            <div className="tier-footer">
-                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=7" target="_blank" rel="noopener noreferrer">
-                                    <button
-                                        className="btn-tier-select dark"
-                                    >
-                                        Select Standard
-                                    </button>
-                                </a>
-                            </div>
-                        </motion.div>
+                                {/* Business Standard Plan */}
+                                <motion.div
+                                    className="tier-card"
+                                    {...fadeInUp}
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                >
+                                    <div className="tier-header">
+                                        <span className="tier-label">BUSINESS STANDARD</span>
+                                        <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
+                                    </div>
+                                    <ul className="tier-features-list">
+                                        <li className="highlight-feature"><PlusCircle className="icon-plus" /> <span>Everything in Basic+</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Tax Compliance Verification</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Social Security & Insurance</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
+                                    </ul>
+                                    <div className="tier-footer">
+                                        <a href="https://kadodo.com.gh/sign-up/create?price_plan=6" target="_blank" rel="noopener noreferrer">
+                                            <button
+                                                className="btn-tier-select dark"
+                                            >
+                                                Select Standard
+                                            </button>
+                                        </a>
+                                    </div>
+                                </motion.div>
 
-                        {/* Premium Plan */}
-                        <motion.div
-                            className="tier-card premium"
-                            {...fadeInUp}
-                            transition={{ duration: 0.6, delay: 0.3 }}
-                        >
-                            <div className="premium-choice-tag">PREMIUM CHOICE</div>
-                            <div className="tier-header">
-                                <span className="tier-label gold-text">PREMIUM</span>
-                                <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
-                            </div>
-                            <ul className="tier-features-list">
-                                <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Standard Plan+</span></li>
-                                <li><CheckCircle2 className="icon-check gold" /> <span>1 Additional Education History</span></li>
-                                <li><CheckCircle2 className="icon-check gold" /> <span>1 Additional Work History</span></li>
-                                <li><CheckCircle2 className="icon-check gold" /> <span>1 Additional Training Certification</span></li>
-                                <li><CheckCircle2 className="icon-check gold" /> <span>Awards and Accolades</span></li>
-                                <li><CheckCircle2 className="icon-check gold" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
-                            </ul>
-                            <div className="tier-footer">
-                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=8" target="_blank" rel="noopener noreferrer">
-                                    <button
-                                        className="btn-tier-select gold-btn"
-                                    >
-                                        Select Premium
-                                    </button>
-                                </a>
-                            </div>
-                        </motion.div>
+                                {/* Business Premium Plan */}
+                                <motion.div
+                                    className="tier-card premium"
+                                    {...fadeInUp}
+                                    transition={{ duration: 0.6, delay: 0.3 }}
+                                >
+                                    <div className="premium-choice-tag">PREMIUM CHOICE</div>
+                                    <div className="tier-header">
+                                        <span className="tier-label gold-text">BUSINESS PREMIUM</span>
+                                        <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
+                                    </div>
+                                    <ul className="tier-features-list">
+                                        <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Standard Plan+</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>Physical Site Inspection</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>Enhanced Due Diligence</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>Priority Support</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
+                                    </ul>
+                                    <div className="tier-footer">
+                                        <a href="https://kadodo.com.gh/sign-up/create?price_plan=9" target="_blank" rel="noopener noreferrer">
+                                            <button
+                                                className="btn-tier-select gold-btn"
+                                            >
+                                                Select Premium
+                                            </button>
+                                        </a>
+                                    </div>
+                                </motion.div>
+                            </>
+                        ) : (
+                            <>
+                                {/* Individual Basic Plan */}
+                                <motion.div
+                                    className="tier-card"
+                                    {...fadeInUp}
+                                    transition={{ duration: 0.6, delay: 0.1 }}
+                                >
+                                    <div className="tier-header">
+                                        <span className="tier-label">INDIVIDUAL BASIC</span>
+                                        <h2 className="tier-price">GH₵100 <span className="period">/ year</span></h2>
+                                    </div>
+                                    <ul className="tier-features-list">
+                                        <li><CheckCircle2 className="icon-check" /> <span>Personal Biography</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>ID Verification (Ghana Card, Birth Certificate, Passport, or Naturalisation Certificate)</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Education History</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
+                                    </ul>
+                                    <div className="tier-footer">
+                                        <a href="https://kadodo.com.gh/sign-up/create?price_plan=4" target="_blank" rel="noopener noreferrer">
+                                            <button
+                                                className="btn-tier-select"
+                                            >
+                                                Select Basic
+                                            </button>
+                                        </a>
+                                    </div>
+                                </motion.div>
+
+                                {/* Individual Standard Plan */}
+                                <motion.div
+                                    className="tier-card"
+                                    {...fadeInUp}
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                >
+                                    <div className="tier-header">
+                                        <span className="tier-label">INDIVIDUAL STANDARD</span>
+                                        <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
+                                    </div>
+                                    <ul className="tier-features-list">
+                                        <li className="highlight-feature"><PlusCircle className="icon-plus" /> <span>Everything in Basic+</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Work History or Work Experience</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Training Certification</span></li>
+                                        <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
+                                    </ul>
+                                    <div className="tier-footer">
+                                        <a href="https://kadodo.com.gh/sign-up/create?price_plan=7" target="_blank" rel="noopener noreferrer">
+                                            <button
+                                                className="btn-tier-select dark"
+                                            >
+                                                Select Standard
+                                            </button>
+                                        </a>
+                                    </div>
+                                </motion.div>
+
+                                {/* Individual Premium Plan */}
+                                <motion.div
+                                    className="tier-card premium"
+                                    {...fadeInUp}
+                                    transition={{ duration: 0.6, delay: 0.3 }}
+                                >
+                                    <div className="premium-choice-tag">PREMIUM CHOICE</div>
+                                    <div className="tier-header">
+                                        <span className="tier-label gold-text">INDIVIDUAL PREMIUM</span>
+                                        <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
+                                    </div>
+                                    <ul className="tier-features-list">
+                                        <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Standard Plan+</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>1 Additional Education History</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>1 Additional Work History</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>1 Additional Training Certification</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>Awards and Accolades</span></li>
+                                        <li><CheckCircle2 className="icon-check gold" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
+                                    </ul>
+                                    <div className="tier-footer">
+                                        <a href="https://kadodo.com.gh/sign-up/create?price_plan=8" target="_blank" rel="noopener noreferrer">
+                                            <button
+                                                className="btn-tier-select gold-btn"
+                                            >
+                                                Select Premium
+                                            </button>
+                                        </a>
+                                    </div>
+                                </motion.div>
+                            </>
+                        )}
                     </div>
                 </div>
             </section>

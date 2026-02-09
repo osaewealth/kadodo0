@@ -104,11 +104,8 @@
     align-items: center;
     justify-content: center;
     min-width: 180px;
-}
-
-.individual-verification .toggle-link {
-    color: #ffffff;
     background: transparent;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .individual-verification .toggle-button.active {
