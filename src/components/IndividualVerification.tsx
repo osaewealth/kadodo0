@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
 import { CheckCircle2, PlusCircle } from 'lucide-react';
 import './IndividualVerification.css';
 
@@ -11,7 +9,6 @@ import consumerConfidenceIcon from '../assets/newimages/Verify.png';
 import protectSellersIcon from '../assets/bankgradeimage.png';
 
 const IndividualVerification: React.FC = () => {
-    const navigate = useNavigate();
     const [showBusiness, setShowBusiness] = useState(false);
     
     useEffect(() => {
