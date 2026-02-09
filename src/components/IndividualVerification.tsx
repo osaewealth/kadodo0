@@ -83,58 +83,6 @@ const IndividualVerification: React.FC = () => {
                                 </a>
                             </div>
                         </motion.div>
-                        
-                        <motion.div
-                            className="tier-card"
-                            {...fadeInUp}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            <div className="tier-header">
-                                <span className="tier-label">STANDARD</span>
-                                <h2 className="tier-price">GH₵200 <span className="period">/ year</span></h2>
-                            </div>
-                            <ul className="tier-features-list">
-                                <li><CheckCircle2 className="icon-check" /> <span>All Basic Features</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Employment History Verification</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Professional License Verification</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Reference Verification</span></li>
-                            </ul>
-                            <div className="tier-footer">
-                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=7" target="_blank" rel="noopener noreferrer">
-                                    <button
-                                        className="btn-tier-select"
-                                    >
-                                        Select Standard
-                                    </button>
-                                </a>
-                            </div>
-                        </motion.div>
-                        
-                        <motion.div
-                            className="tier-card"
-                            {...fadeInUp}
-                            transition={{ duration: 0.6, delay: 0.3 }}
-                        >
-                            <div className="tier-header">
-                                <span className="tier-label">PREMIUM</span>
-                                <h2 className="tier-price">GH₵500 <span className="period">/ year</span></h2>
-                            </div>
-                            <ul className="tier-features-list">
-                                <li><CheckCircle2 className="icon-check" /> <span>All Standard Features</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Enhanced Business Verification</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Priority Support</span></li>
-                                <li><CheckCircle2 className="icon-check" /> <span>Custom Verification Solutions</span></li>
-                            </ul>
-                            <div className="tier-footer">
-                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=8" target="_blank" rel="noopener noreferrer">
-                                    <button
-                                        className="btn-tier-select"
-                                    >
-                                        Select Premium
-                                    </button>
-                                </a>
-                            </div>
-                        </motion.div>
 
                         {/* Standard Plan */}
                         <motion.div
@@ -153,12 +101,13 @@ const IndividualVerification: React.FC = () => {
                                 <li><CheckCircle2 className="icon-check" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
                             </ul>
                             <div className="tier-footer">
-                                <button
-                                    className="btn-tier-select dark"
-                                    onClick={() => navigate('/contact-us')}
-                                >
-                                    Select Standard
-                                </button>
+                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=7" target="_blank" rel="noopener noreferrer">
+                                    <button
+                                        className="btn-tier-select dark"
+                                    >
+                                        Select Standard
+                                    </button>
+                                </a>
                             </div>
                         </motion.div>
 
@@ -182,12 +131,13 @@ const IndividualVerification: React.FC = () => {
                                 <li><CheckCircle2 className="icon-check gold" /> <span>Marketplace Onboarding Verification (Optional)</span></li>
                             </ul>
                             <div className="tier-footer">
-                                <button
-                                    className="btn-tier-select gold-btn"
-                                    onClick={() => navigate('/contact-us')}
-                                >
-                                    Select Premium
-                                </button>
+                                <a href="https://kadodo.com.gh/sign-up/create?price_plan=8" target="_blank" rel="noopener noreferrer">
+                                    <button
+                                        className="btn-tier-select gold-btn"
+                                    >
+                                        Select Premium
+                                    </button>
+                                </a>
                             </div>
                         </motion.div>
                     </div>
