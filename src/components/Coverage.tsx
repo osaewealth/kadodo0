@@ -8,11 +8,17 @@ import eduIcon from '../assets/newimages/Education.png';
 import empIcon from '../assets/newimages/Employment.png';
 import idIcon from '../assets/newimages/ID.png';
 
-import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
 
 const Coverage: React.FC = () => {
+    const navigate = useNavigate();
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const globeRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!globeRef.current) return;
@@ -86,10 +92,10 @@ const Coverage: React.FC = () => {
                         </p>
 
                         <div className="coverage-btns">
-                            <Button variant="secondary" className="btn-get-started">
+                            <Button variant="secondary" className="btn-get-started" onClick={() => navigate('/contact-us')}>
                                 Get Started <ChevronRight size={18} />
                             </Button>
-                            <Button variant="outline" className="btn-view-ids">
+                            <Button variant="outline" className="btn-view-ids" onClick={() => navigate('/ghana')}>
                                 View Ghana IDs
                             </Button>
                         </div>
@@ -139,7 +145,7 @@ const Coverage: React.FC = () => {
                     </div>
 
                     <div className="verification-cards-refined">
-                        <div className="v-card-premium">
+                        <div className="v-card-premium" onClick={() => navigate('/individual-verification')} style={{ cursor: 'pointer' }}>
                             <div className="v-card-icon-overlapping edu">
                                 <div className="edu-icon-design">
                                     <img src={eduIcon} alt="Education" className="edu-img" />
@@ -153,7 +159,7 @@ const Coverage: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="v-card-premium">
+                        <div className="v-card-premium" onClick={() => navigate('/individual-verification')} style={{ cursor: 'pointer' }}>
                             <div className="v-card-icon-overlapping emp">
                                 <div className="emp-icon-design">
                                     <img src={empIcon} alt="Employment" className="suit-img" />
@@ -167,7 +173,7 @@ const Coverage: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="v-card-premium">
+                        <div className="v-card-premium" onClick={() => navigate('/individual-verification')} style={{ cursor: 'pointer' }}>
                             <div className="v-card-icon-overlapping pro">
                                 <div className="pro-icon-design">
                                     <img src={idIcon} alt="Professional" className="id-img" />
@@ -197,7 +203,7 @@ const Coverage: React.FC = () => {
 
                     <div className="expansion-cards-grid">
                         {/* Trinidad & Tobago */}
-                        <div className="expansion-card">
+                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
                             <div className="flag-container">
                                 <div className="flag-tt">
                                     <div className="tt-stripe-white-1"></div>
@@ -214,7 +220,7 @@ const Coverage: React.FC = () => {
                         </div>
 
                         {/* Jamaica */}
-                        <div className="expansion-card">
+                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
                             <div className="flag-container">
                                 <div className="flag-jm">
                                     <div className="jm-tri-green-top"></div>
@@ -232,7 +238,7 @@ const Coverage: React.FC = () => {
                         </div>
 
                         {/* Barbados */}
-                        <div className="expansion-card">
+                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
                             <div className="flag-container">
                                 <div className="flag-bb">
                                     <div className="bb-stripe-blue-left"></div>
@@ -251,7 +257,7 @@ const Coverage: React.FC = () => {
                         </div>
 
                         {/* Guyana */}
-                        <div className="expansion-card">
+                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
                             <div className="flag-container">
                                 <div className="flag-gy">
                                     <div className="gy-white-triangle"></div>
@@ -270,7 +276,7 @@ const Coverage: React.FC = () => {
                     </div>
 
                     <div className="waitlist-footer">
-                        <Button className="btn-join-waitlist" variant="secondary">
+                        <Button className="btn-join-waitlist" variant="secondary" onClick={() => navigate('/contact-us')}>
                             Join Caribbean Waitlist <ChevronRight size={20} />
                         </Button>
                     </div>

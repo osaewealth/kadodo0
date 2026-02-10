@@ -29,14 +29,14 @@ export const VerificationSolutions: React.FC = () => {
             desc: "Your digital trust passport. Authenticate your skills and work history to stand out to employers globally.",
             icon: indIcon,
             linkText: "Explore Professional",
-            route: "/individual-verification"
+            route: "/solution-individual"
         },
         {
             title: "Partners (Investors, Importers, Development Agencies)",
             desc: "De-risk your African strategy. Access a curated pipeline of verified, investment-ready entities. Ideal for European importers and Development Agencies seeking impact transparency.",
             icon: partIcon,
             linkText: "Explore Institutional",
-            route: "/solutions"
+            route: "/solution-partners"
         }
     ];
 
@@ -83,14 +83,14 @@ export const TrustSolutions: React.FC = () => {
             desc: "Your digital trust passport. Authenticate your skills and work history to stand out to employers globally.",
             icon: trustIndIcon,
             linkText: "Explore Professional",
-            route: "/individual-verification"
+            route: "/solution-individual"
         },
         {
             title: "Enterprise Solutions",
             desc: "Customized infrastructure for financial institutions, development agencies, and large-scale importers.",
             icon: trustEntIcon,
             linkText: "Explore Enterprise",
-            route: "/solutions"
+            route: "/solution-partners"
         }
     ];
 

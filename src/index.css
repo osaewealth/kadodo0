@@ -36,10 +36,12 @@ body {
   background-color: var(--color-bg-white);
   line-height: 1.6;
   overflow-x: hidden;
-  transform: scale(0.8);
-  transform-origin: 0 0;
-  width: 125%;
-  height: 125%;
+}
+
+@media (min-width: 1025px) {
+  body {
+    zoom: 0.8;
+  }
 }
 
 h1,

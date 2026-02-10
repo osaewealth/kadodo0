@@ -8,6 +8,8 @@ import SolutionsPage from './components/SolutionsPage';
 import PagePlaceholder from './components/PagePlaceholder';
 import KadodoNumberPage from './components/KadodoNumberPage';
 import IndividualVerification from './components/IndividualVerification';
+import SolutionIndividual from './components/SolutionIndividual';
+import SolutionPartners from './components/SolutionPartners';
 import Business from './components/Business';
 import Ghana from './components/Ghana';
 import ScrollToTop from './components/ScrollToTop';
@@ -21,6 +23,8 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<LandingPage />} />
                     <Route path="solutions" element={<SolutionsPage />} />
+                    <Route path="solution-individual" element={<SolutionIndividual />} />
+                    <Route path="solution-partners" element={<SolutionPartners />} />
                     <Route path="business" element={<Business />} />
                     <Route path="individual-verification" element={<IndividualVerification />} />
                     <Route path="coverage" element={<Coverage />} />
