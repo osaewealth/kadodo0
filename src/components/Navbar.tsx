@@ -62,9 +62,39 @@ const Navbar: React.FC = () => {
                     <Link to="/about-us" className={isActive('/about-us') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>About Us</Link>
                     <Link to="/contact-us" className={isActive('/contact-us') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
 
-                    {/* Only visible on mobile in the side menu */}
+                    {/* Region Selector inside mobile menu */}
+                    <div className="mobile-region-selector">
+                        <p className="mobile-menu-label">Select Region</p>
+                        <div className="mobile-region-options">
+                            <div
+                                className={`mobile-region-option ${selectedRegion === 'Ghana' ? 'active' : ''}`}
+                                onClick={() => { setSelectedRegion('Ghana'); setIsMenuOpen(false); navigate('/ghana'); }}
+                            >
+                                <div className="flag-gh-nav">
+                                    <div className="flag-gh-red"></div>
+                                    <div className="flag-gh-gold"><div className="black-star"></div></div>
+                                    <div className="flag-gh-green"></div>
+                                </div>
+                                <span>Ghana</span>
+                            </div>
+                            <div
+                                className={`mobile-region-option ${selectedRegion === 'Caricom' ? 'active' : ''}`}
+                                onClick={() => { setSelectedRegion('Caricom'); setIsMenuOpen(false); }}
+                            >
+                                <div className="flag-caricom-nav">
+                                    <div className="flag-cc-top"></div>
+                                    <div className="flag-cc-bottom"></div>
+                                    <div className="flag-cc-circle"></div>
+                                </div>
+                                <span>Caricom</span>
+                            </div>
+                        </div>
+                    </div>
+
                     <div className="mobile-only-actions">
-                        <button className="btn-get-started" onClick={() => { navigate('/solutions'); setIsMenuOpen(false); }}>Get Started</button>
+                        <Button variant="secondary" className="btn-get-started-mobile" onClick={() => { navigate('/solutions'); setIsMenuOpen(false); }}>
+                            Get Started
+                        </Button>
                     </div>
                 </div>
 
@@ -78,7 +108,7 @@ const Navbar: React.FC = () => {
                         Get Started
                     </Button>
 
-                    {/* Region Selector */}
+                    {/* Region Selector (Desktop) */}
                     <div className="region-selector" ref={regionRef}>
                         <button
                             className={`region-btn ${regionOpen ? 'open' : ''} ${selectedRegion ? 'selected' : ''}`}

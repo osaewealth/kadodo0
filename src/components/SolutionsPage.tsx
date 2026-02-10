@@ -13,7 +13,33 @@ import mandateIcon from '../assets/newimages/Processing_1.png';
 import verifyIcon from '../assets/newimages/Verify.png';
 import engageIcon from '../assets/newimages/Partners.png';
 
+import trustBg from '../assets/trust.jpg';
+
 // Individual Icons are now Lucide components
+
+const SolutionsMainHero: React.FC = () => {
+    return (
+        <section className="solutions-main-hero" style={{
+            backgroundImage: `linear-gradient(rgba(104, 101, 140, 0.2), rgba(104, 101, 140, 0.2)), linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${trustBg})`
+        }}>
+            <div className="container">
+                <motion.div
+                    className="solutions-main-hero-content"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <h1 className="main-hero-title">Trust Solutions for Every <br /> Economic Actor</h1>
+                    <p className="main-hero-subtitle">
+                        Our Trust-as-a-Service platform provides the critical verification
+                        infrastructure needed to unlock growth and security across the AfCFTA
+                        and Caribbean economies.
+                    </p>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
 
 const SolutionsHero: React.FC = () => {
     const navigate = useNavigate();
@@ -328,6 +354,7 @@ const SolutionsPage: React.FC = () => {
 
     return (
         <div className="solutions-page">
+            <SolutionsMainHero />
             <SolutionsHero />
             <IndividualsSection />
             <MarketplaceOnboarding />

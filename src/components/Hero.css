@@ -156,15 +156,16 @@
 .hero .verified-badge-premium {
     position: absolute;
     top: -20px;
-    left: -40px;
+    left: -20px;
     background: white;
-    padding: 16px 30px;
+    padding: 12px 24px;
     border-radius: 16px;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     z-index: 100;
     border: 1px solid rgba(0, 0, 0, 0.05);
     overflow: hidden;
     pointer-events: none;
+    max-width: calc(100% - 40px);
 }
 
 .hero .badge-inner {

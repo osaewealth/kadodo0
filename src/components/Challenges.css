@@ -90,10 +90,10 @@
 
 @media (max-width: 640px) {
     .challenges-section .challenges-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2x2 on mobile */
-        gap: 60px 16px;
-        padding: 60px 16px 0;
+        grid-template-columns: 1fr;
+        /* Stay 1-up on mobile for better fit */
+        gap: 60px 24px;
+        padding: 60px 24px 0;
     }
 
     .challenges-section .challenge-card {

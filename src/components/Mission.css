@@ -26,12 +26,11 @@
 }
 
 .mission-main-img {
-    width: 120%;
-    /* Slightly scaled for better fit on white */
+    width: 100%;
     height: auto;
-    max-width: none;
-    margin-left: -10%;
+    max-width: 100%;
     display: block;
+    border-radius: 30px;
 }
 
 .mission-content-new {

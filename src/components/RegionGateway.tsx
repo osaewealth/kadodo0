@@ -25,8 +25,8 @@ const RegionGateway: React.FC = () => {
                         <div className="gateway-content">
                             <div className="gateway-text-wrap">
                                 <div className="gateway-region-badge">Active</div>
-                                <h3>Ghana</h3>
-                                <p>Comprehensive ID verification services for businesses and individuals in Ghana.</p>
+                                <h3>Kadodo Ghana</h3>
+                                <p>The leading gateway for West African trade and business verification services.</p>
                             </div>
                             <button className="gateway-btn" onClick={() => navigate('/ghana')}>
                                 Visit Ghana <ArrowRight size={18} />
@@ -41,8 +41,8 @@ const RegionGateway: React.FC = () => {
                         <div className="gateway-content">
                             <div className="gateway-text-wrap">
                                 <div className="gateway-region-badge coming-soon">Coming Soon</div>
-                                <h3>Caricom</h3>
-                                <p>Expanding our trust network to the Caribbean community. Join the waitlist.</p>
+                                <h3>CARICOM</h3>
+                                <p>Unlocking trade between the Caribbean region and the African continent.</p>
                             </div>
                             <button className="gateway-btn outline">
                                 Learn More <ChevronRight size={18} />

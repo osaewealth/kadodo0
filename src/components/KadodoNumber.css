@@ -171,6 +171,10 @@
     transition: all 0.3s ease;
 }
 
+.kn-content a {
+    text-decoration: none;
+}
+
 .btn-primary-muted-gold-lg:hover {
     opacity: 0.9;
     transform: translateY(-2px);
@@ -237,7 +241,8 @@
 
     .kn-card-business-wrapper {
         top: 80px;
-        left: 30px;
+        left: 50%;
+        transform: translateX(-40%);
     }
 
     .kn-title {

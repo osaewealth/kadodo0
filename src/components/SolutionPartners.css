@@ -18,8 +18,7 @@
 .partners-hero .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px 0 150px;
-    /* Moves text right to align with brand */
+    padding: 0 40px;
     width: 100%;
 }
 
@@ -487,6 +486,30 @@
     .partners-hero {
         height: auto;
         padding: 120px 0 80px;
+    }
+
+    .partners-hero .container {
+        padding: 0 24px;
+    }
+
+    .institutional-block {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 24px;
+        text-align: center;
+    }
+
+    .institutional-block.reverse {
+        flex-direction: column;
+    }
+
+    .block-description {
+        margin: 0 auto 32px;
+    }
+
+    .partners-hero-content {
+        text-align: center;
+        max-width: 100%;
     }
 
     .partners-hero-content h1 {
