@@ -1,19 +1,20 @@
-import { MapPin, ChevronRight } from 'lucide-react';
+import { MapPin, ChevronRight, ArrowRight } from 'lucide-react';
 import Button from './Button';
 import './Coverage.css';
 
 // Assets
 import globeCoverage from '../assets/globecoverage.png';
-import eduIcon from '../assets/newimages/Education.png';
-import empIcon from '../assets/newimages/Employment.png';
-import idIcon from '../assets/newimages/ID.png';
+import businessIcon from '../assets/newimages/Business.png';
+import individualsIcon from '../assets/newimages/Individuals.png';
 
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
+import Flag from './Flag';
 
 const Coverage: React.FC = () => {
     const navigate = useNavigate();
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
+    const [showLiveFeed, setShowLiveFeed] = useState(false);
     const globeRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -57,7 +58,12 @@ const Coverage: React.FC = () => {
 
                         {/* Location Pins */}
                         {/* Ghana Pin - Approx location adjustment needed in CSS */}
-                        <div className="globe-pin pin-ghana" title="Ghana">
+                        <div
+                            className="globe-pin pin-ghana"
+                            title="Ghana"
+                            onClick={() => setShowLiveFeed(!showLiveFeed)}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <div className="pin-pulse"></div>
                             <MapPin size={24} className="pin-icon" fill="#a49945" />
                         </div>
@@ -67,6 +73,56 @@ const Coverage: React.FC = () => {
                             <div className="pin-pulse"></div>
                             <MapPin size={24} className="pin-icon" fill="#2e2b4f" />
                         </div>
+
+                        {/* Live Verification Feed Popup */}
+                        {showLiveFeed && (
+                            <div className="live-feed-popup">
+                                <div className="live-feed-header">
+                                    <h3>LIVE VERIFICATION FEED</h3>
+                                    <div className="live-indicator">
+                                        <span className="live-dot"></span>
+                                        <span className="live-text">LIVE</span>
+                                    </div>
+                                </div>
+                                <div className="live-feed-list">
+                                    <div className="feed-item">
+                                        <Flag country="ghana" className="feed-flag" />
+                                        <div className="feed-content">
+                                            <div className="feed-title">Business Verified: Accra, Ghana</div>
+                                            <div className="feed-time">2m ago</div>
+                                        </div>
+                                    </div>
+                                    <div className="feed-item">
+                                        <Flag country="ghana" className="feed-flag" />
+                                        <div className="feed-content">
+                                            <div className="feed-title">ID Authentication: Kumasi, Ghana</div>
+                                            <div className="feed-time">5m ago</div>
+                                        </div>
+                                    </div>
+                                    <div className="feed-item">
+                                        <Flag country="barbados" className="feed-flag" />
+                                        <div className="feed-content">
+                                            <div className="feed-title">UBO Check: Bridgetown, Barbados</div>
+                                            <div className="feed-time">8m ago</div>
+                                        </div>
+                                    </div>
+                                    <div className="feed-item">
+                                        <Flag country="jamaica" className="feed-flag" />
+                                        <div className="feed-content">
+                                            <div className="feed-title">License Verified: Kingston, Jamaica</div>
+                                            <div className="feed-time">16m ago</div>
+                                        </div>
+                                    </div>
+                                    <div className="feed-item">
+                                        <Flag country="ghana" className="feed-flag" />
+                                        <div className="feed-content">
+                                            <div className="feed-title">Physical Audit: Tamale, Ghana</div>
+                                            <div className="feed-time">24m ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -126,66 +182,77 @@ const Coverage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Ghana ID Verification Section */}
-            <section className="ghana-verification">
+            {/* Ghana Verification Section - Redesigned */}
+            <section className="ghana-verification-redesigned">
                 <div className="container">
-                    <div className="section-header-wrap">
-                        <div className="status-label-top">
-                            <div className="flag-gh-large">
-                                <div className="flag-gh-red"></div>
-                                <div className="flag-gh-gold">
-                                    <div className="black-star"></div>
-                                </div>
-                                <div className="flag-gh-green"></div>
-                            </div>
-                            <span className="badge-active-olive">Active</span>
+                    <div className="ghana-section-header">
+                        <h2 className="ghana-title">Active Region: Ghana</h2>
+                        <div className="ghana-flag-large">
+                            <Flag country="ghana" className="flag-svg-large" />
                         </div>
-                        <h2 className="section-title-large">Ghana ID Verification</h2>
-                        <p className="section-subtitle-large">Comprehensive identity verification for all major Ghanaian documents. Fast, secure, and compliant.</p>
                     </div>
 
-                    <div className="verification-cards-refined">
-                        <div className="v-card-premium" onClick={() => navigate('/individual-verification')} style={{ cursor: 'pointer' }}>
-                            <div className="v-card-icon-overlapping edu">
-                                <div className="edu-icon-design">
-                                    <img src={eduIcon} alt="Education" className="edu-img" />
-                                </div>
+                    <div className="ghana-scope-grid">
+                        {/* Business Verification Scope */}
+                        <div className="scope-card business-scope">
+                            <div className="scope-icon-container">
+                                <img src={businessIcon} alt="Business Scope" className="scope-image" />
                             </div>
-                            <div className="v-card-premium-content">
-                                <h3>Educational Credentials</h3>
-                                <p>Verify degrees, certifications, and academic achievements</p>
-                                <div className="v-card-spacer"></div>
-                                <span className="v-card-eg">Eg: Student ID</span>
-                            </div>
+                            <h3>Business Verification Scope</h3>
+                            <ul className="scope-list">
+                                <li>
+                                    <div className="check-circle"><div className="check-mark"></div></div>
+                                    <div className="scope-text">
+                                        <strong>Comprehensive Profile Check</strong>
+                                        <span>Full analysis of business and leadership structures</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="check-circle"><div className="check-mark"></div></div>
+                                    <div className="scope-text">
+                                        <strong>SSNIT (Social Security)</strong>
+                                        <span>Employer contribution and registration status</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="check-circle"><div className="check-mark"></div></div>
+                                    <div className="scope-text">
+                                        <strong>GRA (Tax Compliance)</strong>
+                                        <span>Direct integration with Ghana Revenue Authority</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div className="v-card-premium" onClick={() => navigate('/individual-verification')} style={{ cursor: 'pointer' }}>
-                            <div className="v-card-icon-overlapping emp">
-                                <div className="emp-icon-design">
-                                    <img src={empIcon} alt="Employment" className="suit-img" />
-                                </div>
+                        {/* Individual & Marketplace Scope */}
+                        <div className="scope-card individual-scope">
+                            <div className="scope-icon-container">
+                                <img src={individualsIcon} alt="Individual Scope" className="scope-image" />
                             </div>
-                            <div className="v-card-premium-content">
-                                <h3>Employment History</h3>
-                                <p>Validate professional experience and career progression</p>
-                                <div className="v-card-spacer"></div>
-                                <span className="v-card-eg">Eg: SSNIT</span>
-                            </div>
+                            <h3>Individual & Marketplace Scope</h3>
+                            <ul className="scope-list">
+                                <li>
+                                    <div className="check-circle"><div className="check-mark"></div></div>
+                                    <div className="scope-text">
+                                        <strong>Biometric ID Verification</strong>
+                                        <span>Ghana Card and passport authentication</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className="check-circle"><div className="check-mark"></div></div>
+                                    <div className="scope-text">
+                                        <strong>Verified Work History</strong>
+                                        <span>Past employment and reference validation</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div className="v-card-premium" onClick={() => navigate('/individual-verification')} style={{ cursor: 'pointer' }}>
-                            <div className="v-card-icon-overlapping pro">
-                                <div className="pro-icon-design">
-                                    <img src={idIcon} alt="Professional" className="id-img" />
-                                </div>
-                            </div>
-                            <div className="v-card-premium-content">
-                                <h3>Professional Licenses</h3>
-                                <p>Confirm regulatory and professional certifications</p>
-                                <div className="v-card-spacer"></div>
-                                <span className="v-card-eg">Eg: Driver's License</span>
-                            </div>
-                        </div>
+                    <div className="ghana-cta-container">
+                        <Button className="btn-start-ghana" onClick={() => navigate('/ghana')}>
+                            Start Verification in Ghana <ArrowRight size={20} />
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -197,88 +264,58 @@ const Coverage: React.FC = () => {
                         <div className="coming-soon-badge">
                             Coming Soon
                         </div>
-                        <h2 className="section-title-large">Caribbean Expansion</h2>
-                        <p className="section-subtitle-large">We're bringing the same trusted identity verification to the Caribbean. Join our waitlist to get early access.</p>
+                        <h2 className="section-title-large">Contact Kadodo Africa</h2>
+                        <p className="section-subtitle-large">Expansion: The Caribbean (CARICOM)</p>
                     </div>
 
-                    <div className="expansion-cards-grid">
-                        {/* Trinidad & Tobago */}
-                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
-                            <div className="flag-container">
-                                <div className="flag-tt">
-                                    <div className="tt-stripe-white-1"></div>
-                                    <div className="tt-stripe-black"></div>
-                                    <div className="tt-stripe-white-2"></div>
+                    <div className="expansion-cards-grid-new">
+                        {[
+                            { name: 'Antigua & Barbuda', id: 'antigua' },
+                            { name: 'Barbados', id: 'barbados' },
+                            { name: 'Belize', id: 'belize' },
+                            { name: 'Bahamas', id: 'bahamas' },
+                            { name: 'Dominica', id: 'dominica' },
+                            { name: 'Dominican Republic', id: 'dominicanrepublic' },
+                            { name: 'Grenada', id: 'grenada' },
+                            { name: 'Guyana', id: 'guyana' },
+                            { name: 'Haiti', id: 'haiti' },
+                            { name: 'Jamaica', id: 'jamaica' },
+                            { name: 'St. Kitts', id: 'stkitts' },
+                            { name: 'St. Lucia', id: 'stlucia' },
+                            { name: 'St. Vincent', id: 'stvincent' },
+                            { name: 'Suriname', id: 'suriname' },
+                            { name: 'Trinidad & Tobago', id: 'trinidad' }
+                        ].map((country) => (
+                            <div key={country.id} className="expansion-card-new" onClick={() => navigate('/contact-us')}>
+                                <div className="flag-wrapper-new">
+                                    <Flag country={country.id} className="flag-svg-new" />
                                 </div>
+                                <span className="country-name-new">{country.name}</span>
                             </div>
-                            <div className="expansion-card-content">
-                                <div className="card-info-left">
-                                    <h3>Trinidad & Tobago</h3>
-                                    <span>5 ID Types</span>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
 
-                        {/* Jamaica */}
-                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
-                            <div className="flag-container">
-                                <div className="flag-jm">
-                                    <div className="jm-tri-green-top"></div>
-                                    <div className="jm-tri-green-bottom"></div>
-                                    <div className="jm-tri-black-left"></div>
-                                    <div className="jm-tri-black-right"></div>
-                                </div>
-                            </div>
-                            <div className="expansion-card-content">
-                                <div className="card-info-left">
-                                    <h3>Jamaica</h3>
-                                    <span>4 ID Types</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Barbados */}
-                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
-                            <div className="flag-container">
-                                <div className="flag-bb">
-                                    <div className="bb-stripe-blue-left"></div>
-                                    <div className="bb-stripe-yellow">
-                                        <div className="bb-trident"></div>
-                                    </div>
-                                    <div className="bb-stripe-blue-right"></div>
-                                </div>
-                            </div>
-                            <div className="expansion-card-content">
-                                <div className="card-info-left">
-                                    <h3>Barbados</h3>
-                                    <span>3 ID Types</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Guyana */}
-                        <div className="expansion-card" onClick={() => navigate('/contact-us')} style={{ cursor: 'pointer' }}>
-                            <div className="flag-container">
-                                <div className="flag-gy">
-                                    <div className="gy-white-triangle"></div>
-                                    <div className="gy-yellow-triangle"></div>
-                                    <div className="gy-black-triangle"></div>
-                                    <div className="gy-red-triangle"></div>
-                                </div>
-                            </div>
-                            <div className="expansion-card-content">
-                                <div className="card-info-left">
-                                    <h3>Guyana</h3>
-                                    <span>4 ID Types</span>
-                                </div>
-                            </div>
+                        {/* More Coming Soon Card */}
+                        <div className="expansion-card-new coming-soon-card">
+                            <span className="country-name-new muted">More countries coming soon.</span>
                         </div>
                     </div>
+                </div>
+            </section>
 
-                    <div className="waitlist-footer">
-                        <Button className="btn-join-waitlist" variant="secondary" onClick={() => navigate('/contact-us')}>
-                            Join Caribbean Waitlist <ChevronRight size={20} />
-                        </Button>
+            {/* Global CTA Section */}
+            <section className="global-cta-section">
+                <div className="container">
+                    <div className="global-cta-card">
+                        <h2>Ready to go Global?</h2>
+                        <p>Join the network of verified businesses and individuals pioneering cross-border trade between Africa and the Caribbean.</p>
+                        <div className="global-cta-btns">
+                            <Button className="btn-global-verified" onClick={() => navigate('/contact-us')}>
+                                Get Verified
+                            </Button>
+                            <Button className="btn-global-sales" onClick={() => navigate('/contact-us')}>
+                                Contact Sales
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
