@@ -43,7 +43,7 @@ const KadodoNumber: React.FC = () => {
                                     <span className="check-mark">✔</span>
                                 </div>
                                 <div className="check-text">
-                                    <p className="check-title">Identity Verification</p>
+                                    <p className="check-title">Individual Identity</p>
                                     <p className="check-desc">Government-level KYC and individual background checks.</p>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@ const KadodoNumber: React.FC = () => {
                                     <span className="check-mark">✔</span>
                                 </div>
                                 <div className="check-text">
-                                    <p className="check-title">Entity Authentication</p>
+                                    <p className="check-title">Business Authentication</p>
                                     <p className="check-desc">Full validation of business registration and legal standing.</p>
                                 </div>
                             </div>

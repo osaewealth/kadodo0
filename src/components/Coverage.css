@@ -659,7 +659,7 @@
     color: #2e2b4f !important;
     font-weight: 700 !important;
     padding: 16px 40px !important;
-    border-radius: 12px !important;
+    border-radius: 100px !important;
     font-size: 1.1rem !important;
     box-shadow: 0 4px 12px rgba(164, 153, 69, 0.3);
     border: none !important;
@@ -676,7 +676,7 @@
     color: #2e2b4f !important;
     font-weight: 700 !important;
     padding: 16px 40px !important;
-    border-radius: 12px !important;
+    border-radius: 100px !important;
     font-size: 1.1rem !important;
     border: 1px solid #cbd5e1 !important;
 }

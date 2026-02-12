@@ -61,7 +61,7 @@
     align-items: center;
     gap: 10px;
     padding: 16px 32px !important;
-    border-radius: 16px !important;
+    border-radius: 50px !important;
     font-weight: 700 !important;
     transition: all 0.3s ease;
 }

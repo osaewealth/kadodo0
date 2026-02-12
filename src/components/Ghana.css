@@ -398,10 +398,11 @@
 .ghana-page .gh-btn-marketplace {
     background: #a6994f !important;
     color: #ffffff !important;
-    font-weight: 850 !important;
-    padding: 22px 55px !important;
-    border-radius: 12px !important;
-    font-size: 1.15rem !important;
+    font-weight: 800 !important;
+    padding: 18px 35px !important;
+    border-radius: 100px !important;
+    font-size: 0.95rem !important;
+    text-transform: uppercase;
     box-shadow: 0 15px 35px rgba(166, 153, 79, 0.35);
     border: none !important;
 }
@@ -487,10 +488,11 @@
 .ghana-page .gh-btn-informal {
     background: #a6994f !important;
     color: #1e1b4b !important;
-    font-weight: 900 !important;
-    padding: 22px 60px !important;
-    border-radius: 12px !important;
-    font-size: 1.2rem !important;
+    font-weight: 800 !important;
+    padding: 18px 35px !important;
+    border-radius: 100px !important;
+    font-size: 0.95rem !important;
+    text-transform: uppercase;
     border: none !important;
     box-shadow: 0 15px 35px rgba(166, 153, 79, 0.25);
 }

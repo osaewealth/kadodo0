@@ -12,6 +12,7 @@ import SolutionIndividual from './components/SolutionIndividual';
 import SolutionPartners from './components/SolutionPartners';
 import Business from './components/Business';
 import Ghana from './components/Ghana';
+import TermsOfService from './components/TermsOfService';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -33,7 +34,7 @@ function App() {
                     <Route path="ghana" element={<Ghana />} />
                     <Route path="contact-us" element={<Contact />} />
                     <Route path="legal" element={<PagePlaceholder title="Legal & Privacy" />} />
-                    <Route path="terms" element={<PagePlaceholder title="Terms of Service" />} />
+                    <Route path="terms" element={<TermsOfService />} />
                     <Route path="careers" element={<PagePlaceholder title="Careers" />} />
                 </Route>
             </Routes>

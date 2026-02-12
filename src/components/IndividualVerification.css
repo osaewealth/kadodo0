@@ -258,7 +258,7 @@
 .individual-verification .btn-tier-select {
     width: 100%;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 100px;
     font-size: 1.1rem;
     font-weight: 800;
     cursor: pointer;

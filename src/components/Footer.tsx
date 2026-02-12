@@ -1,16 +1,10 @@
 import React from 'react';
 import { Mail, Share2 } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../assets/kadodologofooter.png';
 
 const Footer: React.FC = () => {
-    const location = useLocation();
-
-    const getLink = (hash: string) => {
-        return location.pathname === '/' ? hash : `/${hash}`;
-    };
-
     return (
         <footer id="contact-us" className="footer-refined">
             <div className="container footer-content-grid">
@@ -30,17 +24,22 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
 
-                {/* Navigation Column */}
+                {/* Solutions Column */}
                 <div className="footer-nav-col">
-                    <h4>NAVIGATION</h4>
+                    <h4>SOLUTIONS</h4>
                     <ul className="footer-links-list">
-                        <li><a href={getLink("#home")}>Home</a></li>
-                        <li><Link to="/solutions">Solutions</Link></li>
                         <li><Link to="/business">Business Verification</Link></li>
                         <li><Link to="/individual-verification">Individual Verification</Link></li>
+                        <li><Link to="/solution-partners">Partner Solutions</Link></li>
+                    </ul>
+                </div>
+
+                {/* Coverage Column */}
+                <div className="footer-nav-col">
+                    <h4>COVERAGE</h4>
+                    <ul className="footer-links-list">
                         <li><Link to="/ghana">Ghana Gateway</Link></li>
                         <li><Link to="/kadodo-number">Kadodo Number</Link></li>
-                        <li><Link to="/about-us">About Us</Link></li>
                     </ul>
                 </div>
 
@@ -48,10 +47,11 @@ const Footer: React.FC = () => {
                 <div className="footer-nav-col">
                     <h4>COMPANY</h4>
                     <ul className="footer-links-list">
+                        <li><Link to="/about-us">About Us</Link></li>
+                        <li><Link to="/contact-us">Contact Us</Link></li>
+                        <li><Link to="/careers">Careers</Link></li>
                         <li><Link to="/legal">Legal & Privacy</Link></li>
                         <li><Link to="/terms">Terms of Service</Link></li>
-                        <li><Link to="/contact-us">Contact</Link></li>
-                        <li><Link to="/careers">Careers</Link></li>
                     </ul>
                 </div>
             </div>

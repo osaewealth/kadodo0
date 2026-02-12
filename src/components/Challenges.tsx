@@ -34,7 +34,7 @@ const challenges = [
     {
         title: "High Cost of Compliance",
         challenge: "Manual due diligence is slow, expensive, and prone to error.",
-        solution: "Our API and dual-check system reduce verification time from weeks to minutes.",
+        solution: "Our digital-first approach accelerates verification from months to days, while our field teams ensure thorough due diligence where data is missing.",
         icon: costIcon,
         color: "yellow"
     }

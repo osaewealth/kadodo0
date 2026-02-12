@@ -71,7 +71,7 @@ const Ghana: React.FC = () => {
                                 className="btn-gh-primary"
                                 onClick={() => navigate('/business')}
                             >
-                                VERIFY BUSINESS (ORC/ GRA)
+                                VERIFY BUSINESS
                             </Button>
                             <Button
                                 variant="outline"
@@ -79,7 +79,7 @@ const Ghana: React.FC = () => {
                                 className="btn-gh-outline"
                                 onClick={() => navigate('/individual-verification')}
                             >
-                                VERIFY INDIVIDUAL (GHANA CARD)
+                                VERIFY INDIVIDUAL
                             </Button>
                         </motion.div>
                     </div>

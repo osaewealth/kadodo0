@@ -50,7 +50,7 @@
   background-color: #a49945;
   color: #1a153d;
   padding: 16px 40px;
-  border-radius: 8px;
+  border-radius: 100px;
   font-weight: 700;
   font-size: 1.1rem;
   border: none;
@@ -293,7 +293,7 @@
   background-color: #1a153d;
   color: #ffffff;
   padding: 14px 40px;
-  border-radius: 10px;
+  border-radius: 100px;
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -311,7 +311,7 @@
   border: 1px solid #cbd5e1;
   color: #1a153d;
   padding: 14px 40px;
-  border-radius: 10px;
+  border-radius: 100px;
   font-weight: 500;
   cursor: pointer;
   width: 100%;
@@ -355,7 +355,7 @@
   background-color: #a49945;
   color: #ffffff;
   padding: 20px 50px;
-  border-radius: 12px;
+  border-radius: 100px;
   font-weight: 700;
   font-size: 1.1rem;
   border: none;

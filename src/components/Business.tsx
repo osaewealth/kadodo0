@@ -146,7 +146,7 @@ const Business: React.FC = () => {
             {/* Challenges We Solve */}
             <section className="challenges-solve">
                 <div className="container">
-                    <h2 className="section-title-centered">The Challenges We Solve</h2>
+                    <h2 className="section-title-centered">Barriers to Global Trade</h2>
                     <div className="challenges-grid">
                         <div className="challenge-card">
                             <img src={cashIcon} alt="Financial Exclusion" className="challenge-icon" />

@@ -145,7 +145,7 @@
     background-color: #2b2a4a;
     color: white;
     padding: 16px 36px;
-    border-radius: 14px;
+    border-radius: 100px;
     border: none;
     font-weight: 800;
     font-size: 1.1rem;
@@ -323,7 +323,7 @@
     background-color: #a49945;
     color: white;
     padding: 20px 48px;
-    border-radius: 16px;
+    border-radius: 100px;
     font-weight: 800;
     font-size: 1.2rem;
     border: none;
@@ -858,7 +858,7 @@
     background-color: #a49945;
     color: white;
     padding: 20px 50px;
-    border-radius: 12px;
+    border-radius: 100px;
     font-weight: 800;
     font-size: 1.5rem;
     border: none;
@@ -1000,7 +1000,7 @@
     background-color: #232243;
     color: white;
     padding: 18px 36px;
-    border-radius: 14px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 1.1rem;
     border: none;
@@ -1021,7 +1021,7 @@
     background-color: #e2e4ea;
     color: #232243;
     padding: 18px 36px;
-    border-radius: 14px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 1.1rem;
     border: 1px solid #d1d5db;
