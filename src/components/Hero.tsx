@@ -29,7 +29,7 @@ const Hero: React.FC = () => {
                             onClick={() => navigate('/individual-verification')}
                         >
                             <UserCheck size={20} />
-                            Global individual verification
+                            Learn More
                         </Button>
                     </div>
                 </div>

@@ -1,44 +1,39 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import './Stats.css';
 
-const stats = [
-    { label: "Market Potential", value: "2.5", suffix: "T", desc: "AfCFTA Market" },
-    { label: "Entities Covered", value: "10", suffix: "k+", desc: "Verified Profiles" },
-    { label: "Trust Network", value: "15", suffix: "k+", desc: "Business Partners" },
-    { label: "Regions", value: "2", suffix: "", desc: "Africa & Caribbean" }
+// Import partner logos
+import agiLogo from '../assets/agi.png';
+// Using placeholder images for missing logos
+import placeholderLogo from '../assets/kadodologo.png';
+
+const partners = [
+    { name: "African Union", logo: placeholderLogo },
+    { name: "Caricom", logo: placeholderLogo },
+    { name: "AGI", logo: agiLogo },
 ];
 
 const Stats: React.FC = () => {
     return (
-        <section className="stats-section">
+        <section className="partners-section">
             <div className="container">
-                <div className="stats-grid">
-                    {stats.map((stat, index) => (
-                        <motion.div
-                            key={index}
-                            className="stat-item"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                        >
-                            <div className="stat-value-container">
-                                <motion.span
-                                    className="stat-value"
-                                    initial={{ opacity: 0 }}
-                                    whileInView={{ opacity: 1 }}
-                                    transition={{ duration: 1, delay: 0.5 }}
-                                >
-                                    {stat.value}{stat.suffix}
-                                </motion.span>
+                <div className="partners-header">
+                    <h3>Strategic Alignment & Global Partners</h3>
+                </div>
+
+                <div className="marquee-container">
+                    <div className="marquee-track">
+                        {/* Double the logos for seamless loop */}
+                        {[...partners, ...partners, ...partners].map((partner, index) => (
+                            <div key={index} className="partner-item">
+                                <img
+                                    src={partner.logo}
+                                    alt={`${partner.name} logo`}
+                                    className="partner-logo"
+                                />
                             </div>
-                            <div className="stat-info">
-                                <p className="stat-label">{stat.label}</p>
-                                <p className="stat-desc">{stat.desc}</p>
-                            </div>
-                        </motion.div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
