@@ -2,10 +2,12 @@ import React from 'react';
 import Section from './Section';
 import { CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './Mission.css';
 import womanImage from '../assets/woman.png';
 
 const Mission: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <Section id="about-us" className="foundation-trust-section">
             <div className="mission-container">
@@ -49,7 +51,7 @@ const Mission: React.FC = () => {
                             </div>
                             <div className="mission-block">
                                 <CheckCircle2 className="mission-block-icon" size={24} />
-                                <span className="mission-block-text">Scalable trust architecture for AfCFTA</span>
+                                <span className="mission-block-text">Scalable trust architecture for Africa</span>
                             </div>
                             <div className="mission-block">
                                 <CheckCircle2 className="mission-block-icon" size={24} />
@@ -57,7 +59,7 @@ const Mission: React.FC = () => {
                             </div>
                         </div>
 
-                        <button className="btn-mission-learn">
+                        <button className="btn-mission-learn" onClick={() => navigate('/about-us')}>
                             Learn About Our Mission <span className="arrow">→</span>
                         </button>
                     </motion.div>

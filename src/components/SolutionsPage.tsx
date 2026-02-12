@@ -309,7 +309,7 @@ const EnterpriseProcess: React.FC = () => {
                 </div>
 
                 <div className="enterprise-cta-wrapper">
-                    <button className="btn-enterprise-cta" onClick={() => navigate('/contact-us')}>
+                    <button className="btn-enterprise-cta" onClick={() => navigate('/solution-partners')}>
                         Partner With Us <ArrowRight size={24} />
                     </button>
                 </div>

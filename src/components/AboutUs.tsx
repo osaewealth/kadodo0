@@ -11,6 +11,9 @@ import founderImg from '../assets/founder.jpg';
 import sponsor1 from '../assets/sponsor1.png';
 import sponsor2 from '../assets/sponsor2.png';
 import sponsor3 from '../assets/sponsor3.png';
+import sponsor5 from '../assets/sponsor5.png';
+import sponsor6 from '../assets/sponsor6.png';
+import sponsor7 from '../assets/sponsor7.png';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -59,7 +62,7 @@ const AboutUs: React.FC = () => {
                             <img src={missionIcon} alt="Our Mission" className="mv-icon-png" />
                         </div>
                         <h2>Our Mission</h2>
-                        <p>To build a decentralized trust infrastructure that authenticates every business and individual in the AfCFTA and Caribbean markets, making cross-border trade seamless, secure, and inclusive.</p>
+                        <p>To build a decentralized trust infrastructure that authenticates every business and individual in the Africa and Caribbean markets, making cross-border trade seamless, secure, and inclusive.</p>
                     </div>
 
                     {/* Our Vision */}
@@ -85,7 +88,7 @@ const AboutUs: React.FC = () => {
                                 <img src={busIcon} alt="For Businesses" />
                             </div>
                             <h3>For Businesses</h3>
-                            <p>Issuance of the <span className="text-accent-gold">Kadodo Number</span> a multi-layered verification badge that serves as a digital trust passport for SMEs to access banks and international exporters.</p>
+                            <p>Issuance of the <span className="text-accent-gold">Kadodo Number ,</span> a multi-layered verification badge that serves as a digital trust passport for SMEs to access banks and international exporters.</p>
                         </div>
                         <div className="wwd-card">
                             <div className="wwd-icon">
@@ -99,7 +102,7 @@ const AboutUs: React.FC = () => {
                                 <img src={partIcon} alt="For Partners" />
                             </div>
                             <h3>For Partners</h3>
-                            <p>Creating <span className="text-accent-gold">de-risked pipelines</span> for investors, development agencies, and importers seeking verified partners within the AfCFTA trade zones.</p>
+                            <p>Creating <span className="text-accent-gold">de-risked pipelines</span> for investors, development agencies, and importers seeking verified partners within Africa</p>
                         </div>
                     </div>
                 </div>
@@ -118,7 +121,7 @@ const AboutUs: React.FC = () => {
                     <div className="leadership-content">
                         <h2>Our Leadership</h2>
                         <p className="leader-intro">
-                            A serial entrepreneur and digital transformation expert with over 15 years of experience in African technology ecosystems. Tsonam has been at the forefront of policy advocacy for the AfCFTA and private sector development.
+                            A serial entrepreneur and digital transformation expert with over 15 years of experience in African technology ecosystems. Tsonam has been at the forefront of policy advocacy for the Africa and private sector development.
                         </p>
                         <p className="leader-vision">
                             His vision for Kadodo Africa stems from a deep commitment to industrialization and the belief that verified data is the most valuable currency for Africa's economic resurgence.
@@ -131,7 +134,7 @@ const AboutUs: React.FC = () => {
                                 <CheckCircle2 size={18} className="badge-check" /> <span>Digital Africa Ambassador</span>
                             </div>
                             <div className="leader-badge">
-                                <CheckCircle2 size={18} className="badge-check" /> <span>AfCFTA Policy Consultant</span>
+                                <CheckCircle2 size={18} className="badge-check" /> <span>Africa Policy Consultant</span>
                             </div>
                             <div className="leader-badge">
                                 <CheckCircle2 size={18} className="badge-check" /> <span>UN SDSN Fellow</span>
@@ -188,7 +191,7 @@ const AboutUs: React.FC = () => {
                     </div>
                     <div className="marquee-wrapper">
                         <div className="marquee-content">
-                            {[sponsor1, sponsor2, sponsor3, sponsor1, sponsor2, sponsor3].map((logo, idx) => (
+                            {[sponsor1, sponsor2, sponsor3, sponsor5, sponsor6, sponsor7, sponsor1, sponsor2, sponsor3, sponsor5, sponsor6, sponsor7].map((logo, idx) => (
                                 <div key={idx} className="partner-logo-item">
                                     <img src={logo} alt={`Partner ${idx + 1}`} />
                                 </div>

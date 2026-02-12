@@ -54,13 +54,13 @@ const Contact: React.FC = () => {
 
                             <span>
 
-                                <img src={phoneIcon} alt="Phone" /> +233 xx xxx xxxx
+                                <img src={phoneIcon} alt="Phone" /> +233 302903220
 
                             </span>
 
                             <span>
 
-                                <img src={emailIcon} alt="Email" /> example@kadodo.africa
+                                <img src={emailIcon} alt="Email" /> support@kadodoafrica.com
 
                             </span>
 

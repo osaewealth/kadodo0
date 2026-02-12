@@ -44,7 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 120px;
     /* No grayscale as requested */
     opacity: 1;
     transition: transform 0.3s ease;
@@ -58,7 +58,7 @@
 .partner-logo {
     height: 100%;
     width: auto;
-    max-width: 180px;
+    max-width: 250px;
     object-fit: contain;
 }
 
@@ -80,8 +80,8 @@
     }
 
     .partner-item {
-        height: 60px;
-        max-width: 140px;
+        height: 90px;
+        max-width: 200px;
     }
 
     .partners-header h3 {

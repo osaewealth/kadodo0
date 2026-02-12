@@ -1,7 +1,7 @@
 import React from 'react';
 import './RegionGateway.css';
-import ghanaMap from '../assets/ghanamap.png';
-import caricomMap from '../assets/caribeanmap.png';
+import ghanaheritage from '../assets/ghanaheritage.png';
+import caribeanheritage from '../assets/caribeanheritage.jpg';
 import { ChevronRight, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ const RegionGateway: React.FC = () => {
                 <div className="gateway-grid">
                     {/* Ghana Card */}
                     <div className="gateway-card ghana-card">
-                        <div className="gateway-bg" style={{ backgroundImage: `url(${ghanaMap})` }}></div>
+                        <div className="gateway-bg" style={{ backgroundImage: `url(${ghanaheritage})` }}></div>
                         <div className="gateway-overlay"></div>
                         <div className="gateway-content">
                             <div className="gateway-text-wrap">
@@ -36,7 +36,7 @@ const RegionGateway: React.FC = () => {
 
                     {/* Caricom Card */}
                     <div className="gateway-card caricom-card">
-                        <div className="gateway-bg" style={{ backgroundImage: `url(${caricomMap})` }}></div>
+                        <div className="gateway-bg" style={{ backgroundImage: `url(${caribeanheritage})` }}></div>
                         <div className="gateway-overlay"></div>
                         <div className="gateway-content">
                             <div className="gateway-text-wrap">

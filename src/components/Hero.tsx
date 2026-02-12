@@ -1,9 +1,9 @@
-import { ShieldCheck, UserCheck, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import './Hero.css';
-import heroGraphic from '../assets/kadodo-logo.svg';
+import heroGraphic from '../assets/heromain.png';
 
 const Hero: React.FC = () => {
     const navigate = useNavigate();
@@ -26,9 +26,8 @@ const Hero: React.FC = () => {
                         <Button
                             variant="outline"
                             className="btn-icon btn-light"
-                            onClick={() => navigate('/individual-verification')}
+                            onClick={() => navigate('/solution-partners')}
                         >
-                            <UserCheck size={20} />
                             Learn More
                         </Button>
                     </div>

@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             <div className="footer-bottom-refined">
                 <div className="container bottom-flex">
                     <p className="copyright-text">
-                        © 2024 Kadodo Africa. All Rights Reserved. Built for AfCFTA.
+                        © 2026 Kadodo Africa. All Rights Reserved.
                     </p>
                     <div className="bottom-legal-links">
                         <Link to="/legal">Privacy Policy</Link>
