@@ -6,6 +6,7 @@ import KadodoNumber from './KadodoNumber';
 import { VerificationSolutions } from './Solutions';
 import Mission from './Mission';
 import RegionGateway from './RegionGateway';
+import SecuritySection from './SecuritySection';
 
 const LandingPage: React.FC = () => {
     return (
@@ -17,6 +18,7 @@ const LandingPage: React.FC = () => {
             <VerificationSolutions />
             <Mission />
             <RegionGateway />
+            <SecuritySection />
         </>
     );
 };

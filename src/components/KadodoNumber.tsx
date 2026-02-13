@@ -3,6 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 import './KadodoNumber.css';
 import cardBusiness from '../assets/kadodocardbusiness.png';
 import cardPersonal from '../assets/kadodocardpersonal.png';
+import bizIcon from '../assets/newimages/Business.png';
+import individualIcon from '../assets/newimages/Individuals.png';
+import partnersIcon from '../assets/newimages/Partners.png';
 
 const KadodoNumber: React.FC = () => {
     const location = useLocation();
@@ -34,35 +37,34 @@ const KadodoNumber: React.FC = () => {
                     <div className="kn-content">
                         <h1 className="kn-title">What is a Kadodo Number?</h1>
                         <p className="kn-desc">
-                            These digital verification cards serve as a digital trust passport for businesses and individuals. A unique Kadodo ID represents a multi-layered verification badge that opens doors to international trade across Africa and the Caribbean.
-                        </p>
+                            The Kadodo Number is a unique, verifiable digital credential issued only after an entity passes our multi-layered authentication process. It serves as a definitive “Seal of Trust” across three key pillars:  </p>
 
                         <div className="kn-checklist-boxed">
                             <div className="kn-check-item-boxed">
                                 <div className="check-icon-box">
-                                    <span className="check-mark">✔</span>
+                                    <img src={bizIcon} alt="Business Icon" className="kn-icon" />
                                 </div>
                                 <div className="check-text">
-                                    <p className="check-title">Individual Identity</p>
-                                    <p className="check-desc">Government-level KYC and individual background checks.</p>
+                                    <p className="check-title">For Businesses</p>
+                                    <p className="check-desc">Your License to Scale. It is a verified business identity that proves your registration, tax standing, and operational legitimacy to banks and global supply chains.</p>
                                 </div>
                             </div>
                             <div className="kn-check-item-boxed">
                                 <div className="check-icon-box">
-                                    <span className="check-mark">✔</span>
+                                    <img src={individualIcon} alt="Individual Icon" className="kn-icon" />
                                 </div>
                                 <div className="check-text">
-                                    <p className="check-title">Business Authentication</p>
-                                    <p className="check-desc">Full validation of business registration and legal standing.</p>
+                                    <p className="check-title">For Individuals</p>
+                                    <p className="check-desc">Your Professional Trust Passport. It authenticates your identity, academic credentials, and work history, making your reputation portable and globally recognized.</p>
                                 </div>
                             </div>
                             <div className="kn-check-item-boxed">
                                 <div className="check-icon-box">
-                                    <span className="check-mark">✔</span>
+                                    <img src={partnersIcon} alt="Partners Icon" className="kn-icon" />
                                 </div>
                                 <div className="check-text">
-                                    <p className="check-title">Professional Standing</p>
-                                    <p className="check-desc">Certification of industry-specific licenses and standards.</p>
+                                    <p className="check-title">For Partners</p>
+                                    <p className="check-desc">Your Risk Mitigation Key. For investors and importers, the Kadodo Number is the entry point to a comprehensive KYB/KYC report, ensuring every engagement is backed by accurate, informed data.</p>
                                 </div>
                             </div>
                         </div>
