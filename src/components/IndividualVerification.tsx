@@ -10,7 +10,7 @@ import protectSellersIcon from '../assets/bankgradeimage.png';
 
 const IndividualVerification: React.FC = () => {
     const [showBusiness, setShowBusiness] = useState(false);
-    
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -44,13 +44,13 @@ const IndividualVerification: React.FC = () => {
 
                         <div className="toggle-container">
                             <div className="toggle-outer">
-                                <button 
+                                <button
                                     className={`toggle-button ${!showBusiness ? 'active' : ''}`}
                                     onClick={() => setShowBusiness(false)}
                                 >
                                     For Individuals
                                 </button>
-                                <button 
+                                <button
                                     className={`toggle-button ${showBusiness ? 'active' : ''}`}
                                     onClick={() => setShowBusiness(true)}
                                 >

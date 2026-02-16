@@ -16,6 +16,19 @@
 .footer-column {
     flex: 1;
     min-width: 200px;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .footer-brand-column {
@@ -25,6 +38,7 @@
 
 .footer-brand-col {
     max-width: 400px;
+    margin-bottom: 40px;
 }
 
 .footer-logo-refined {
@@ -42,13 +56,36 @@
 .footer-social-icons {
     display: flex;
     gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.icon-circle {
-    width: 44px;
-    height: 44px;
+/* Share Menu Animation styles */
+.share-menu-container {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover bridge to keep the menu open while moving between buttons */
+.share-menu-container:hover::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: -120px;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.share-trigger,
+.footer-social-btn {
+    width: 110px;
+    height: 110px;
     background-color: rgba(255, 255, 255, 0.08);
-    /* Frosted circle */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -56,12 +93,166 @@
     cursor: pointer;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    z-index: 10;
+    position: relative;
+    padding: 0;
 }
 
-.icon-circle:hover {
+@keyframes pulseGlow {
+    from {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.05);
+    }
+
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.share-menu-container:hover .share-trigger {
     background-color: var(--color-primary);
-    transform: translateY(-3px);
+    transform: scale(0.95);
+    /* Slight squeeze effect */
     border-color: var(--color-primary);
+}
+
+.sub-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.sub-button {
+    position: absolute;
+    top: 33px;
+    /* Centering 44px inside 110px */
+    left: 33px;
+    width: 44px;
+    height: 44px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 0) scale(0);
+    /* Transition for closing (snap back) */
+    transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6), opacity 0.3s ease, visibility 0s 0.3s, transform 0.4s ease;
+}
+
+/* Brand Colors */
+.x-btn {
+    background: #000000;
+}
+
+.linkedin-btn {
+    background: #0077b5;
+}
+
+.instagram-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.facebook-btn {
+    background: #1877F2;
+}
+
+.youtube-btn {
+    background: #FF0000;
+}
+
+.share-menu-container:hover .sub-button {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    /* Elastic Pop Timing: cubic-bezier(0.34, 1.56, 0.64, 1) provides a nice overshoot settle */
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease, visibility 0s;
+}
+
+/* 90° (Top) - X */
+.share-menu-container:hover .x-btn {
+    transform: translate(0, -130px) scale(1);
+    transition-delay: 0.03s;
+}
+
+/* 112.5° - LinkedIn */
+.share-menu-container:hover .linkedin-btn {
+    transform: translate(-50px, -120px) scale(1);
+    transition-delay: 0.06s;
+}
+
+/* 135° - Instagram */
+.share-menu-container:hover .instagram-btn {
+    transform: translate(-92px, -92px) scale(1);
+    transition-delay: 0.09s;
+}
+
+/* 157.5° - Facebook */
+.share-menu-container:hover .facebook-btn {
+    transform: translate(-120px, -50px) scale(1);
+    transition-delay: 0.12s;
+}
+
+/* 180° (Left) - YouTube */
+.share-menu-container:hover .youtube-btn {
+    transform: translate(-130px, 0) scale(1);
+    transition-delay: 0.15s;
+}
+
+.sub-button:hover {
+    filter: brightness(1.2);
+    transform: translate(var(--hover-x), var(--hover-y)) scale(1.15) !important;
+}
+
+.x-btn:hover {
+    --hover-x: 0;
+    --hover-y: -130px;
+}
+
+.linkedin-btn:hover {
+    --hover-x: -50px;
+    --hover-y: -120px;
+}
+
+.instagram-btn:hover {
+    --hover-x: -92px;
+    --hover-y: -92px;
+}
+
+.facebook-btn:hover {
+    --hover-x: -120px;
+    --hover-y: -50px;
+}
+
+.youtube-btn:hover {
+    --hover-x: -130px;
+    --hover-y: 0;
+}
+
+/* Specific hover effect for mail icon to match previous behavior if needed */
+.footer-social-icons .footer-social-btn:hover {
+    transform: translateY(-3px) scale(1.1);
 }
 
 .footer-nav-col h4 {
@@ -180,6 +371,78 @@
 
     .footer-nav-col h4 {
         margin-bottom: 16px;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+        gap: 32px;
+        margin-top: 40px;
+    }
+
+    /* Scaling social buttons for mobile */
+    .share-menu-container,
+    .share-trigger,
+    .footer-social-btn {
+        width: 75px;
+        height: 75px;
+    }
+
+    .sub-button {
+        top: 22px;
+        left: 22px;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Adjusting mobile radial distances - spread more */
+    .share-menu-container:hover .x-btn {
+        transform: translate(0, -100px) scale(1);
+        transition-delay: 0.03s;
+    }
+
+    .share-menu-container:hover .linkedin-btn {
+        transform: translate(-38px, -92px) scale(1);
+        transition-delay: 0.06s;
+    }
+
+    .share-menu-container:hover .instagram-btn {
+        transform: translate(-71px, -71px) scale(1);
+        transition-delay: 0.09s;
+    }
+
+    .share-menu-container:hover .facebook-btn {
+        transform: translate(-92px, -38px) scale(1);
+        transition-delay: 0.12s;
+    }
+
+    .share-menu-container:hover .youtube-btn {
+        transform: translate(-100px, 0) scale(1);
+        transition-delay: 0.15s;
+    }
+
+    .x-btn:hover {
+        --hover-x: 0;
+        --hover-y: -100px;
+    }
+
+    .linkedin-btn:hover {
+        --hover-x: -38px;
+        --hover-y: -92px;
+    }
+
+    .instagram-btn:hover {
+        --hover-x: -71px;
+        --hover-y: -71px;
+    }
+
+    .facebook-btn:hover {
+        --hover-x: -92px;
+        --hover-y: -38px;
+    }
+
+    .youtube-btn:hover {
+        --hover-x: -100px;
+        --hover-y: 0;
     }
 
     .bottom-flex {

@@ -16,6 +16,14 @@ const Coverage: React.FC = () => {
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const [showLiveFeed, setShowLiveFeed] = useState(false);
     const globeRef = useRef<HTMLDivElement>(null);
+    const ghanaSectionRef = useRef<HTMLElement>(null);
+    const caribbeanSectionRef = useRef<HTMLElement>(null);
+
+    const scrollToSection = (ref: React.RefObject<HTMLElement>) => {
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -43,147 +51,165 @@ const Coverage: React.FC = () => {
 
     return (
         <div className="coverage-page">
-            {/* Hero Section */}
-            <section className="coverage-hero" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-                {/* Globe Graphic on Right - positioned absolutely in CSS or as flex item */}
-                <div className="hero-globe-wrapper" ref={globeRef} style={{ perspective: '1000px' }}>
-                    <div
-                        className="globe-3d-container"
-                        style={{
-                            transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
-                            transition: 'transform 0.1s ease-out'
-                        }}
-                    >
-                        <img src={globeCoverage} alt="Global Coverage" className="globe-graphic" />
-
-                        {/* Location Pins */}
-                        {/* Ghana Pin - Approx location adjustment needed in CSS */}
-                        <div
-                            className="globe-pin pin-ghana"
-                            title="Ghana"
-                            onClick={() => setShowLiveFeed(!showLiveFeed)}
-                            style={{ cursor: 'pointer' }}
+            {/* Operational Coverage Selection Section */}
+            <section className="operational-coverage-top">
+                <div className="container">
+                    <h2 className="oc-title">Operational Coverage</h2>
+                    <p className="oc-description">
+                        Providing the foundational digital trust infrastructure required for cross-border trade and institutional integration across Africa and the Caribbean.
+                    </p>
+                    <div className="oc-button-group">
+                        <button
+                            className="oc-btn-ghana"
+                            onClick={() => scrollToSection(ghanaSectionRef)}
                         >
-                            <div className="pin-pulse"></div>
-                            <MapPin size={24} className="pin-icon" fill="#a49945" />
-                        </div>
-
-                        {/* Caribbean Pin - Approx location adjustment needed in CSS */}
-                        <div className="globe-pin pin-caribbean" title="Caribbean">
-                            <div className="pin-pulse"></div>
-                            <MapPin size={24} className="pin-icon" fill="#2e2b4f" />
-                        </div>
-
-                        {/* Live Verification Feed Popup */}
-                        {showLiveFeed && (
-                            <div className="live-feed-popup">
-                                <div className="live-feed-header">
-                                    <h3>LIVE VERIFICATION FEED</h3>
-                                    <div className="live-indicator">
-                                        <span className="live-dot"></span>
-                                        <span className="live-text">LIVE</span>
-                                    </div>
-                                </div>
-                                <div className="live-feed-list">
-                                    <div className="feed-item">
-                                        <Flag country="ghana" className="feed-flag" />
-                                        <div className="feed-content">
-                                            <div className="feed-title">Business Verified: Accra, Ghana</div>
-                                            <div className="feed-time">2m ago</div>
-                                        </div>
-                                    </div>
-                                    <div className="feed-item">
-                                        <Flag country="ghana" className="feed-flag" />
-                                        <div className="feed-content">
-                                            <div className="feed-title">ID Authentication: Kumasi, Ghana</div>
-                                            <div className="feed-time">5m ago</div>
-                                        </div>
-                                    </div>
-                                    <div className="feed-item">
-                                        <Flag country="barbados" className="feed-flag" />
-                                        <div className="feed-content">
-                                            <div className="feed-title">UBO Check: Bridgetown, Barbados</div>
-                                            <div className="feed-time">8m ago</div>
-                                        </div>
-                                    </div>
-                                    <div className="feed-item">
-                                        <Flag country="jamaica" className="feed-flag" />
-                                        <div className="feed-content">
-                                            <div className="feed-title">License Verified: Kingston, Jamaica</div>
-                                            <div className="feed-time">16m ago</div>
-                                        </div>
-                                    </div>
-                                    <div className="feed-item">
-                                        <Flag country="ghana" className="feed-flag" />
-                                        <div className="feed-content">
-                                            <div className="feed-title">Physical Audit: Tamale, Ghana</div>
-                                            <div className="feed-time">24m ago</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
+                            Ghana
+                        </button>
+                        <button
+                            className="oc-btn-caribbean"
+                            onClick={() => scrollToSection(caribbeanSectionRef)}
+                        >
+                            Caribbean Expansion
+                        </button>
+                    </div>
+                </div>
+            </section>
+            {/* Global Trust Infrastructure Map Section */}
+            <section className="global-map-section" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+                <div className="container map-header-container">
+                    <div className="map-title-group">
+                        <h1 className="map-main-title">Global Trust Infrastructure Map</h1>
+                        <p className="map-subtitle">Real-time Trust Pulse: Visualizing live data flow and verified nodes.</p>
                     </div>
                 </div>
 
-                <div className="container coverage-container">
-                    <div className="coverage-hero-content">
-                        <div className="now-live-badge">
-                            <span className="dot"></span>
-                            Now Live in Ghana
-                            <div className="flag-gh mini">
-                                <div className="flag-gh-red"></div>
-                                <div className="flag-gh-gold">
-                                    <div className="black-star"></div>
+                <div className="map-view-container">
+                    {/* Left Sidebar: Live Feed */}
+                    <div className="map-sidebar left-sidebar">
+                        <div className="panel-box feed-panel">
+                            <div className="panel-header">
+                                <h3>LIVE VERIFICATION FEED</h3>
+                                <div className="live-status">
+                                    <span className="live-dot-pulse"></span>
+                                    LIVE
                                 </div>
-                                <div className="flag-gh-green"></div>
                             </div>
-                        </div>
-
-                        <h1 className="coverage-title">Our Coverage</h1>
-                        <p className="coverage-desc">
-                            Currently live in Ghana with comprehensive ID verification.
-                            Caribbean expansion is underway with Trinidad & Tobago,
-                            Jamaica, Barbados, and Guyana coming soon.
-                        </p>
-
-                        <div className="coverage-btns">
-                            <Button variant="secondary" className="btn-get-started" onClick={() => navigate('/contact-us')}>
-                                Get Started <ChevronRight size={18} />
-                            </Button>
-                            <Button variant="outline" className="btn-view-ids" onClick={() => navigate('/ghana')}>
-                                View Ghana IDs
-                            </Button>
+                            <div className="feed-scroll-area">
+                                <div className="feed-entry">
+                                    <Flag country="ghana" className="entry-flag" />
+                                    <div className="entry-text">
+                                        <div className="entry-title">Business Verified: Accra, Ghana</div>
+                                        <div className="entry-time">2m ago</div>
+                                    </div>
+                                </div>
+                                <div className="feed-entry">
+                                    <Flag country="ghana" className="entry-flag" />
+                                    <div className="entry-text">
+                                        <div className="entry-title">ID Authentication: Kumasi, Ghana</div>
+                                        <div className="entry-time">5m ago</div>
+                                    </div>
+                                </div>
+                                <div className="feed-entry">
+                                    <Flag country="barbados" className="entry-flag" />
+                                    <div className="entry-text">
+                                        <div className="entry-title">UBO Check: Bridgetown, Barbados</div>
+                                        <div className="entry-time">12m ago</div>
+                                    </div>
+                                </div>
+                                <div className="feed-entry">
+                                    <Flag country="jamaica" className="entry-flag" />
+                                    <div className="entry-text">
+                                        <div className="entry-title">License Verified: Kingston, Jamaica</div>
+                                        <div className="entry-time">18m ago</div>
+                                    </div>
+                                </div>
+                                <div className="feed-entry">
+                                    <Flag country="ghana" className="entry-flag" />
+                                    <div className="entry-text">
+                                        <div className="entry-title">Physical Audit: Tamale, Ghana</div>
+                                        <div className="entry-time">24m ago</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Ghana Marker & Badge - Refined for design */}
-                    <div className="ghana-marker-container">
-                        <div className="marker-badge-box">
-                            <div className="badge-header">Ghana</div>
-                            <div className="badge-flag">
-                                <div className="flag-gh">
-                                    <div className="flag-gh-red"></div>
-                                    <div className="flag-gh-gold">
-                                        <div className="black-star"></div>
-                                    </div>
-                                    <div className="flag-gh-green"></div>
-                                </div>
+                    {/* Center: The Globe */}
+                    <div className="map-center-view" ref={globeRef}>
+                        <div
+                            className="globe-wrapper-3d"
+                            style={{
+                                transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+                                transition: 'transform 0.1s ease-out'
+                            }}
+                        >
+                            <img src={globeCoverage} alt="High Tech Globe" className="high-tech-globe" />
+
+                            {/* Connection Pulse Line */}
+                            <svg className="data-pulse-svg" viewBox="0 0 400 300">
+                                <path
+                                    className="pulse-path"
+                                    d="M100,100 Q200,50 300,150"
+                                    fill="none"
+                                    stroke="#a49945"
+                                    strokeWidth="2"
+                                    strokeDasharray="5,5"
+                                />
+                            </svg>
+
+                            {/* Node Pins */}
+                            <div className="node-marker ghana-node" title="Primary Trust Node: Ghana">
+                                <div className="node-icon gold"></div>
+                            </div>
+                            <div className="node-marker caribbean-node" title="Active Integration: CARICOM">
+                                <div className="node-icon green"></div>
                             </div>
                         </div>
-                        <div className="marker-pindrop">
-                            <MapPin size={32} fill="white" color="white" />
+                    </div>
+
+                    {/* Right Column: Controls & Status */}
+                    <div className="map-sidebar right-sidebar">
+                        <div className="controls-stack">
+                            <div className="panel-box zoom-controls">
+                                <button className="zoom-btn">+</button>
+                                <div className="zoom-divider"></div>
+                                <button className="zoom-btn">-</button>
+                            </div>
+
+                            <div className="panel-box nav-control">
+                                <button className="nav-btn">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                                        <path d="M16 12l-4-4-4 4M12 8v8" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
-                        {/* Smaller pins around if needed but screenshot shows main one */}
-                        <div className="marker-pindrop-secondary">
-                            <MapPin size={24} fill="#white" color="white" />
+
+                        <div className="panel-box status-panel">
+                            <h3>LIVE INFRASTRUCTURE STATUS</h3>
+                            <div className="status-legend">
+                                <div className="legend-item">
+                                    <span className="legend-dot gold"></span>
+                                    <span>Primary Trust Node (GH)</span>
+                                </div>
+                                <div className="legend-item">
+                                    <span className="legend-dot green"></span>
+                                    <span>Active Integration (CARICOM)</span>
+                                </div>
+                                <div className="legend-item">
+                                    <span className="legend-line pulse"></span>
+                                    <span>Trans-Atlantic Data Pulse</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Ghana Verification Section - Redesigned */}
-            <section className="ghana-verification-redesigned">
+            <section ref={ghanaSectionRef} className="ghana-verification-redesigned">
                 <div className="container">
                     <div className="ghana-section-header">
                         <h2 className="ghana-title">Active Region: Ghana</h2>
@@ -258,7 +284,7 @@ const Coverage: React.FC = () => {
             </section>
 
             {/* Caribbean Expansion Section */}
-            <section className="caribbean-expansion">
+            <section ref={caribbeanSectionRef} className="caribbean-expansion">
                 <div className="container">
                     <div className="section-header-wrap">
                         <div className="coming-soon-badge">
