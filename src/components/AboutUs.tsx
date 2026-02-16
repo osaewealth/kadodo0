@@ -7,14 +7,13 @@ import partIcon from '../assets/newimages/Partners.png';
 import bridgeIcon from '../assets/newimages/Digital Bridge.png';
 import missionIcon from '../assets/newimages/Mission.png';
 import visionIcon from '../assets/newimages/Vision.png';
-import founderImg from '../assets/founder.jpg';
 import sponsor1 from '../assets/sponsor1.png';
 import sponsor2 from '../assets/sponsor2.png';
 import sponsor3 from '../assets/sponsor3.png';
 import sponsor5 from '../assets/sponsor5.png';
 import sponsor6 from '../assets/sponsor6.png';
 import sponsor7 from '../assets/sponsor7.png';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const AboutUs: React.FC = () => {
@@ -108,7 +107,7 @@ const AboutUs: React.FC = () => {
                 </div>
             </section>
 
-            {/* Our Leadership Section */}
+            {/* Our Leadership Section (Temporarily Disabled)
             <section className="our-leadership">
                 <div className="container leadership-grid">
                     <div className="leadership-image-wrap">
@@ -143,8 +142,9 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
             </section>
+            */}
 
-            {/* Operational Leadership Section */}
+            {/* Operational Leadership Section (Temporarily Disabled)
             <section className="operational-leadership">
                 <div className="container">
                     <div className="section-header-centered">
@@ -182,6 +182,7 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
             </section>
+            */}
 
             {/* Strategic Partners Section */}
             <section className="partners-marquee-section">

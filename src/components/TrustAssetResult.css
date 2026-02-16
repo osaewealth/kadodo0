@@ -127,6 +127,10 @@
     flex-wrap: wrap;
 }
 
+.tar-cta-buttons a {
+    text-decoration: none;
+}
+
 /* Button Styles Reuse/Specifics */
 .btn-secondary-outline-lg {
     padding: 14px 32px;

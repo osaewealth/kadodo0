@@ -1,4 +1,4 @@
-import { MapPin, ChevronRight, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Button from './Button';
 import './Coverage.css';
 
@@ -14,7 +14,6 @@ import Flag from './Flag';
 const Coverage: React.FC = () => {
     const navigate = useNavigate();
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
-    const [showLiveFeed, setShowLiveFeed] = useState(false);
     const globeRef = useRef<HTMLDivElement>(null);
     const ghanaSectionRef = useRef<HTMLElement>(null);
     const caribbeanSectionRef = useRef<HTMLElement>(null);

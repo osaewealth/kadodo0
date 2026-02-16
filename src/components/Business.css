@@ -510,14 +510,14 @@
 
     .business-page .challenges-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* 2x2 on mobile */
-        gap: 60px 20px;
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
+        gap: 80px;
     }
 
     .business-page .region-cards-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
