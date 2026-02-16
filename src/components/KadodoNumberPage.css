@@ -1,0 +1,105 @@
+.kn-page-hero {
+    padding: 120px 0 80px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.kn-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.kn-hero-content {
+    max-width: 650px;
+}
+
+.kn-hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.kn-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a49945;
+    /* Olive gold from design */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.kn-hero-desc {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+.kn-hero-desc strong {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
+
+.kn-hero-tag {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 0 10px 10px 0;
+    /* Match screenshot tag style */
+    font-weight: 600;
+    font-size: 1.1rem;
+    /* Slightly larger text */
+    letter-spacing: 0.02em;
+    box-shadow: 0 10px 20px rgba(46, 43, 80, 0.15);
+    min-width: 100%;
+    /* Extend to full width of column if desired, or just wider */
+}
+
+/* Updated per feedback: Opposite corners & Lengthy */
+.kn-hero-image-wrapper {
+    position: relative;
+    border-radius: 50px 0 50px 0;
+    /* Opposite sided corners per user feedback */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    /* Ensure wrapper fills grid cell height */
+    min-height: 500px;
+    /* Force minimum height for "more lengthy" look */
+    display: flex;
+    /* Flex to stretch image */
+}
+
+.kn-hero-img {
+    width: 100%;
+    height: 100%;
+    /* Fill container height */
+    object-fit: cover;
+    /* Cover container while maintaining aspect ratio */
+    display: block;
+    transform: scale(1.01);
+    /* Prevent pixel gap */
+}
+
+@media (max-width: 1024px) {
+    .kn-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .kn-hero-content {
+        margin: 0 auto;
+    }
+
+    .kn-hero-title {
+        font-size: 3rem;
+    }
+}
