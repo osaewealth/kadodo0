@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, PlusCircle } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import './IndividualVerification.css';
 
 // Assets
@@ -10,10 +11,16 @@ import protectSellersIcon from '../assets/bankgradeimage.png';
 
 const IndividualVerification: React.FC = () => {
     const [showBusiness, setShowBusiness] = useState(false);
+    const [searchParams] = useSearchParams();
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+        if (searchParams.get('tab') === 'business') {
+            setShowBusiness(true);
+        } else {
+            setShowBusiness(false);
+        }
+    }, [searchParams]);
 
     const fadeInUp = {
         initial: { opacity: 0, y: 20 },
