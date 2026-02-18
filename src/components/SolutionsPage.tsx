@@ -102,7 +102,7 @@ const SolutionsHero: React.FC = () => {
                         </div>
                     </div>
 
-                    <button className="btn-solutions-cta" onClick={() => navigate('/business')}>
+                    <button className="btn-solutions-cta" onClick={() => navigate('/individual-verification?tab=business')}>
                         Start Business Verification <ArrowRight size={20} />
                     </button>
                 </motion.div>
@@ -334,7 +334,7 @@ const SolutionsCTA: React.FC = () => {
                     <p className="cta-subtitle">Select the verification path that fits our goals today.</p>
 
                     <div className="cta-buttons">
-                        <button className="btn-cta-primary" onClick={() => navigate('/business')}>
+                        <button className="btn-cta-primary" onClick={() => navigate('/individual-verification?tab=business')}>
                             Start Business Verification <ArrowRight size={20} />
                         </button>
                         <Link to="/individual-verification" className="btn-cta-secondary" style={{ textDecoration: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>

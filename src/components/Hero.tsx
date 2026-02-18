@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
                         <Button
                             variant="secondary"
                             className="btn-icon"
-                            onClick={() => navigate('/business')}
+                            onClick={() => navigate('/individual-verification?tab=business')}
                         >
                             <ShieldCheck size={20} />
                             Verify My Business

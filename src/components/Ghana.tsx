@@ -69,7 +69,7 @@ const Ghana: React.FC = () => {
                                 variant="secondary"
                                 size="lg"
                                 className="btn-gh-primary"
-                                onClick={() => navigate('/business')}
+                                onClick={() => navigate('/individual-verification?tab=business')}
                             >
                                 VERIFY BUSINESS
                             </Button>
@@ -174,7 +174,7 @@ const Ghana: React.FC = () => {
                                     </ul>
                                 </div>
 
-                                <Link to="/business" className="gh-path-cta-link">
+                                <Link to="/individual-verification?tab=business" className="gh-path-cta-link">
                                     View Business Plans <ArrowRight size={20} />
                                 </Link>
                             </div>
