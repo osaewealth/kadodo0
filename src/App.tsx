@@ -13,6 +13,9 @@ import SolutionPartners from './components/SolutionPartners';
 import Business from './components/Business';
 import Ghana from './components/Ghana';
 import TermsOfService from './components/TermsOfService';
+import Compliance from './components/Compliance';
+import ComplianceForm from './components/ComplianceForm';
+import NDA from './components/NDA';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -35,6 +38,9 @@ function App() {
                     <Route path="contact-us" element={<Contact />} />
                     <Route path="legal" element={<PagePlaceholder title="Legal & Privacy" />} />
                     <Route path="terms" element={<TermsOfService />} />
+                    <Route path="compliance" element={<Compliance />} />
+                    <Route path="compliance-form" element={<ComplianceForm />} />
+                    <Route path="nda" element={<NDA />} />
                     <Route path="careers" element={<PagePlaceholder title="Careers" />} />
                 </Route>
             </Routes>

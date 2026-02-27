@@ -50,6 +50,8 @@ const Footer: React.FC = () => {
                         <li><Link to="/business">Business Verification</Link></li>
                         <li><Link to="/solution-individual">Individual Verification</Link></li>
                         <li><Link to="/solution-partners">Partner Solutions</Link></li>
+                        <li><Link to="/compliance">Trust Center</Link></li>
+                        <li><Link to="/compliance-form">Compliance Form</Link></li>
                     </ul>
                 </div>
 
@@ -61,6 +63,7 @@ const Footer: React.FC = () => {
                         <li><Link to="/kadodo-number">Kadodo Number</Link></li>
                     </ul>
                 </div>
+
 
                 {/* Company Column */}
                 <div className="footer-nav-col">

@@ -70,7 +70,6 @@
     justify-content: center;
 }
 
-/* Hover bridge to keep the menu open while moving between buttons */
 .share-menu-container:hover::before {
     content: '';
     position: absolute;

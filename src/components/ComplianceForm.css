@@ -1,0 +1,258 @@
+/* Compliance Form Page Container */
+.compliance-form-page {
+    background-color: #f7f6fc;
+    /* Light purple tint from image background */
+    min-height: 100vh;
+    padding: 80px 20px 120px;
+    font-family: inherit;
+    /* Should inherit global font */
+}
+
+/* Header Sections */
+.compliance-form-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.compliance-form-header h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #2e2b4f;
+    /* Dark purple */
+    margin-bottom: 12px;
+}
+
+.compliance-form-header p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+/* Form Container & Card */
+.compliance-form-container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.compliance-form-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+    /* For the footer bar at bottom */
+}
+
+/* Internal Form Layout */
+.compliance-form-card form {
+    padding: 40px 48px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+}
+
+/* Inputs, Selects, & Textareas */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #374151;
+    background-color: #ffffff;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2e2b4f;
+}
+
+/* Custom Select styling to hide default arrow and use custom styling optionally */
+.custom-select-wrapper {
+    position: relative;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Checkbox Agreement Area */
+.agreement-group {
+    margin-top: 16px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-weight: 400 !important;
+    /* Override label bold */
+    user-select: none;
+    padding-left: 32px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+}
+
+.checkbox-container:hover input~.checkmark {
+    border-color: #9ca3af;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #2e2b4f;
+    border-color: #2e2b4f;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.agreement-text {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.agreement-text a {
+    color: #2e2b4f;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Submit Section */
+.form-submit-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.submit-request-btn {
+    background-color: #2e2b4f;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 16px 40px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    width: auto;
+    min-width: 250px;
+    justify-content: center;
+}
+
+.submit-request-btn:hover {
+    background-color: #1f1d36;
+}
+
+.submit-request-btn:active {
+    transform: scale(0.98);
+}
+
+/* Footer Info Bar */
+.form-footer-info {
+    background-color: #f9fafa;
+    border-top: 1px solid #e5e7eb;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+.form-footer-info svg {
+    color: #111827;
+    /* Dark icon */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .compliance-form-card form {
+        padding: 32px 24px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .submit-request-btn {
+        width: 100%;
+    }
+
+    .form-footer-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}

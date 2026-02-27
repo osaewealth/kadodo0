@@ -1,0 +1,134 @@
+.performance-stats-section {
+    position: relative;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* Optional dark overlay if the image itself doesn't have enough contrast */
+.performance-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(30, 27, 75, 0.4);
+    /* Slight purple/blue tint */
+    z-index: 1;
+}
+
+.performance-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.performance-header {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+}
+
+.performance-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.performance-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.performance-card {
+    /* Custom gradient matching the design */
+    background: linear-gradient(135deg, #a49945 0%, #3b3765 60%, #2e2b4f 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.performance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.performance-card h3 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+
+.performance-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+}
+
+.performance-card p {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .performance-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .performance-header {
+        max-width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .performance-stats-section {
+        padding: 60px 0;
+    }
+
+    .performance-header h2 {
+        font-size: 2.75rem;
+    }
+
+    .performance-card h3 {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .performance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .performance-header h2 {
+        font-size: 2.25rem;
+    }
+}

@@ -3,6 +3,7 @@ import Hero from './Hero';
 import Stats from './Stats';
 import Challenges from './Challenges';
 import KadodoNumber from './KadodoNumber';
+import PerformanceStats from './PerformanceStats';
 import { VerificationSolutions } from './Solutions';
 import Mission from './Mission';
 import RegionGateway from './RegionGateway';
@@ -15,6 +16,7 @@ const LandingPage: React.FC = () => {
             <Stats />
             <Challenges />
             <KadodoNumber />
+            <PerformanceStats />
             <VerificationSolutions />
             <Mission />
             <RegionGateway />
