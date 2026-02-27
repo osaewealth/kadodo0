@@ -1,0 +1,641 @@
+.governance-page {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section - Scoped to Governance */
+.governance-page .governance-hero-new {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 700px;
+    /* Further increased to match Homepage scale */
+    height: 750px;
+    /* Set to a more prominent height */
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    padding: 0;
+    overflow: hidden;
+}
+
+.governance-page .governance-hero-new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.governance-page .governance-hero-flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px !important;
+    margin: 0 auto;
+}
+
+.governance-page .hero-people-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+}
+
+.governance-page .lawyers-img {
+    height: 580px;
+    /* Increased from 450px/500px */
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin-bottom: -5px;
+    margin-left: 40px;
+}
+
+.governance-page .hero-text-side {
+    flex: 2;
+    /* Increased flex to allow more width for the text */
+    padding-bottom: 25px;
+    /* Lowered the text block further */
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    z-index: 5;
+    margin-left: -150px;
+    /* Re-introducing some overlap for better composition */
+}
+
+.governance-page .hero-text-side h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+    /* Force onto one line as requested */
+}
+
+.governance-page .hero-description {
+    font-size: 1.1rem;
+    /* Reduced to match other descriptions */
+    max-width: 800px;
+    /* Significantly increased width to prevent short wrapping */
+    margin-bottom: 24px;
+    opacity: 0.95;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.governance-page .hero-quote {
+    font-size: 1.8rem;
+    /* Increased size back for prominence */
+    font-weight: 850;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+    border-left: none;
+    /* Removed border to match clean reference style */
+    padding-left: 0;
+    opacity: 1;
+}
+
+/* Legal Oversight Section */
+.legal-oversight {
+    padding: 20px 0 30px;
+    /* Very compact */
+    background-color: #ffffff;
+}
+
+.legal-container {
+    display: flex;
+    align-items: stretch;
+    /* Change to stretch to align heights */
+    gap: 80px;
+    max-width: 1300px !important;
+}
+
+.legal-image-side {
+    flex: 1;
+}
+
+.legal-img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    /* Further reduced from 350px/400px */
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.legal-content-side {
+    flex: 1.2;
+    text-align: left;
+    /* Explicitly left-aligned */
+}
+
+.legal-title {
+    font-size: 2.8rem;
+    /* Slightly larger for presence */
+    font-weight: 850;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    text-align: left;
+    letter-spacing: -0.02em;
+}
+
+.legal-intro {
+    font-size: 1.1rem;
+    /* Reduced */
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    /* Reduced */
+    max-width: 600px;
+}
+
+.legal-subtitle {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legal-subtitle::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #e5e7eb, transparent);
+}
+
+.legal-support-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Reduced */
+    margin-bottom: 32px;
+    /* Reduced */
+}
+
+.legal-list-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 28px;
+    background: #ffffff;
+    border: 1px solid #f3f4f6;
+    border-radius: 16px;
+    font-weight: 600;
+    color: #374151;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.legal-list-item:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primary);
+}
+
+.legal-icon {
+    color: var(--color-primary);
+    /* Brand gold */
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(164, 153, 69, 0.2));
+}
+
+.legal-footer-text {
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+
+.risk-card-content {
+    display: flex;
+    align-items: center;
+    /* Better vertical balance */
+    gap: 40px;
+}
+
+.risk-icon-img {
+    width: 60px;
+    /* Much smaller and more proportional */
+    height: auto;
+    object-fit: contain;
+}
+
+.risk-card-text h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    margin-bottom: 12px;
+}
+
+.risk-card-text p {
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.risk-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.risk-tags span {
+    padding: 6px 14px;
+    background: #f3f4f6;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b7280;
+}
+
+/* Risk Framework Section */
+.risk-framework {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.risk-card {
+    background: #f8f9fa;
+    /* Soft off-white background from reference */
+    border-radius: 20px;
+    padding: 20px 45px;
+    /* Further reduced vertical padding and slightly increased horizontal */
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.risk-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+.risk-card-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.risk-icon-img {
+    width: 120px;
+    /* Slightly scaled for better height balance */
+    height: auto;
+    object-fit: contain;
+}
+
+.risk-card-text {
+    flex: 1;
+}
+
+.risk-card-text h3 {
+    font-size: 1.6rem;
+    /* Slightly reduced to keep height compact */
+    font-weight: 850;
+    color: #2e2b4f;
+    /* Deep navy from reference */
+    margin-bottom: 8px;
+}
+
+.risk-card-text p {
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    opacity: 0.85;
+}
+
+.risk-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.risk-framework .section-description {
+    text-align: center;
+    max-width: 950px;
+    margin: -32px auto 60px !important;
+    font-size: 1.3rem !important;
+    color: #4b5563;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.risk-tags span {
+    padding: 8px 18px;
+    background: #e5e7eb;
+    /* Grey pills from reference */
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 0.01em;
+}
+
+/* Data Protection Principles Section */
+.data-protection {
+    padding: 100px 0;
+    background-color: #f9fafb;
+}
+
+.data-protection .section-description,
+.risk-framework .section-description {
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: -32px auto 60px !important;
+    font-size: 1.3rem !important;
+    color: #4b5563;
+    font-weight: 500;
+    line-height: 1.5;
+    display: block;
+    /* Ensure it behaves as a block for margin: auto */
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.principle-item {
+    text-align: center;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.principle-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.principle-icon-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.principle-icon-img-large {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.principle-item h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 16px;
+}
+
+.principle-item p {
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive for New Sections */
+@media (max-width: 1200px) {
+    .principles-grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .risk-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .risk-card-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .section-title-centered {
+        font-size: 2.5rem;
+    }
+}
+
+/* Responsive for Legal Section */
+@media (max-width: 1024px) {
+    .legal-container {
+        flex-direction: column;
+        gap: 60px;
+        text-align: left;
+    }
+
+    .legal-title {
+        font-size: 2.8rem;
+    }
+
+    .legal-list-item {
+        padding: 14px 24px;
+    }
+}
+
+/* AML & KYC Compliance Section */
+.aml-kyc-section {
+    background-color: #252545;
+    /* Deeper, more saturated navy like reference */
+    padding: 120px 0;
+    color: #ffffff;
+}
+
+.aml-container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    max-width: 1400px !important;
+}
+
+.aml-content-side {
+    flex: 1;
+}
+
+.aml-title {
+    font-size: 3.8rem;
+    /* Slightly larger as in reference */
+    font-weight: 900;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    line-height: 1.05;
+}
+
+.aml-description {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 50px;
+    max-width: 520px;
+    font-weight: 500;
+}
+
+.aml-actions {
+    display: flex;
+    gap: 24px;
+}
+
+.aml-btn {
+    padding: 16px 36px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aml-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.aml-card-side {
+    flex: 1.3;
+}
+
+.infra-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    padding: 60px 50px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.infra-card-header {
+    display: flex;
+    align-items: center;
+    /* Centered alignment for horizontal flow */
+    gap: 50px;
+}
+
+.infra-text {
+    flex: 1;
+}
+
+.infra-text h3 {
+    font-size: 2.2rem;
+    font-weight: 850;
+    margin-bottom: 24px;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.infra-text p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+}
+
+.infra-icon {
+    flex-shrink: 0;
+}
+
+.infra-icon img {
+    width: 150px;
+    /* Properly scaled icon */
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 1200px) {
+    .aml-container {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .aml-kyc-section {
+        padding: 80px 0;
+    }
+
+    .aml-container {
+        flex-direction: column;
+        gap: 60px;
+        text-align: left;
+    }
+
+    .aml-title {
+        font-size: 3rem;
+    }
+
+    .aml-description {
+        max-width: 100%;
+    }
+
+    .infra-card {
+        padding: 40px 30px;
+    }
+
+    .infra-card-header {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .infra-icon img {
+        width: 120px;
+        margin-bottom: 0;
+    }
+}

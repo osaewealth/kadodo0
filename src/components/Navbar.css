@@ -23,10 +23,9 @@
 .navbar-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    max-width: 1400px;
-    /* Wider container for better distribution */
+    max-width: 1600px;
+    padding: 0 40px;
 }
 
 .logo img {
@@ -46,13 +45,9 @@
 
 .nav-links {
     display: flex;
-    gap: 32px;
-    /* Reduced gap - was 40px */
-    position: absolute;
-    left: 45%;
-    /* Shifted left slightly - was 50% */
-    transform: translateX(-50%);
-    /* Moved left to avoid overlap with Get Started button */
+    align-items: center;
+    gap: 40px;
+    margin-left: 60px;
 }
 
 .nav-links a {
@@ -95,7 +90,8 @@
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
+    margin-left: auto;
 }
 
 .btn-get-started {
@@ -191,17 +187,34 @@
     align-items: center;
     gap: 6px;
     height: 100%;
-    padding: 0 16px;
-    color: var(--color-text-dark);
-    font-weight: 500;
+    padding: 8px 0;
+    color: var(--color-secondary);
+    font-weight: 700;
     font-size: 0.95rem;
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
 .nav-link-dropdown:hover,
 .nav-link-dropdown.active {
     color: var(--color-primary);
+}
+
+.nav-link-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link-dropdown:hover::after,
+.nav-link-dropdown.active::after {
+    width: 100%;
 }
 
 .dropdown-menu {
@@ -318,9 +331,16 @@
 }
 
 @media (max-width: 1024px) {
+    .navbar-container {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
     .nav-links {
         display: flex;
         flex-direction: column;
+        margin-left: 0;
+        gap: 0;
         position: fixed;
         top: 90px;
         left: 0;
@@ -356,8 +376,46 @@
         color: var(--color-primary);
     }
 
+    /* Mobile Dropdown Fix */
+    .nav-item-dropdown {
+        width: 100%;
+        display: block;
+        height: auto !important;
+    }
+
+    .nav-link-dropdown {
+        padding: 20px 40px !important;
+        font-size: 1.2rem !important;
+        border-bottom: 1px solid #f1f5f9;
+        width: 100%;
+        justify-content: space-between;
+        height: auto !important;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 0;
+        display: none;
+        background: #f8fafc;
+    }
+
+    .nav-item-dropdown.mobile-expanded .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 15px 60px;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
     .nav-actions {
         display: none;
+        margin-left: 0;
     }
 
     .mobile-menu-toggle {

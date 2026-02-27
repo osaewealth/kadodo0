@@ -16,6 +16,8 @@ import TermsOfService from './components/TermsOfService';
 import Compliance from './components/Compliance';
 import ComplianceForm from './components/ComplianceForm';
 import NDA from './components/NDA';
+import Governance from './components/Governance';
+
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
@@ -40,6 +42,7 @@ function App() {
                     <Route path="terms" element={<TermsOfService />} />
                     <Route path="compliance" element={<Compliance />} />
                     <Route path="compliance-form" element={<ComplianceForm />} />
+                    <Route path="governance" element={<Governance />} />
                     <Route path="nda" element={<NDA />} />
                     <Route path="careers" element={<PagePlaceholder title="Careers" />} />
                 </Route>

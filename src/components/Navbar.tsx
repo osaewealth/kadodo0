@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [regionOpen, setRegionOpen] = useState(false);
+    const [resourcesOpen, setResourcesOpen] = useState(false);
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const regionRef = useRef<HTMLDivElement>(null);
     const location = useLocation();
@@ -56,9 +57,26 @@ const Navbar: React.FC = () => {
                 </button>
 
                 <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-                    <Link to="/" className={isActive('/') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Home</Link>
                     <Link to="/solutions" className={isActive('/solutions') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Solutions</Link>
                     <Link to="/coverage" className={isActive('/coverage') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Coverage</Link>
+
+                    <div className={`nav-item-dropdown ${resourcesOpen ? 'mobile-expanded' : ''}`}>
+                        <span
+                            className={`nav-link-dropdown ${location.pathname === '/compliance' ? 'active' : ''}`}
+                            onClick={(e) => {
+                                if (window.innerWidth <= 1024) {
+                                    e.preventDefault();
+                                    setResourcesOpen(!resourcesOpen);
+                                }
+                            }}
+                        >
+                            Resources <ChevronDown size={14} className={resourcesOpen ? 'rotate' : ''} />
+                        </span>
+                        <div className="dropdown-menu">
+                            <Link to="/compliance" onClick={() => { setIsMenuOpen(false); setResourcesOpen(false); }}>Trust Center</Link>
+                        </div>
+                    </div>
+
                     <Link to="/about-us" className={isActive('/about-us') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>About Us</Link>
                     <Link to="/contact-us" className={isActive('/contact-us') ? 'active' : ''} onClick={() => setIsMenuOpen(false)}>Contact Us</Link>
 
