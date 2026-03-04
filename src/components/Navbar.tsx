@@ -74,6 +74,7 @@ const Navbar: React.FC = () => {
                         </span>
                         <div className="dropdown-menu">
                             <Link to="/compliance" onClick={() => { setIsMenuOpen(false); setResourcesOpen(false); }}>Trust Center</Link>
+                            <Link to="/governance" onClick={() => { setIsMenuOpen(false); setResourcesOpen(false); }}>Governance</Link>
                         </div>
                     </div>
 
