@@ -247,6 +247,39 @@
     opacity: 1;
 }
 
+.governance-page .hero-actions {
+    margin-top: 32px;
+}
+
+.governance-page .hero-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--color-primary, #a49945);
+    color: #ffffff;
+    padding: 18px 36px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(164, 153, 69, 0.3);
+}
+
+.governance-page .hero-cta-btn:hover {
+    transform: translateY(-3px);
+    background-color: #b5aa56;
+    box-shadow: 0 12px 30px rgba(164, 153, 69, 0.4);
+}
+
+.governance-page .hero-cta-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.governance-page .hero-cta-btn:hover svg {
+    transform: translateX(5px);
+}
+
 /* Legal Oversight Section */
 .legal-oversight {
     padding: 20px 0 30px;
@@ -771,6 +804,14 @@
     border-color: rgba(255, 255, 255, 0.6);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.aml-btn-link {
+    text-decoration: none;
+}
+
+.aml-btn-link .aml-btn {
+    width: 100%;
 }
 
 .aml-card-side {

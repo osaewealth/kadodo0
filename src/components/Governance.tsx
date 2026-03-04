@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { CircleCheck } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { CircleCheck, ArrowRight } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 import './Governance.css';
 
 // Image imports
@@ -40,6 +40,11 @@ const Governance: React.FC = () => {
                         </p>
                         <div className="hero-quote">
                             "Digital trust is governed, not assumed."
+                        </div>
+                        <div className="hero-actions">
+                            <Link to="/compliance-form" className="hero-cta-btn">
+                                Request Compliance Access <ArrowRight size={20} />
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -178,8 +183,12 @@ const Governance: React.FC = () => {
                             ensuring Kadodo remains a safe corridor for investment and trade.
                         </p>
                         <div className="aml-actions">
-                            <button className="aml-btn">Identity Screening</button>
-                            <button className="aml-btn">Sanctions/PEP Checks</button>
+                            <Link to="/compliance-form" className="aml-btn-link">
+                                <button className="aml-btn">Identity Screening</button>
+                            </Link>
+                            <Link to="/compliance-form" className="aml-btn-link">
+                                <button className="aml-btn">Sanctions/PEP Checks</button>
+                            </Link>
                         </div>
                     </div>
 
