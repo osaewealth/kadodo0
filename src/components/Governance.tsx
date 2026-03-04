@@ -13,6 +13,8 @@ import dataByDesignIcon from '../assets/databydesign.png';
 import lawfulBasisIcon from '../assets/lawfulbasis.png';
 import dataSubjectRightIcon from '../assets/datasubjectright.png';
 import infrastructureIcon from '../assets/infrastructureimg.png';
+import personCarryingBoxes from '../assets/personcarryingboxes.jpg';
+import lawlawImage from '../assets/lawlaw.jpg';
 
 const Governance: React.FC = () => {
     const { pathname } = useLocation();
@@ -195,6 +197,103 @@ const Governance: React.FC = () => {
                                 <div className="infra-icon">
                                     <img src={infrastructureIcon} alt="Infrastructure Integrity" />
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Trust Badge Framework Section */}
+            <section className="trust-badge-framework">
+                <div className="container">
+                    <h2 className="section-title-centered">Trust Badge Framework</h2>
+
+                    <div className="trust-badge-card">
+                        <div className="trust-badge-content">
+                            <div className="issuance-thresholds">
+                                <h3 className="issuance-title">Issuance Thresholds</h3>
+                                <p className="issuance-description">
+                                    Verification badges are only issued upon successful
+                                    completion of the 'KYB' (Know Your Business) protocol,
+                                    requiring valid registration, tax compliance, and physical
+                                    presence verification.
+                                </p>
+
+                                <ul className="issuance-list">
+                                    <li className="issuance-item">
+                                        <CircleCheck size={20} className="check-icon" />
+                                        <span>Legal Entity Proof</span>
+                                    </li>
+                                    <li className="issuance-item">
+                                        <CircleCheck size={20} className="check-icon" />
+                                        <span>Physical Address Validation</span>
+                                    </li>
+                                    <li className="issuance-item">
+                                        <CircleCheck size={20} className="check-icon" />
+                                        <span>Operational Capacity Audit</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="trust-badge-image">
+                                <img src={personCarryingBoxes} alt="Person carrying boxes" className="boxes-img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Revocation & Appeals Section */}
+            <section className="revocation-appeals">
+                <div className="container">
+                    <div className="revocation-card" style={{ backgroundImage: `url(${lawlawImage})` }}>
+                        <div className="revocation-content-side">
+                            <h2 className="revocation-title">Revocation & Appeals</h2>
+                            <p className="revocation-description">
+                                Maintaining trust requires strict enforcement. Our
+                                Governance Board monitors for non-compliance, providing
+                                a transparent escalation and appeals procedure.
+                            </p>
+
+                            <div className="revocation-cards-container">
+                                <div className="revocation-mini-card">
+                                    <h4 className="mini-card-tag incident">INCIDENT MONITORING</h4>
+                                    <p className="mini-card-text">
+                                        24/7 Automated monitoring of compliance thresholds.
+                                    </p>
+                                </div>
+
+                                <div className="revocation-mini-card">
+                                    <h4 className="mini-card-tag escalation">ESCALATION PATHWAY</h4>
+                                    <p className="mini-card-text">
+                                        Defined procedures for breach notification and remediation.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Contact Compliance Section */}
+            <section className="contact-compliance">
+                <div className="container">
+                    <div className="contact-border-box">
+                        <h2 className="contact-title">Contact Compliance</h2>
+                        <p className="contact-description">
+                            For legal inquiries, data protection requests, or compliance concerns,
+                            please reach out to our dedicated teams.
+                        </p>
+
+                        <div className="contact-cards-flex">
+                            <div className="contact-info-card">
+                                <h4 className="contact-tag">GENERAL COMPLIANCE</h4>
+                                <a href="mailto:compliance@kadodoafrica.com" className="contact-email">compliance@kadodoafrica.com</a>
+                            </div>
+
+                            <div className="contact-info-card">
+                                <h4 className="contact-tag">DATA PROTECTION OFFICER</h4>
+                                <a href="mailto:dpo@kadodoafrica.com" className="contact-email">dpo@kadodoafrica.com</a>
                             </div>
                         </div>
                     </div>
