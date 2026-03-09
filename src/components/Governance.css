@@ -620,11 +620,15 @@
 
     .principles-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 40px;
     }
 
     .section-title-centered {
         font-size: 2.5rem;
+    }
+
+    .risk-framework {
+        padding: 60px 0;
     }
 }
 
@@ -632,16 +636,138 @@
 @media (max-width: 1024px) {
     .legal-container {
         flex-direction: column;
-        gap: 60px;
+        gap: 40px;
         text-align: left;
     }
 
     .legal-title {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
 
     .legal-list-item {
         padding: 14px 24px;
+    }
+
+    .legal-intro {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .risk-framework {
+        padding: 40px 0;
+    }
+
+    .risk-card {
+        padding: 20px 24px;
+    }
+
+    .risk-card-content {
+        gap: 20px;
+    }
+
+    .risk-icon-img {
+        width: 80px;
+    }
+
+    .risk-card-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .risk-card-text p {
+        font-size: 0.95rem;
+    }
+
+    .section-title-centered {
+        font-size: 2rem;
+    }
+
+    .data-protection {
+        padding: 40px 0 30px;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .principle-item {
+        padding: 30px 20px;
+    }
+
+    .principle-icon-wrapper {
+        width: 90px;
+        height: 90px;
+    }
+
+    .principle-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .principle-item p {
+        font-size: 0.95rem;
+    }
+
+    .data-protection .section-description,
+    .risk-framework .section-description {
+        font-size: 1.05rem !important;
+        margin: -16px auto 40px !important;
+    }
+
+    .legal-container {
+        gap: 30px;
+    }
+
+    .legal-title {
+        font-size: 2rem;
+    }
+
+    .legal-intro {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .legal-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .legal-list-item {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+
+    .legal-footer-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-centered {
+        font-size: 1.6rem;
+    }
+
+    .risk-framework {
+        padding: 30px 0;
+    }
+
+    .risk-card {
+        padding: 16px 18px;
+    }
+
+    .risk-icon-img {
+        width: 60px;
+    }
+
+    .data-protection {
+        padding: 30px 0 20px;
+    }
+
+    .legal-title {
+        font-size: 1.6rem;
+    }
+
+    .legal-oversight {
+        padding: 15px 0 20px;
     }
 }
 
@@ -740,6 +866,53 @@
 
     .trust-badge-card {
         padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-badge-framework {
+        padding: 15px 0;
+    }
+
+    .trust-badge-card {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+
+    .trust-badge-content {
+        gap: 24px;
+    }
+
+    .issuance-title {
+        font-size: 1.8rem;
+    }
+
+    .issuance-description {
+        font-size: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .issuance-item {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+
+    .boxes-img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .trust-badge-card {
+        padding: 20px 16px;
+    }
+
+    .issuance-title {
+        font-size: 1.5rem;
+    }
+
+    .issuance-description {
+        font-size: 0.9rem;
     }
 }
 
@@ -888,7 +1061,6 @@
     .aml-title {
         font-size: 3rem;
         white-space: normal;
-        /* Allow wrap on mobile */
     }
 
     .aml-description {
@@ -909,6 +1081,76 @@
     .infra-icon img {
         width: 120px;
         margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .aml-kyc-section {
+        padding: 50px 0;
+    }
+
+    .aml-container {
+        gap: 40px;
+    }
+
+    .aml-title {
+        font-size: 2.2rem;
+    }
+
+    .aml-description {
+        font-size: 1.05rem;
+        margin-bottom: 30px;
+    }
+
+    .aml-actions {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .aml-btn {
+        padding: 14px 28px;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .infra-card {
+        padding: 30px 20px;
+        border-radius: 20px;
+    }
+
+    .infra-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .infra-text p {
+        font-size: 1rem;
+    }
+
+    .infra-icon img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aml-kyc-section {
+        padding: 40px 0;
+    }
+
+    .aml-title {
+        font-size: 1.8rem;
+    }
+
+    .aml-description {
+        font-size: 0.95rem;
+    }
+
+    .infra-card {
+        padding: 24px 16px;
+    }
+
+    .infra-text h3 {
+        font-size: 1.3rem;
     }
 }
 
@@ -1005,11 +1247,15 @@
 }
 
 @media (max-width: 1024px) {
-    .revocation-grid {
+    .revocation-card {
         flex-direction: column;
+        min-height: auto;
+        background-position: center top;
+        background-size: cover;
     }
 
     .revocation-content-side {
+        flex: 1;
         padding: 40px 30px;
     }
 
@@ -1019,15 +1265,133 @@
 }
 
 @media (max-width: 768px) {
+
+    /* === Hero Section Mobile === */
+    .governance-page .governance-hero-new {
+        min-height: auto;
+        height: auto;
+        padding-bottom: 30px;
+    }
+
+    .governance-page .governance-hero-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .governance-page .hero-people-side {
+        display: none;
+    }
+
     .governance-page .hero-text-side {
         margin-left: 0;
+        padding: 0 20px 10px;
         text-align: center;
         align-items: center;
     }
 
+    .governance-page .hero-text-side h1 {
+        font-size: 2rem;
+        white-space: normal;
+    }
+
+    .governance-page .hero-description {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .governance-page .hero-quote {
+        font-size: 1.3rem;
+    }
+
+    .governance-page .hero-actions {
+        margin-top: 20px;
+    }
+
+    .governance-page .hero-cta-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    /* === Revocation Section Mobile === */
+    .revocation-appeals {
+        padding: 15px 0;
+    }
+
+    .revocation-card {
+        border-radius: 24px;
+        min-height: auto;
+    }
+
+    .revocation-content-side {
+        padding: 30px 20px;
+    }
+
+    .revocation-title {
+        font-size: 2rem;
+    }
+
+    .revocation-description {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    .revocation-cards-container {
+        gap: 16px;
+    }
+
+    .revocation-mini-card {
+        padding: 20px 24px;
+        border-radius: 14px;
+    }
+
+    .mini-card-tag {
+        font-size: 0.85rem;
+    }
+
+    .mini-card-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .governance-page .governance-hero-new {
+        padding-bottom: 20px;
+    }
+
     .governance-page .lawyers-img {
-        height: 300px;
-        margin-left: 0;
+        height: 220px;
+    }
+
+    .governance-page .hero-text-side h1 {
+        font-size: 1.6rem;
+    }
+
+    .governance-page .hero-description {
+        font-size: 0.85rem;
+    }
+
+    .governance-page .hero-quote {
+        font-size: 1.1rem;
+    }
+
+    .governance-page .hero-cta-btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+    .revocation-title {
+        font-size: 1.6rem;
+    }
+
+    .revocation-description {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .revocation-mini-card {
+        padding: 16px 18px;
     }
 }
 
@@ -1131,5 +1495,77 @@
     .contact-info-card {
         width: 100%;
         padding: 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-compliance {
+        padding: 50px 0;
+    }
+
+    .contact-border-box {
+        padding: 40px 20px;
+        border-radius: 20px;
+        margin-top: 20px;
+        border-width: 2px;
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+    }
+
+    .contact-description {
+        font-size: 1.05rem;
+        margin-bottom: 40px;
+    }
+
+    .contact-cards-flex {
+        gap: 20px;
+    }
+
+    .contact-info-card {
+        min-width: auto;
+        padding: 18px 30px;
+        border-radius: 100px;
+    }
+
+    .contact-tag {
+        font-size: 0.8rem;
+    }
+
+    .contact-email {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-compliance {
+        padding: 30px 0;
+    }
+
+    .contact-border-box {
+        padding: 30px 16px;
+        border-radius: 16px;
+    }
+
+    .contact-title {
+        font-size: 1.7rem;
+    }
+
+    .contact-description {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+
+    .contact-info-card {
+        padding: 16px 24px;
+    }
+
+    .contact-tag {
+        font-size: 0.75rem;
+    }
+
+    .contact-email {
+        font-size: 0.95rem;
     }
 }

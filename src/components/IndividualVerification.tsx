@@ -82,8 +82,8 @@ const IndividualVerification: React.FC = () => {
                                     transition={{ duration: 0.6, delay: 0.1 }}
                                 >
                                     <div className="tier-header">
-                                        <span className="tier-label">BUSINESS BASIC</span>
-                                        <h2 className="tier-price">GH₵100 <span className="period">/ year</span></h2>
+                                        <span className="tier-label">BASIC</span>
+                                        <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li><CheckCircle2 className="icon-check" /> <span>Business Profile Validation</span></li>
@@ -109,8 +109,8 @@ const IndividualVerification: React.FC = () => {
                                     transition={{ duration: 0.6, delay: 0.2 }}
                                 >
                                     <div className="tier-header">
-                                        <span className="tier-label">BUSINESS STANDARD</span>
-                                        <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
+                                        <span className="tier-label">TRUST+</span>
+                                        <h2 className="tier-price">GH₵750 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li className="highlight-feature"><PlusCircle className="icon-plus" /> <span>Everything in Basic+</span></li>
@@ -123,7 +123,7 @@ const IndividualVerification: React.FC = () => {
                                             <button
                                                 className="btn-tier-select dark"
                                             >
-                                                Select Standard
+                                                Select Trust+
                                             </button>
                                         </a>
                                     </div>
@@ -137,11 +137,11 @@ const IndividualVerification: React.FC = () => {
                                 >
                                     <div className="premium-choice-tag">PREMIUM CHOICE</div>
                                     <div className="tier-header">
-                                        <span className="tier-label gold-text">BUSINESS PREMIUM</span>
+                                        <span className="tier-label gold-text">GLOBAL</span>
                                         <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
-                                        <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Standard Plan+</span></li>
+                                        <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Trust+ Plan+</span></li>
                                         <li><CheckCircle2 className="icon-check gold" /> <span>Physical Site Inspection</span></li>
                                         <li><CheckCircle2 className="icon-check gold" /> <span>Enhanced Due Diligence</span></li>
                                         <li><CheckCircle2 className="icon-check gold" /> <span>Priority Support</span></li>
@@ -152,7 +152,7 @@ const IndividualVerification: React.FC = () => {
                                             <button
                                                 className="btn-tier-select gold-btn"
                                             >
-                                                Select Premium
+                                                Select Global
                                             </button>
                                         </a>
                                     </div>
