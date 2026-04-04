@@ -102,7 +102,7 @@ const SolutionPartners: React.FC = () => {
                             </div>
                             <h3>Accelerate Onboarding</h3>
                             <p>
-                                Reduce supplier and investee KYC/KYB cycles from weeks to minutes
+                                Reduce supplier and investee KYC/KYB cycles from months to days
                                 through automated credential harvesting and digital trust passports.
                             </p>
                         </motion.div>
