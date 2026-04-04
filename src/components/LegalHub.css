@@ -1,0 +1,164 @@
+.legal-hub-container {
+    background-color: var(--color-bg-white); 
+    color: var(--color-text-dark);
+    min-height: 100vh;
+}
+
+.legal-hero {
+    padding: 160px 20px 120px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.legal-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 850;
+    margin-bottom: 24px;
+    color: #ffffff;
+    letter-spacing: -1.5px;
+}
+
+.highlight-gold {
+    color: var(--color-primary); /* Kadodo Gold */
+}
+
+.legal-hero-content p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.legal-hub-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.legal-section {
+    margin-bottom: 80px;
+}
+
+.section-header-minimal {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primary);
+    margin-right: 20px;
+}
+
+.section-header-minimal h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-secondary);
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.policy-grid-minimal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.policy-card-minimal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    padding: 40px 30px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.policy-card-minimal:hover {
+    border-top-color: var(--color-primary);
+    box-shadow: var(--shadow-md, 0 10px 30px rgba(0, 0, 0, 0.05));
+    transform: translateY(-2px);
+}
+
+.policy-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+}
+
+.policy-card-minimal:hover .policy-content h3 {
+    color: var(--color-primary);
+}
+
+.policy-content p {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin: 0 0 30px 0;
+    line-height: 1.6;
+}
+
+.policy-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    margin-top: auto;
+}
+
+.read-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+}
+
+.policy-card-minimal:hover .read-more {
+    color: var(--color-primary);
+}
+
+.policy-arrow {
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.policy-card-minimal:hover .policy-arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .legal-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header-minimal h2 {
+        font-size: 1.6rem;
+    }
+    
+    .policy-grid-minimal {
+        grid-template-columns: 1fr;
+    }
+    
+    .legal-hero {
+        padding: 120px 20px 80px;
+    }
+}

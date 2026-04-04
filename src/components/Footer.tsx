@@ -85,8 +85,8 @@ const Footer: React.FC = () => {
                         © 2026 Kadodo Africa. All Rights Reserved.
                     </p>
                     <div className="bottom-legal-links">
-                        <Link to="/legal">Privacy Policy</Link>
-                        <Link to="/legal">Cookie Policy</Link>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
+                        <Link to="/cookie-policy">Cookie Policy</Link>
                     </div>
                 </div>
             </div>

@@ -22,6 +22,7 @@ import LimitationOfLiability from './components/LimitationOfLiability';
 import MarketplaceSellerAgreement from './components/MarketplaceSellerAgreement';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import SubscriptionPolicy from './components/SubscriptionPolicy';
+import LegalHub from './components/LegalHub';
 import Compliance from './components/Compliance';
 import ComplianceForm from './components/ComplianceForm';
 import NDA from './components/NDA';
@@ -47,7 +48,7 @@ function App() {
                     <Route path="kadodo-number" element={<KadodoNumberPage />} />
                     <Route path="ghana" element={<Ghana />} />
                     <Route path="contact-us" element={<Contact />} />
-                    <Route path="legal" element={<PagePlaceholder title="Legal & Privacy" />} />
+                    <Route path="legal" element={<LegalHub />} />
                     <Route path="terms" element={<TermsOfService />} />
                     <Route path="acceptable-use-policy" element={<AcceptableUsePolicy />} />
                     <Route path="biometric-data-policy" element={<BiometricDataPolicy />} />
