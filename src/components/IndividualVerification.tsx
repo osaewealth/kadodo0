@@ -83,7 +83,7 @@ const IndividualVerification: React.FC = () => {
                                 >
                                     <div className="tier-header">
                                         <span className="tier-label">BASIC</span>
-                                        <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
+                                        <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li><CheckCircle2 className="icon-check" /> <span>Business Profile Validation</span></li>
@@ -110,7 +110,7 @@ const IndividualVerification: React.FC = () => {
                                 >
                                     <div className="tier-header">
                                         <span className="tier-label">TRUST+</span>
-                                        <h2 className="tier-price">GH₵750 <span className="period">/ year</span></h2>
+                                        <h2 className="tier-price">GH₵3,000 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li className="highlight-feature"><PlusCircle className="icon-plus" /> <span>Everything in Basic+</span></li>
@@ -138,7 +138,7 @@ const IndividualVerification: React.FC = () => {
                                     <div className="premium-choice-tag">PREMIUM CHOICE</div>
                                     <div className="tier-header">
                                         <span className="tier-label gold-text">GLOBAL</span>
-                                        <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
+                                        <h2 className="tier-price">GH₵5,000 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Trust+ Plan+</span></li>
@@ -168,7 +168,7 @@ const IndividualVerification: React.FC = () => {
                                 >
                                     <div className="tier-header">
                                         <span className="tier-label">INDIVIDUAL BASIC</span>
-                                        <h2 className="tier-price">GH₵100 <span className="period">/ year</span></h2>
+                                        <h2 className="tier-price">GH₵700 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li><CheckCircle2 className="icon-check" /> <span>Personal Biography</span></li>
@@ -195,7 +195,7 @@ const IndividualVerification: React.FC = () => {
                                 >
                                     <div className="tier-header">
                                         <span className="tier-label">INDIVIDUAL STANDARD</span>
-                                        <h2 className="tier-price">GH₵250 <span className="period">/ year</span></h2>
+                                        <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li className="highlight-feature"><PlusCircle className="icon-plus" /> <span>Everything in Basic+</span></li>
@@ -223,7 +223,7 @@ const IndividualVerification: React.FC = () => {
                                     <div className="premium-choice-tag">PREMIUM CHOICE</div>
                                     <div className="tier-header">
                                         <span className="tier-label gold-text">INDIVIDUAL PREMIUM</span>
-                                        <h2 className="tier-price">GH₵1,500 <span className="period">/ year</span></h2>
+                                        <h2 className="tier-price">GH₵3,000 <span className="period">/ year</span></h2>
                                     </div>
                                     <ul className="tier-features-list">
                                         <li className="highlight-feature gold-text"><PlusCircle className="icon-plus gold" /> <span>Everything in Standard Plan+</span></li>

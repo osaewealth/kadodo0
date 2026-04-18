@@ -12,7 +12,7 @@ const CookiePolicy: React.FC = () => {
 
                 <div className="cp-content">
                     <h2>1. INTRODUCTION</h2>
-                    <p>This Cookie Policy explains how <strong>Kadodo Africa</strong> ("we", "us", or "our"), operated by <strong>Suku Technologies Ltd.</strong>, uses cookies and similar technologies (such as pixels, beacons, and tags) when you visit our website "<strong><a href="https://www.sukutechnologies.com">www.sukutechnologies.com</a></strong>" or use our mobile application.</p>
+                    <p>This Cookie Policy explains how <strong>Kadodo Africa</strong> ("we", "us", or "our"), operated by <strong>Suku Technologies Ltd.</strong>, uses cookies and similar technologies (such as pixels, beacons, and tags) when you visit our website "<strong><a href="https://www.kadodoafrica.com">www.kadodoafrica.com</a></strong>" or use our mobile application.</p>
                     <p>This policy explains what these technologies are, why we use them, and your rights to control our use of them.</p>
 
                     <h2>2. WHAT ARE COOKIES?</h2>
