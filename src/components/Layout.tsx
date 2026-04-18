@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { Outlet } from 'react-router-dom';
 import ScrollToTopButton from './ScrollToTopButton';
+import CookieConsent from './CookieConsent';
 
 const Layout: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const Layout: React.FC = () => {
                 <Outlet />
             </main>
             <Footer />
+            <CookieConsent />
         </div>
     );
 };
