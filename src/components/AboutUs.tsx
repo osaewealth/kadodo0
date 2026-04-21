@@ -184,7 +184,7 @@ const AboutUs: React.FC = () => {
             </section>
             */}
 
-            {/* Strategic Partners Section */}
+            {/* Strategic Partners Section — temporarily hidden
             <section className="partners-marquee-section">
                 <div className="container">
                     <div className="section-header-centered">
@@ -201,6 +201,7 @@ const AboutUs: React.FC = () => {
                     </div>
                 </div>
             </section>
+            */}
 
             {/* Join Us (CTA) Section */}
             <section className="about-cta">

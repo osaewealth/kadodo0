@@ -13,7 +13,7 @@ const LandingPage: React.FC = () => {
     return (
         <>
             <Hero />
-            <Stats />
+            {/* <Stats /> */}{/* Partner section temporarily hidden */}
             <Challenges />
             <KadodoNumber />
             <PerformanceStats />
